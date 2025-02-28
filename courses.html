@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitiz Sharma</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://templates.envytheme.com/finix/default/assets/img/favicon.png"
+        type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+   
+
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .HomepageAnonCards_root {
+        position: relative;
+        padding: 3rem 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .width-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .HomepageAnonCards_item {
+        background: #ffffff;
+        padding: 1.5rem;
+        margin: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .HomepageAnonCards_icon {
+        background: #d5a12b;
+        border-radius: 50%;
+        width: 75px;
+        height: 75px;
+        margin: -40px auto 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .HomepageAnonCards_icon img {
+        width: 50px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    p {
+        color: #666;
+        font-size: 1rem;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #000000;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .training-schedule {
+        background-color: #1d1d1d;
+        padding: 3rem 0;
+        width: 100%;
+        /* max-width: 1028px; */
+        margin: 0 auto;
+    }
+
+    .schedule-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .schedule-item {
+        background: #00000000;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+        max-width: 600px;
+        height: 200px;
+        /* Fixed height for all items */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .schedule-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .schedule-item h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+        transition: color 0.3s ease;
+    }
+
+    .schedule-item:hover h2 {
+        color: #ffffff;
+        /* Change heading color on hover */
+    }
+
+    .schedule-item p {
+        color: #666;
+        font-size: 1rem;
+        line-height: 1.5;
+        transition: color 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .schedule-item:hover p {
+        color: #333;
+        /* Change paragraph color on hover */
+    }
+
+    .container-video {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 50px;
+    }
+
+    .content {
+        width: 60%;
+    }
+
+    .video {
+        width: 35%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 315px;
+    }
+
+    .padtop {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .icon {
+        font-size: 24px;
+        color: #d5a12b;
+        margin-bottom: 10px;
+    }
+
+    download-btn {
+        display: inline-block;
+        background-color: #d5a12b;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .download-btn:hover {
+        background-color: #d5a12b;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .form-section {
+        width: 60%;
+        background-color: #000000;
+        padding: 30px;
+
+    }
+
+    .form-section h2 {
+        margin-bottom: 20px;
+        font-size: 26px;
+        color: white;
+    }
+
+    .form-section input,
+    .form-section select,
+    .form-section textarea {
+        width: 100%;
+        padding: 8px 0px;
+        margin-bottom: 15px;
+        border: none;
+        border-bottom: 1px solid #edecec5b;
+
+        font-size: 16px;
+        background: transparent;
+        color: #6f7173;
+        outline: none;
+        margin-top: 20px;
+    }
+
+    .separator {
+        height: 1px;
+        background: #777;
+        margin-bottom: 15px;
+    }
+
+    .form-section button {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        width: 40%;
+        border-radius: 5px;
+    }
+
+    .form-section button:hover {
+        background-color: #d5a12b;
+    }
+
+    .address-section {
+        width: 48%;
+        background-color: #1a1616;
+        padding: 40px;
+        border-radius: 12px;
+        color: white;
+    }
+
+    .address-section h3 {
+        margin-bottom: 39px;
+        font-size: 24px;
+    }
+
+    .address-section p {
+        margin: 40px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .address-section i {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #d5a12b;
+    }
+
+    .address-section a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .address-section a:hover {
+        text-decoration: underline;
+    }
+
+    .cont {
+        background-color: #000 !important;
+    }
+</style>
+
+<body>
+    <!-- HERO HEADER  -->
+    <header>
+        <!-- NAV  -->
+        <nav>
+            <div class="nav-left">
+                <div class="logo">
+                    <a href="index.html"><img class="logosize" src="image/Nitiz-Sharma9.png"></a>
+                </div>
+                <ul class="menu">
+                    <li class="has-dropdown">
+                        <a href="#">Courses <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <div class="mega-menu">
+
+                            <!-- First Row (2 Columns) -->
+                            <div class="mega-menu-row">
+                                <div class="mega-menu-column">
+                                    <h4>EXPERT LEVEL TRAINING PROGRAMS</h4>
+                                    <ul>
+                                        <li><a href="#">FCX/SE8</a></li>
+                                        <li><a href="#">CCIE Security</a></li>
+                                        <li><a href="#">CCIE Data Center</a></li>
+                                        <li><a href="#">CCIE Enterprise Infrastructure</a></li>
+                                        <li><a href="#">CCIE Wireless</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>PROFESSIONAL LEVEL TRAINING PROGRAMS</h4>
+                                    <ul>
+                                        <li><a href="#">CCNP Security Training</a></li>
+                                        <li><a href="#">CCNP Data Center Training</a></li>
+                                        <li><a href="#">CCNP Enterprise Infrastructure Training</a></li>
+                                        <li><a href="#">CCNP Wireless Training</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Second Row (2 Columns) -->
+                            <div class="mega-menu-row">
+                                <div class="mega-menu-column">
+                                    <h4>ASSOCIATE LEVEL TRAINING PROGRAMS</h4>
+                                    <ul>
+                                        <li><a href="#">CCNA</a></li>
+                                        <li><a href="#">CWNA</a></li>
+                                        <li><a href="#">AWS</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>SPECIAL COURSES</h4>
+                                    <ul>
+                                        <li><a href="#">SDN++</a></li>
+                                        <li style="margin-left: 20px;"><a href="#">SDWAN training and Certification</a>
+                                        </li>
+                                        <li style="margin-left: 20px;"><a href="#">Cisco ACI training and
+                                                Certification</a></li>
+                                        <li><a href="#">Fortinet NSE 4</a></li>
+                                        <li><a href="#">Digital Marketing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="corporatetraining.html">Corporate Training</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <!-- <div class="call-us">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <div class="call-det">
+                        <p>Call Us:</p>
+                        <h2>+91 7019021129</h2>
+                    </div>
+                </div> -->
+                <div class="btn">
+                    <button onclick="location.href='contact.html'">Contact Us</button>
+                    <i class="ri-arrow-right-up-long-line"></i>
+                </div>
+            </div>
+            <div class="bars">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <!-- HERO SECTION  -->
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+                <!-- slide 1 -->
+                <div class="swiper-slide">
+                    <div class="hero-header">
+                        <div class="hero-content">
+                            <h1 class="herheadingsize" class="" id="animatedText">Building Next-Generation</h1>
+                            <!-- <h1>Network Professionals</h1> -->
+                            <div class="">
+                                <div>
+                                    <h1>Network Professionals</h1>
+                                </div>
+                                <!-- <div>Empowering Tomorrow’s Networking Experts</div>
+                                <div>Developing Elite Network Professionals</div> -->
+
+                            </div>
+                            <p>Explore our platform for real-world learning.Engage with top instructors, comprehensive
+                                labs, and validate your Networking & Cybersecurity skills.</p>
+                            <!-- <div class="btn">
+                                <button>Explore Courses</button>
+                                <i class="ri-arrow-right-up-long-line"></i>
+                            </div> -->
+                        </div>
+                        <!-- <div class="hero-img">
+                            <img src="image/NITIZ SHARMA.png" clas="nitizsharma-banner" alt="">
+                        </div> -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- <div class="swiper-button-prev swiper-btn swiper-btn-prev"><i class="ri-arrow-left-s-line"></i></div>
+        <div class="swiper-button-next swiper-btn swiper-btn-next"><i class="ri-arrow-right-s-line"></i></div> -->
+
+
+
+    </header>
+
+    <!-- Time ection -->
+    <!-- Video Section -->
+    <div class="container-video padtop">
+        <div class="content">
+            <h1>CCIE Security v6.1 Training and Certification</h1>
+            <p>CCIE Security Training Program From Foundation to Advanced Level.</p><br />
+            <p>CCIE Security Training is your path to learning advanced network security and earning one of the top
+                certifications in networking. At Nitiz Sharma Global Tech Pvt. Ltd., we offer a program that teaches you
+                the skills you need to handle modern network security challenges with confidence.</p><br />
+            <p>Our expert trainers guide you step-by-step through the CCIE Security Written and Lab exams. You’ll get
+                hands-on practice, real-world examples, and personal support to help you succeed. With access to the
+                latest tools and resources, you’ll learn how to design, set up, and fix advanced security systems.</p>
+            <br />
+            <p>Whether you’re just starting in networking or want to grow your career, our CCIE Security Training gives
+                you the knowledge and tools to achieve your goals. Come learn with us today and start your journey to
+                becoming an expert in network security!</p>
+        </div>
+        <div class="video">
+            <iframe
+                src="https://www.youtube.com/embed/-b_jJttKVqk?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Fnitizsharma.com&widgetid=1"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+    <!-- end -->
+
+    <section class="training-schedule">
+        <div class="schedule-container">
+            <!-- Row 1 -->
+            <div class="schedule-item">
+                <div class="icon">
+                    <i class="fas fa-calendar-alt"></i> <!-- Icon for Date -->
+                </div>
+                <h2>Cohort Starts</h2>
+                <p>25th FEB, 2025 @ 10:30 AM IST</p>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="schedule-item">
+                <div class="icon">
+                    <i class="fas fa-calendar-day"></i> <!-- Icon for Training Days -->
+                </div>
+                <h2>Training Days</h2>
+                <p>Weekdays (Mon-Thu)</p>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="schedule-item">
+                <div class="icon">
+                    <i class="fas fa-clock"></i> <!-- Icon for Hours -->
+                </div>
+                <h2>Hours</h2>
+                <p>90 Minutes / Day</p>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="schedule-item">
+                <div class="icon">
+                    <i class="fas fa-hourglass-half"></i> <!-- Icon for Duration -->
+                </div>
+                <h2>Duration</h2>
+                <p>2.5 Months Technology Training |<br /> 1.5 Months FCX Immersion / Lab</p>
+            </div>
+        </div>
+    </section>
+    <section class="HomepageAnonCards_root">
+        <h1 style="padding-bottom: 30px;">CCIE Security Course Syllabus</h1>
+        <div class="width-wrapper">
+            <div class="HomepageAnonCards_item">
+                <div class="HomepageAnonCards_icon">
+                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-build-0f21c66ed03bfb36c597636d27ca621e.svg"
+                        alt="Build & Test Icon">
+                </div>
+                <h2>ASA</h2>
+                <p>Secure your network with Cisco ASA – advanced firewall protection and threat defense.</p>
+            </div>
+
+            <div class="HomepageAnonCards_item">
+                <div class="HomepageAnonCards_icon">
+                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-learn-b1311620e99cea826f259aa2f7750940.svg"
+                        alt="Learn & Discover Icon">
+                </div>
+                <h2>VPN</h2>
+                <p>Secure remote access and encrypted communication for seamless connectivity, ensuring privacy and data
+                    protection.</p>
+            </div>
+
+            <div class="HomepageAnonCards_item">
+                <div class="HomepageAnonCards_icon">
+                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-share-910c683bbac21bf41fcf9aab64ebc957.svg"
+                        alt="Share Your Work Icon">
+                </div>
+                <h2>ISE</h2>
+                <p>Cisco ISE provides centralized network access control, policy enforcement, and identity management
+                    for enhanced security.</p>
+            </div>
+
+            <div class="HomepageAnonCards_item">
+                <div class="HomepageAnonCards_icon">
+                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-build-0f21c66ed03bfb36c597636d27ca621e.svg"
+                        alt="Build & Test Icon">
+                </div>
+                <h2>NGFW</h2>
+                <p>Advanced firewall protection with deep packet inspection, threat intelligence, and application
+                    control for modern cybersecurity.</p>
+            </div>
+
+            <div class="HomepageAnonCards_item">
+                <div class="HomepageAnonCards_icon">
+                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-build-0f21c66ed03bfb36c597636d27ca621e.svg"
+                        alt="Build & Test Icon">
+                </div>
+                <h2>WSA</h2>
+                <p>Cisco WSA ensures secure web browsing by filtering malicious content, preventing malware, and
+                    enforcing corporate policies.</p>
+            </div>
+
+            <div class="HomepageAnonCards_item">
+                <div class="HomepageAnonCards_icon">
+                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-build-0f21c66ed03bfb36c597636d27ca621e.svg"
+                        alt="Build & Test Icon">
+                </div>
+                <h2>ESA</h2>
+                <p>Protects email communications from phishing, malware, and spam using advanced threat detection and
+                    encryption.</p>
+            </div>
+
+            <div class="HomepageAnonCards_item">
+                <div class="HomepageAnonCards_icon">
+                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-build-0f21c66ed03bfb36c597636d27ca621e.svg"
+                        alt="Build & Test Icon">
+                </div>
+                <h2>Stealth Watch</h2>
+                <p>Network visibility and threat analytics solution leveraging AI and machine learning to detect and
+                    respond to cyber threats in real-time.</p>
+            </div>
+        </div>
+
+        <!-- Download Syllabus Button -->
+        <div style="text-align: center; margin-top: 20px;">
+            <a id="open-pdf" href="your-syllabus.pdf" download class="download-btn">Download Syllabus</a>
+        </div>
+
+        <style>
+            .download-btn {
+                display: inline-block;
+                background-color: #000000;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                font-size: 18px;
+                border-radius: 5px;
+                transition: 0.3s;
+            }
+
+            .download-btn:hover {
+                background-color: #000000;
+            }
+        </style>
+    </section>
+
+    <!-- ContactFrom -->
+    <div class="cont">
+        <div class="form-container">
+            <div class="form-section">
+                <h2>Have a Question? We’re here to Help You!
+                </h2>
+                <p style="color: white;line-height: 1.5rem;">If you’re interested in learning more about our training
+                    materials or would like to schedule a free demo, please feel free to contact us at your convenience.
+                </p>
+
+                <form id="contactForm" action="send_email.php" method="POST">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+
+                    <!-- <select name="country" required>
+                        <option value="">Select a country</option>
+                        <option value="AF">Afghanistan</option>
+                        <option value="AL">Albania</option>
+                        <option value="DZ">Algeria</option>
+                        <option value="AS">American Samoa</option>
+                        <option value="AD">Andorra</option>
+                        <option value="AO">Angola</option>
+                        <option value="AI">Anguilla</option>
+                        <option value="AQ">Antarctica</option>
+                        <option value="AG">Antigua and Barbuda</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AM">Armenia</option>
+                        <option value="AW">Aruba</option>
+                        <option value="AU">Australia</option>
+                        <option value="AT">Austria</option>
+                        <option value="AZ">Azerbaijan</option>
+                        <option value="BS">Bahamas</option>
+                        <option value="BH">Bahrain</option>
+                        <option value="BD">Bangladesh</option>
+                        <option value="BB">Barbados</option>
+                        <option value="BY">Belarus</option>
+                        <option value="BE">Belgium</option>
+                        <option value="BZ">Belize</option>
+                        <option value="BJ">Benin</option>
+                        <option value="BM">Bermuda</option>
+                        <option value="BT">Bhutan</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BA">Bosnia and Herzegovina</option>
+                        <option value="BW">Botswana</option>
+                        <option value="BR">Brazil</option>
+                        <option value="BN">Brunei</option>
+                        <option value="BG">Bulgaria</option>
+                        <option value="BF">Burkina Faso</option>
+                        <option value="BI">Burundi</option>
+                        <option value="KH">Cambodia</option>
+                        <option value="CM">Cameroon</option>
+                        <option value="CA">Canada</option>
+                        <option value="CV">Cape Verde</option>
+                        <option value="CF">Central African Republic</option>
+                        <option value="TD">Chad</option>
+                        <option value="CL">Chile</option>
+                        <option value="CN">China</option>
+                        <option value="CO">Colombia</option>
+                        <option value="KM">Comoros</option>
+                        <option value="CG">Congo</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="HR">Croatia</option>
+                        <option value="CU">Cuba</option>
+                        <option value="CY">Cyprus</option>
+                        <option value="CZ">Czech Republic</option>
+                        <option value="DK">Denmark</option>
+                        <option value="DJ">Djibouti</option>
+                        <option value="DM">Dominica</option>
+                        <option value="DO">Dominican Republic</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="EG">Egypt</option>
+                        <option value="SV">El Salvador</option>
+                        <option value="GQ">Equatorial Guinea</option>
+                        <option value="ER">Eritrea</option>
+                        <option value="EE">Estonia</option>
+                        <option value="ET">Ethiopia</option>
+                        <option value="FI">Finland</option>
+                        <option value="FR">France</option>
+                        <option value="GA">Gabon</option>
+                        <option value="GM">Gambia</option>
+                        <option value="DE">Germany</option>
+                        <option value="GH">Ghana</option>
+                        <option value="GR">Greece</option>
+                        <option value="GT">Guatemala</option>
+                        <option value="GN">Guinea</option>
+                        <option value="HT">Haiti</option>
+                        <option value="HN">Honduras</option>
+                        <option value="HU">Hungary</option>
+                        <option value="IS">Iceland</option>
+                        <option value="IN">India</option>
+                        <option value="ID">Indonesia</option>
+                        <option value="IR">Iran</option>
+                        <option value="IQ">Iraq</option>
+                        <option value="IE">Ireland</option>
+                        <option value="IL">Israel</option>
+                        <option value="IT">Italy</option>
+                        <option value="JM">Jamaica</option>
+                        <option value="JP">Japan</option>
+                        <option value="JO">Jordan</option>
+                        <option value="KZ">Kazakhstan</option>
+                        <option value="KE">Kenya</option>
+                        <option value="KR">Korea</option>
+                        <option value="KW">Kuwait</option>
+                        <option value="LV">Latvia</option>
+                        <option value="LB">Lebanon</option>
+                        <option value="LY">Libya</option>
+                        <option value="LT">Lithuania</option>
+                        <option value="LU">Luxembourg</option>
+                        <option value="MG">Madagascar</option>
+                        <option value="MY">Malaysia</option>
+                        <option value="MX">Mexico</option>
+                        <option value="MA">Morocco</option>
+                        <option value="MZ">Mozambique</option>
+                        <option value="MM">Myanmar</option>
+                        <option value="NP">Nepal</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="NZ">New Zealand</option>
+                        <option value="NG">Nigeria</option>
+                        <option value="NO">Norway</option>
+                        <option value="OM">Oman</option>
+                        <option value="PK">Pakistan</option>
+                        <option value="PA">Panama</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="PE">Peru</option>
+                        <option value="PH">Philippines</option>
+                        <option value="PL">Poland</option>
+                        <option value="PT">Portugal</option>
+                        <option value="QA">Qatar</option>
+                        <option value="RO">Romania</option>
+                        <option value="RU">Russia</option>
+                        <option value="SA">Saudi Arabia</option>
+                        <option value="SN">Senegal</option>
+                        <option value="SG">Singapore</option>
+                        <option value="ZA">South Africa</option>
+                        <option value="ES">Spain</option>
+                        <option value="SE">Sweden</option>
+                        <option value="CH">Switzerland</option>
+                        <option value="TH">Thailand</option>
+                        <option value="TN">Tunisia</option>
+                        <option value="TR">Turkey</option>
+                        <option value="UA">Ukraine</option>
+                        <option value="AE">United Arab Emirates</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="US">United States</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="VE">Venezuela</option>
+                        <option value="VN">Vietnam</option>
+                        <option value="YE">Yemen</option>
+                        <option value="ZM">Zambia</option>
+                        <option value="ZW">Zimbabwe</option>
+                    </select> -->
+
+
+                    <input id="phone" type="tel" name="phone" placeholder="Phone Number" required>
+
+
+                    <select name="course_type" required>
+                        <option value="">Choose Course</option>
+                        <option value="short-courses">FCX/NSE8</option>
+                        <option value="featured-courses">CCIE Security</option>
+                        <option value="undergraduate">CCIE Data Center</option>
+                        <option value="diploma">CCIE Enterprise Infrastructure</option>
+                        <option value="certificate">CCIE Wireless</option>
+                        <option value="masters-degree">CCNA</option>
+                        <option value="postgraduate">SDN++/SD-WAN/ACI</option>
+                    </select>
+
+                    <textarea name="message" placeholder="Message" required></textarea>
+
+                    <button type="submit">Enquire Now</button>
+                </form>
+
+                <p id="success-message" style="display:none; color: green; font-weight: bold;">Form submitted
+                    successfully!</p>
+
+            </div>
+
+            <div class="address-section">
+                <h3>Contact Information</h3>
+                <p style="line-height: 1.5rem;"><i class="fas fa-map-marker-alt"></i>Nitiz Sharma Global Tech Pvt. Ltd,
+                    48-49, Gubbalala Main Rd, off Kanakapura Road, Gubbalala, Subramanyapura, Bengaluru, Karnataka
+                    560061</p>
+                <p><i class="fas fa-phone"></i> +91 7019021129</p>
+                <p><i class="fas fa-phone"></i> +91 776014441</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@yoursite.com">info@nitizsharma.com</a></p>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="footer-container lines">
+        <div class="footer-logo">
+            <div class="logo">
+                <a href="index.html"><span><img class="logosize" src="image/Nitiz-Sharma9.png"></span></a>
+            </div>
+        </div>
+        <div class="footer-wrapper">
+            <div class="footer-col">
+                <h2>Links</h2>
+                <a href="about.html">About Us</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="corporatetraining.html">Corporate Training</a>
+            </div>
+            <div class="footer-col">
+                <h2>Other Links</h2>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Become An Instructor</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Customer Registration process and guidelines</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025, Nitiz Sharma. All rights reserved.</p>
+        <div class="footer-social-icon">
+            <a href="https://www.facebook.com/nitizsharmatrainings/" target="_blank">
+                <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/nitizsharmatrainings/" target="_blank">
+                <i class="ri-instagram-line"></i>
+            </a>
+            <a href="https://twitter.com/NitizSharmaNZ" target="_blank">
+                <i class="ri-twitter-x-line"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/nitiz-sharma-training/" target="_blank">
+                <i class="ri-linkedin-box-fill"></i>
+            </a>
+            <a href="https://www.youtube.com/@nitizsharm" target="_blank">
+                <i class="ri-youtube-fill"></i>
+            </a>
+            <!-- WhatsApp Icon -->
+            <!-- <a href="https://wa.me/917019021129" target="_blank">
+                <i class="ri-whatsapp-fill"></i>
+            </a> -->
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    
+    <script>
+        // URL of the PDF file
+
+        const pdfUrl = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
+
+        // Add click event to the button
+        document.getElementById('open-pdf').addEventListener('click', function () {
+            // Open the PDF in a new tab for viewing
+            window.open(pdfUrl, '_blank');
+
+            // Force download the PDF
+            const link = document.createElement('a');
+            link.href = pdfUrl;
+            link.download = 'file.pdf'; // Name of the downloaded file
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+
+
+        // Initialize the phone input field with country flags and codes
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            initialCountry: "auto",  // Automatically detects user's country
+            separateDialCode: true,  // Shows country code separately
+            autoPlaceholder: "polite",
+            preferredCountries: ["us", "gb", "in"], // Most commonly used countries at the top
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+
+        // Ensure that only a valid number is submitted
+        document.querySelector("#contactForm").addEventListener("submit", function (event) {
+            if (!phoneInput.isValidNumber()) {
+                event.preventDefault(); // Prevent form submission
+                alert("Please enter a valid phone number.");
+            }
+        });
+    </script>
+   
+</footer>
+
+</html>

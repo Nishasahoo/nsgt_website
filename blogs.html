@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitiz Sharma</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Remix icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <!-- Font Awesome icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Swiper Slider CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        .page-section {
+            margin-bottom: 20px;
+        }
+
+        .active-btn {
+            width: 132px !important;
+        }
+
+        /* Container for the tabs */
+        .tabs {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            /* Background color for the tab container */
+            padding: 10px 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        /* Individual tab items */
+        .tab {
+            flex: 0 0 auto;
+            padding: 14px 20px;
+            margin-right: 2px;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* Style for the active tab */
+        .tab.active {
+            background-color: #bbb;
+            font-weight: bold;
+        }
+
+        /* Hover effect for tabs */
+        .tab:hover {
+            background-color: #ccc;
+        }
+
+
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            margin-top: 10px;
+
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .blog-item,
+        .image-gallery img {
+            margin: 10px 0;
+        }
+
+        .image-gallery img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO HEADER  -->
+    <header>
+        <!-- NAV  -->
+        <nav>
+            <div class="nav-left">
+                <div class="logo">
+                    <a href="index.html"><img class="logosize" src="image/Nitiz-Sharma9.png"></a>
+                </div>
+                <ul class="menu">
+                    <li class="has-dropdown">
+                        <a href="#">Courses <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <div class="mega-menu">
+                            
+                            <!-- First Row (2 Columns) -->
+                            <div class="mega-menu-row">
+                                <div class="mega-menu-column">
+                                    <h4>EXPERT LEVEL TRAINING PROGRAMS</h4>
+                                    <ul>
+                                        <li><a href="#">FCX/SE8</a></li>
+                                        <li><a href="#">CCIE Security</a></li>
+                                        <li><a href="#">CCIE Data Center</a></li>
+                                        <li><a href="#">CCIE Enterprise Infrastructure</a></li>
+                                        <li><a href="#">CCIE Wireless</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>PROFESSIONAL LEVEL TRAINING PROGRAMS</h4>
+                                    <ul>
+                                        <li><a href="#">CCNP Security Training</a></li>
+                                        <li><a href="#">CCNP Data Center Training</a></li>
+                                        <li><a href="#">CCNP Enterprise Infrastructure Training</a></li>
+                                        <li><a href="#">CCNP Wireless Training</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+        
+                            <!-- Second Row (2 Columns) -->
+                            <div class="mega-menu-row">
+                                <div class="mega-menu-column">
+                                    <h4>ASSOCIATE LEVEL TRAINING PROGRAMS</h4>
+                                    <ul>
+                                        <li><a href="#">CCNA</a></li>
+                                        <li><a href="#">CWNA</a></li>
+                                        <li><a href="#">AWS</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>SPECIAL COURSES</h4>
+                                    <ul>
+                                        <li><a href="#">SDN++</a></li>
+                                        <li style="margin-left: 20px;"><a href="#">SDWAN training and Certification</a></li>
+                                        <li style="margin-left: 20px;"><a href="#">Cisco ACI training and Certification</a></li>
+                                        <li><a href="#">Fortinet NSE 4</a></li>
+                                        <li><a href="#">Digital Marketing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="corporatetraining.html">Corporate Training</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <!-- <div class="call-us">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <div class="call-det">
+                        <p>Call Us:</p>
+                        <h2>+91 7019021129</h2>
+                    </div>
+                </div> -->
+                <div class="btn">
+                    <button onclick="location.href='contact.html'">Contact Us</button>
+                    <i class="ri-arrow-right-up-long-line"></i>
+                </div>
+            </div>
+            <div class="bars">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <!-- HERO SECTION  -->
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="hero-header">
+                        <div class="hero-content">
+                            <h1 class="herheadingsize" class="" id="animatedText">Learn What Is Network Automation</h1>
+                            <p>Network automation simplifies network management by giving insights into automating
+                                processes for security, scalability, featuring tools, benefits and more</p>
+                        </div>
+                        <!-- <div class="hero-img">
+                            <img src="image/NITIZ SHARMA.png" clas="nitizsharma-banner" alt="">
+                        </div> -->
+                    </div>
+                </div>
+                <!-- slide 2 -->
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE SECTION  -->
+
+    <div class="page-section">
+        <a href="index.html">Home</a>
+        <i class="ri-arrow-right-double-line"></i>
+        <span>Blogs</span>
+    </div>
+
+    <div class="tabs">
+        <div class="tab active" onclick="openTab(event, 'all')">All</div>
+        <div class="tab" onclick="openTab(event, 'ccie')">CCIE Data Center</div>
+        <div class="tab" onclick="openTab(event, 'cloud')">CCIE EI</div>
+        <div class="tab" onclick="openTab(event, 'security')">CCIE Security</div>
+        <div class="tab" onclick="openTab(event, 'networking')">CCIE Wireless</div>
+        <div class="tab" onclick="openTab(event, 'data')">CCNA</div>
+        <div class="tab" onclick="openTab(event, 'devops')">Network Engineering Course</div>
+        <div class="tab" onclick="openTab(event, 'nse')">NSE / FCX</div>
+    </div>
+
+
+
+
+
+    <!-- All -->
+    <div id="all" class="tab-content active">
+        <section class="blogs">
+            <div class="blog-wrapper">
+                <!-- blog col 1 -->
+                
+                    <div class="blog-col">
+                        <div class="blog-img">
+                            <img src="image/Understanding-and-Implementing-Virtual-Private-Networks-1-1-1024x576.png" alt="VPN in CCNA">
+                        </div>
+                        <div class="blog-content">
+                            <a href="vpns.html"><h2 style="color: #d7a61b;">Virtual Private Networks (VPNs) in CCNA and more...</h2></a>
+                         
+                        </div>
+                    </div>
+             
+                <!-- blog col 2 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/cisco.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Cisco ACI Training and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 3 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Understanding-NAT-for-CCNA-2-1024x576.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Introduction to NAT read more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 4 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/The-Ultimate-Guide-to-SD-WAN-Deployment-Models-and-Best-Practices-1-1024x512.png"
+                            alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Understanding SD-WAN and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 5 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Cisco-ASA-Firewalls-1024x576.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Cisco ASA Firewalls Set Up and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 6 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Data-Center-Networking-Architecture-Key-Concepts-and-Best-Practices-1024x576.png"
+                            alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>CCIE Data Center and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 7 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Fortinet-NSE-8-Certification-The-Ultimate-Guide-for-Network-Security-Experts-1-1024x576.png"
+                            alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Fortinet NSE 8 Certification and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 8 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/How-to-Use-GNS3-and-EVE-NG-for-CCIE-Security-Labs-1-1024x576.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2> GNS3 & EVE-NG for CCIE Security Labs and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 9 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Understanding-NAT-for-CCNA-2-1024x576.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>OSI and TCP Models for CCNA and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 10 -->
+
+                <!-- blog col 11 -->
+
+                <!-- blog col 12 -->
+
+            </div>
+        </section>
+    </div>
+    <!-- end -->
+    <div id="ccie" class="tab-content ">
+        <section class="blogs">
+            <div class="blog-wrapper">
+                <!-- blog col 1 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Data-Center-Networking-Architecture-Key-Concepts-and-Best-Practices-1024x576.png"
+                            alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>CCIE Data Center and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 2 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/What-Is-Data-Center-Security.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>What Is Data Center Security and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 3 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Top-Challenges-in-Modern-Data-Centers-and-How-to-Overcome-Them.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Top Challenges in Modern Data more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 4 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Blog-Feature-image-1024x536.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>What is Cloud Integration? and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 5 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/CCIE-Data-CENTER-VS-CCIE-SECURITY-FEATURE-IMAGE-1024x576.webp" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>What is Data Center Virtualization? and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 6 -->
+
+                <!-- blog col 7 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/flexpod.webp" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Understanding FlexPod Architecture and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 8 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Data-center-virt-BP-2-1024x568.webp" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2> GNS3 & EVE-NG for CCIE Security Labs and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 9 -->
+
+                <!-- blog col 10 -->
+
+                <!-- blog col 11 -->
+
+                <!-- blog col 12 -->
+
+            </div>
+        </section>
+    </div>
+
+    <!-- ccie -->
+    <div id="cloud" class="tab-content ">
+        <section class="blogs">
+            <div class="blog-wrapper">
+                <!-- blog col 1 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/In-Depth-Analysis-of-EIGRP-and-OSPF-in-CCIE-Enterprise-Infrastructure-1.png"
+                            alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>EIGRP and OSPF in CCIE Enterprise Infrastructure
+                            and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 2 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Website-blog-banner-image-5-2.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Understanding the Structure of the CCIE EI Lab Exam
+                            and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 3 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/EI-blog-website-banner.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>What is Enhanced Interior Gateway Routing Protocol (EIGRP)? more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 4 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Website-blog-banner-image.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Fundamentals of AI and Machine Learning and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 5 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/network-automation-feature-image.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>What is Network Automation? and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 6 -->
+
+                <!-- blog col 7 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/BGP-Feature-image.webp" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Understanding Border Getaway Protocol (BGP) and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 8 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/EI-salary-blog-FI.webp" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2> CCIE Enterprise Infrastructure and more...</h2>
+
+                    </div>
+                </div>
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Screenshot-150.webp" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2> SYN (Synchronize) packet and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 9 -->
+
+                <!-- blog col 10 -->
+
+                <!-- blog col 11 -->
+
+                <!-- blog col 12 -->
+
+            </div>
+        </section>
+    </div>
+    <!-- end -->
+<!-- cciesecurity -->
+<div id="security" class="tab-content ">
+    <section class="blogs">
+        <div class="blog-wrapper">
+            <!-- blog col 1 -->
+            <div class="blog-col">
+                <div class="blog-img">
+                    <img src="image/Cisco-ASA-Firewalls-1024x576.png" alt="">
+                </div>
+                <div class="blog-content">
+                    <h2>Cisco ASA Firewalls Set Up and more...</h2>
+
+                </div>
+            </div>
+            <!-- blog col 2 -->
+            <div class="blog-col">
+                <div class="blog-img">
+                    <img src="image/How-to-Use-GNS3-and-EVE-NG-for-CCIE-Security-Labs-1-1024x576.png" alt="">
+                </div>
+                <div class="blog-content">
+                    <h2>How to Use GNS3 and EVE-NG for CCIE Security Labs
+                        and more...</h2>
+
+                </div>
+            </div>
+            <!-- blog col 3 -->
+            <div class="blog-col">
+                <div class="blog-img">
+                    <img src="image/The-Role-of-Zero-Trust-Network-Architecture-in-CCIE-Security-Certification-1-1024x576.png" alt="">
+                </div>
+                <div class="blog-content">
+                    <h2>Zero Trust Network Architecture more...</h2>
+
+                </div>
+            </div>
+            <!-- blog col 4 -->
+            <div class="blog-col">
+                <div class="blog-img">
+                    <img src="image/Blue-Minimalist-Collage-Blog-Banner-1024x576.png" alt="">
+                </div>
+                <div class="blog-content">
+                    <h2>Security Misconfigurations
+                        and more...</h2>
+
+                </div>
+            </div>
+            <!-- blog col 5 -->
+            <div class="blog-col">
+                <div class="blog-img">
+                    <img src="image/EI-guest-posting-blog-banner-3.png" alt="">
+                </div>
+                <div class="blog-content">
+                    <h2>Why Build a Home Lab for CCIE Security? and more...</h2>
+
+                </div>
+            </div>
+            <!-- blog col 6 -->
+
+            <!-- blog col 7 -->
+            <div class="blog-col">
+                <div class="blog-img">
+                    <img src="image/8-ways-to-take-care-of-your-skin-1-1024x576.png" alt="">
+                </div>
+                <div class="blog-content">
+                    <h2>What Makes CCIE Security Special? and more...</h2>
+
+                </div>
+            </div>
+            <!-- blog col 8 -->
+            <div class="blog-col">
+                <div class="blog-img">
+                    <img src="image/Website-blog-banner-image-2.png" alt="">
+                </div>
+                <div class="blog-content">
+                    <h2> Why Firewalls Are Critical and more...</h2>
+
+                </div>
+            </div>
+           
+            <!-- blog col 9 -->
+            <div class="blog-col">
+                <div class="blog-img">
+                    <img src="image/What-is-IPsec-FEATURED-IMAGE-1-1024x576.webp" alt="">
+                </div>
+                <div class="blog-content">
+                    <h2>What is IPsec? and more...</h2>
+
+                </div>
+            </div>
+            <!-- blog col 10 -->
+            <div class="blog-col">
+                <div class="blog-img">
+                    <img src="image/ASA-Featured-image.png" alt="">
+                </div>
+                <div class="blog-content">
+                    <h2>What Is The Cisco ASA? and more...</h2>
+
+                </div>
+            </div>
+            <!-- blog col 11 -->
+          
+            <!-- blog col 12 -->
+
+        </div>
+    </section>
+</div>
+<!-- end -->
+  <!-- cciewireless -->
+  <div id="networking" class="tab-content ">
+    <section class="blogs">
+        <div class="blog-wrapper">
+            <!-- blog col 1 -->
+            <div class="blog-col">
+                <div class="blog-img">
+                    <img src="image/CCIE-WIRELESS-blog-website-banner.png" alt="">
+                </div>
+                <div class="blog-content">
+                    <h2>What is CCIE Wireless Certification? and more...</h2>
+
+                </div>
+            </div>
+            <!-- blog col 2 -->
+          
+            </div>
+            <!-- blog col 11 -->
+          
+            <!-- blog col 12 -->
+
+        </div>
+
+
+
+        <!-- nsefcx/ -->
+        <div id="nse" class="tab-content ">
+            <section class="blogs">
+                <div class="blog-wrapper">
+                    <!-- blog col 1 -->
+                    <div class="blog-col">
+                        <div class="blog-img">
+                            <img src="image/Fortinet-NSE-8-Certification-The-Ultimate-Guide-for-Network-Security-Experts-1.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h2>Understanding of Fortinet NSE 8 Certification and more...</h2>
+        
+                        </div>
+                    </div>
+                    <!-- blog col 2 -->
+                    <div class="blog-col">
+                        <div class="blog-img">
+                            <img src="image/Understanding-Layer-2-security-in-Network-Architecture-for-FCX-Certification.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h2>What is Layer 2 security in Network Architecture ? and more...</h2>
+        
+                        </div>
+                    </div>
+                    <div class="blog-col">
+                        <div class="blog-img">
+                            <img src="image/fortinet-blog-feature-image.webp" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h2>What is CCIE Wireless Certification? and more...</h2>
+        
+                        </div>
+                    </div>
+                    </div>
+                    <!-- blog col 11 -->
+                  
+                    <!-- blog col 12 -->
+        
+                </div>
+        <!-- end -->
+
+    <!-- ccna  -->
+
+    
+    <!-- end -->
+
+        <!-- ccna -->
+        <div id="data" class="tab-content ">
+            <section class="blogs">
+                <div class="blog-wrapper">
+                    <!-- blog col 1 -->
+                    <div class="blog-col">
+                        <div class="blog-img">
+                            <img src="image/Understanding-and-Implementing-Virtual-Private-Networks-2-1.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h2>Top 50 Questions and Answers for Subnetting and more...</h2>
+        
+                        </div>
+                    </div>
+                    <!-- blog col 2 -->
+                    <div class="blog-col">
+                        <div class="blog-img">
+                            <img src="image/Understanding-and-Implementing-Virtual-Private-Networks-1-1-1024x576.png"
+                                alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h2>Virtual Private Networks (VPNs) in CCNA and more...</h2>
+    
+                        </div>
+                    </div>
+                    <div class="blog-col">
+                        <div class="blog-img">
+                            <img src="image/Understanding-NAT-for-CCNA-2-1024x576.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h2>Why NAT Matters in Networking and more...</h2>
+    
+                        </div>
+                    </div>
+
+                    <div class="blog-col">
+                        <div class="blog-img">
+                            <img src="image/Understanding-OSI-1.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h2>OSI and TCP Models for CCNA and more...</h2>
+        
+                        </div>
+                    </div>
+                    <div class="blog-col">
+                        <div class="blog-img">
+                            <img src="image/Blue-Modern-Futuristic-Cyber-Security-Presentation-1.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h2>Importance of VLANs and Inter-VLAN and more...</h2>
+        
+                        </div>
+                    </div>
+                    <div class="blog-col">
+                        <div class="blog-img">
+                            <img src="image/Top-30-CCNA-Interview-Questions-and-How-to-Answer-Them-1.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h2>Subnetting Guide for CCNA Candidates and more...</h2>
+        
+                        </div>
+                    </div>
+                    <div class="blog-col">
+                        <div class="blog-img">
+                            <img src="image/Cyber-Monday-1-1024x576.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h2>Routing and OSI Model and more...</h2>
+        
+                        </div>
+                    </div>
+                    <div class="blog-col">
+                        <div class="blog-img">
+                            <img src="image/ccna-blog-banner.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h2>What is the CCNA 200-301 Exam, and Why is it Important? and more...</h2>
+        
+                        </div>
+                    </div>
+                    <div class="blog-col">
+                        <div class="blog-img">
+                            <img src="image/overview-of-routing-tables.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h2>Interpreting the Components of a Routing Table and more...</h2>
+        
+                        </div>
+                    </div>
+                    </div>
+                    <!-- blog col 11 -->
+                  
+                    <!-- blog col 12 -->
+        
+                </div>
+        <!-- end -->
+    </section>
+</div>
+  <!-- end -->
+    <div id="cloud" class="tab-content">
+        <h3>Cloud Computing Blogs</h3>
+        <p>Cloud trends in 2025...</p>
+    </div>
+
+    <div id="security" class="tab-content">
+        <h3>Cyber Security Blogs</h3>
+        <p>Cybersecurity best practices...</p>
+    </div>
+
+    <div id="networking" class="tab-content">
+        <h3>Networking Blogs</h3>
+        <p>Latest networking innovations...</p>
+    </div>
+
+    <div id="data" class="tab-content">
+        <h3>Data Science Blogs</h3>
+        <p>AI and Data Science insights...</p>
+    </div>
+
+    <div id="devops" class="tab-content">
+        <h3>DevOps Blogs</h3>
+        <p>DevOps automation and CI/CD...</p>
+    </div>
+    <div class="more-tab-btn">
+        <button class="active-btn">Read More</button>
+    </div>
+    <!-- <div class="project-marquee blog-marquee">
+        <marquee behavior="alternate" direction="">
+            <div class="project-marquee-text">
+                <h2>Blog</h2>
+                <i class="ri-gemini-line"></i>
+                <h2>Blog</h2>
+                <i class="ri-gemini-line"></i>
+                <h2>Blog</h2>
+                <i class="ri-gemini-line"></i>
+                <h2>Blog</h2>
+                <i class="ri-gemini-line"></i>
+                <h2>Blog</h2>
+                <i class="ri-gemini-line"></i>
+                <h2>Blog</h2>
+                <i class="ri-gemini-line"></i>
+                <h2>Blog</h2>
+                <i class="ri-gemini-line"></i>
+                <h2>Blog</h2>
+                <i class="ri-gemini-line"></i>
+                <h2>Blog</h2>
+                <i class="ri-gemini-line"></i>
+            </div>
+        </marquee>
+    </div> -->
+    <!-- BLOGS -->
+
+
+
+
+
+
+    <!-- FOOTER  -->
+    <footer>
+        <div class="footer-container lines">
+            <div class="footer-logo">
+                <div class="logo">
+                    <a href="index.html"><span><img class="logosize" src="image/Nitiz-Sharma9.png"></span></a>
+                </div>
+            </div>
+            <div class="footer-wrapper">
+                <div class="footer-col">
+                    <h2>Links</h2>
+
+                    <a href="about.html">About Us</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="corporatetraining.html">Corporate Training</a>
+
+                </div>
+                <div class="footer-col">
+                    <h2>Other Links</h2>
+
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Refund Policy</a>
+                    <a href="#">Become An Instructor</a>
+                    <a href="#">Terms and Conditions</a>
+                    <a href="#">Customer Registration process and guidelines</a>
+                </div>
+                <!-- <div class="footer-col">
+                    <h1>Subscribe our newsletter</h1>
+
+                    <div class="inputs">
+                        <input type="text" placeholder="Enter E-mail Here...">
+                        <i class="fa fa-paper-plane fa-md"></i>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025, Nitiz Sharma. All rights reserved.</p>
+            <div class="footer-social-icon">
+                <a href="https://www.facebook.com/nitizsharmatrainings/" target="_blank">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="https://www.instagram.com/nitizsharmatrainings/" target="_blank">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://twitter.com/NitizSharmaNZ" target="_blank">
+                    <i class="ri-twitter-x-line"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/nitiz-sharma-training/" target="_blank">
+                    <i class="ri-linkedin-box-fill"></i>
+                </a>
+                <a href="https://www.youtube.com/@nitizsharm" target="_blank">
+                    <i class="ri-youtube-fill"></i>
+                </a>
+
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/917019021129?text=Hello!%20I%20need%20some%20assistance." 
+    class="whatsapp-float" 
+    target="_blank">
+     <i class="ri-whatsapp-fill"></i>
+ </a>
+    <!-- Swiper Slider JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <!-- GSAP  -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <!-- GSAP SCROLLING -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
