@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta http-equiv="refresh" content="3;url=https://nitizsharma.com" />
+</head>
+<body class="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 min-h-screen flex items-center justify-center px-4">
+
+  <div class="bg-white shadow-xl rounded-2xl p-8 max-w-md w-full text-center animate-fade-in">
+    <!-- Success Icon -->
+    <div class="flex justify-center mb-4">
+      <div class="bg-green-100 rounded-full p-4">
+        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Heading -->
+    <h2 class="text-2xl font-extrabold text-gray-800 mb-2">Thank You!</h2>
+    <p class="text-gray-600 mb-4">Your form was submitted successfully.<br>Our team will connect with you shortly.</p>
+
+    <!-- Redirect Message -->
+    <p class="text-sm text-gray-400">Redirecting to homepage in a moment...</p>
+  </div>
+
+  <!-- Optional animation -->
+  <style>
+    .animate-fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+
+</body>
+</html>

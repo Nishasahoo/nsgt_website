@@ -13,8 +13,58 @@
     <!-- Swiper Slider CSS  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        /* Prevent horizontal scroll across the whole page */
+        /* Ensure no horizontal scroll globally */
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-    
+        /* Prevent child elements from causing overflow */
+        * {
+            box-sizing: border-box;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            transition-timing-function: ease;
+        }
+
+        /* Handle Swiper internal overflow issues */
+        .swiper,
+        .swiper-wrapper,
+        .swiper-slide {
+            width: 100% !important;
+            max-width: 100%;
+            /* overflow-x: hidden !important; */
+        }
+
+        /* Responsive iframe fix */
+        iframe {
+            max-width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* Make sure nav and mega-menu don't exceed width */
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        body::before,
+        body::after {
+            display: none !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,47 +81,56 @@
                     <li class="has-dropdown">
                         <a href="#">Courses <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                         <div class="mega-menu">
-                            
+
                             <!-- First Row (2 Columns) -->
                             <div class="mega-menu-row">
                                 <div class="mega-menu-column">
                                     <h4>EXPERT LEVEL TRAINING PROGRAMS</h4>
                                     <ul>
-                                        <li><a href="#">FCX/SE8</a></li>
-                                        <li><a href="#">CCIE Security</a></li>
-                                        <li><a href="#">CCIE Data Center</a></li>
-                                        <li><a href="#">CCIE Enterprise Infrastructure</a></li>
-                                        <li><a href="#">CCIE Wireless</a></li>
+                                        <li><a href="fortinet-nse8-training.html">FCX/NSE8</a></li>
+                                        <li><a href="cciesecurity.html">CCIE Security</a></li>
+                                        <li><a href="ccie-data-center-training-and-certification.html">CCIE Data
+                                                Center</a></li>
+                                        <li><a href="ccie-enterprise-infrastructure-training.html">CCIE Enterprise
+                                                Infrastructure</a></li>
+                                        <li><a href="ccie-wireless-training.html">CCIE Wireless</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega-menu-column">
                                     <h4>PROFESSIONAL LEVEL TRAINING PROGRAMS</h4>
                                     <ul>
-                                        <li><a href="#">CCNP Security Training</a></li>
-                                        <li><a href="#">CCNP Data Center Training</a></li>
-                                        <li><a href="#">CCNP Enterprise Infrastructure Training</a></li>
-                                        <li><a href="#">CCNP Wireless Training</a></li>
+                                        <li><a href="ccnp-security-training.html">CCNP Security Training</a></li>
+                                        <li><a href="ccnp-data-center-training.html">CCNP Data Center Training</a></li>
+                                        <li><a href="ccnp-enterprise-infrastructure-training.html">CCNP Enterprise
+                                                Infrastructure Training</a></li>
+                                        <li><a href="ccnp-wireless-training.html">CCNP Wireless Training</a></li>
+                                        <li><a href="cisco-ise-training.html">Cisco ISE Training</a></li>
                                     </ul>
                                 </div>
                             </div>
-        
+
                             <!-- Second Row (2 Columns) -->
                             <div class="mega-menu-row">
                                 <div class="mega-menu-column">
                                     <h4>ASSOCIATE LEVEL TRAINING PROGRAMS</h4>
                                     <ul>
-                                        <li><a href="#">CCNA</a></li>
-                                        <li><a href="#">CWNA</a></li>
-                                        <li><a href="#">AWS</a></li>
+                                        <li><a href="ccna-course-and-certification.html">CCNA</a></li>
+                                        <!-- <li><a href="#">CWNA</a></li>
+                                        <li><a href="#">AWS</a></li> -->
                                     </ul>
                                 </div>
                                 <div class="mega-menu-column">
                                     <h4>SPECIAL COURSES</h4>
                                     <ul>
-                                        <li><a href="#">SDN++</a></li>
-                                        <li style="margin-left: 20px;"><a href="#">SDWAN training and Certification</a></li>
-                                        <li style="margin-left: 20px;"><a href="#">Cisco ACI training and Certification</a></li>
-                                        <li><a href="#">Fortinet NSE 4</a></li>
+                                        <li><a href="/cisco-sdn-training-and-certification.html">SDN++</a></li>
+                                        <li style="margin-left: 20px;"><a
+                                                href="sdwan-training-and-certification.html">SDWAN training and
+                                                Certification</a>
+                                        </li>
+                                        <li style="margin-left: 20px;"><a
+                                                href="cisco-aci-training-and-certification.html">Cisco ACI training and
+                                                Certification</a></li>
+                                        <li><a href="fortinet-nse-4-certification.html">Fortinet NSE 4</a></li>
                                         <li><a href="#">Digital Marketing</a></li>
                                     </ul>
                                 </div>
@@ -81,19 +140,24 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="corporatetraining.html">Corporate Training</a></li>
                     <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
+
+
             </div>
-            <div class="nav-right">
-                <!-- <div class="call-us">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <div class="call-det">
-                        <p>Call Us:</p>
-                        <h2>+91 7019021129</h2>
-                    </div>
-                </div> -->
+            <div class="nav-right flex items-center gap-4">
                 <div class="btn">
-                    <button onclick="location.href='contact.html'">Contact Us</button>
-                    <i class="ri-arrow-right-up-long-line"></i>
+                    <!-- Login Button -->
+                    <button onclick="location.href='https://nitizsharma.com/dashboard/'"
+                        class="bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                        Login/
+                    </button>
+
+                    <!-- Register Button -->
+                    <button onclick="location.href='https://nitizsharma.com/dashboard/'"
+                        class="bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+                        Register
+                    </button>
                 </div>
             </div>
             <div class="bars">
@@ -103,14 +167,17 @@
         <!-- HERO SECTION  -->
         <div class="swiper heroSwiper">
             <div class="swiper-wrapper">
-                
+
                 <div class="swiper-slide">
                     <div class="hero-header">
                         <div class="hero-content">
-                            <h1 class="herheadingsize" class="" id="animatedText">Why Choose Our CCIE Data Center Training?</h1>
-                        
-             
-                            <p>The CCIE Data Center certification is the pinnacle of expertise in designing, deploying, and managing complex data center infrastructures. Our program is designed to equip</p>
+                            <h1 class="herheadingsize" class="" id="animatedText">Why Choose Our CCIE Data Center
+                                Training?</h1>
+
+
+                            <p style="text-align: justify;">The CCIE Data Center certification is the pinnacle of
+                                expertise in designing, deploying,
+                                and managing complex data center infrastructures. Our program is designed to equip</p>
                             <!-- <div class="btn">
                                 <button>Explore Courses</button>
                                 <i class="ri-arrow-right-up-long-line"></i>
@@ -171,7 +238,7 @@
         <div class="cfb-title">
             <h2 style="align-items: center; display: flex; justify-content: center;padding-top: 30px;">Testimonials
             </h2>
-          
+
         </div>
         <div class="cfb-swiper">
             <div class="swiper cfbSwiper">
@@ -191,7 +258,9 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p>View my verified achievement from Cisco. Finally, after years of efforts and learns, I got my CCIE number #66007! Thanks for everyone who supported me in this long journey! Big Thanks for Instructor Nitiz Sharma for your support and learning program!</p>
+                            <p>View my verified achievement from Cisco. Finally, after years of efforts and learns, I
+                                got my CCIE number #66007! Thanks for everyone who supported me in this long journey!
+                                Big Thanks for Instructor Nitiz Sharma for your support and learning program!</p>
                         </div>
                     </div>
                     <!-- slide 2 -->
@@ -209,7 +278,9 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p>Excellent Training  For CCNA-to-CCIE technology learning as well as Certification Prep. Enrolled For CCIE Security end to end program every lecture is in depth training provided By Mr. Nitiz. Highly recommended course to pass CCIE Security lab.</p>
+                            <p>Excellent Training For CCNA-to-CCIE technology learning as well as Certification Prep.
+                                Enrolled For CCIE Security end to end program every lecture is in depth training
+                                provided By Mr. Nitiz. Highly recommended course to pass CCIE Security lab.</p>
                         </div>
                     </div>
                     <!-- slide 3 -->
@@ -227,7 +298,9 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p>Initially thought CCIE is very tough and hard to achieve. However after completing CCIE Security Training, Practice Labs and Support from Nitiz Sharma, it felt easy to achieve. Thanks for making my CCIE dream really easy to achieve.</p>
+                            <p>Initially thought CCIE is very tough and hard to achieve. However after completing CCIE
+                                Security Training, Practice Labs and Support from Nitiz Sharma, it felt easy to achieve.
+                                Thanks for making my CCIE dream really easy to achieve.</p>
                         </div>
                     </div>
                 </div>
@@ -237,21 +310,21 @@
         <div class="swiper-button-next swiper-btn5 swiper-btn-next"><i class="ri-arrow-right-long-line"></i></div>
     </section>
     <!-- <section class="about-page"> -->
-        <!-- <div class="abp-title">
+    <!-- <div class="abp-title">
             <h1 style="color: white;">Harnessing the power of artificial intelligence to create innovative and effective solutions.</h1>
         </div> -->
-        <!-- <div class="abp-container">
+    <!-- <div class="abp-container">
             <div class="abp-left">
                 <YouTube Video Embed -->
-                <!-- <iframe width="600" height="515" src="https://www.youtube.com/embed/-DfQfiRDvwc"
+    <!-- <iframe width="600" height="515" src="https://www.youtube.com/embed/-DfQfiRDvwc"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div> -->
 
-        <!-- </div> --> 
-        <!-- <div class="abp-content">
+    <!-- </div> -->
+    <!-- <div class="abp-content">
             <p>Nitiz Sharma and Company is registered in India and We are an online/offline ed-tech platform that began with an idea to share in-depth knowledge and make the best network/security engineers. NSC was a vision to help students understand concepts from scratch to expert level. The journey started in 2010 with the confidence to change students' futures by giving them the best training. We have grown to become India’s leader in providing networking/data communications training and solutions. We are widely recognized as the region’s trendsetter, consistently delivering quality and setting new industry benchmarks.</p>
             <div class="abp-arrow">
                 <img src="image/about-page-arrow.svg" alt="">
@@ -261,17 +334,19 @@
 
     <section class="container-fluid bg2 mb-0 pb-0 why_infosecTrain" style="background:#000000;">
         <div class="container">
-          
-              <div class="col-md-12 video-section">
-                 <div class="tablet">
+            <div class="col-md-12 video-section">
+                <div class="tablet">
                     <div class="content">
-                        <iframe width="582" height="378" src="https://www.youtube.com/embed/-DfQfiRDvwc" title="CCIE Security v6.1 Training Demo Class | Nitiz Sharma Trainings" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe width="582" src="https://www.youtube.com/embed/-DfQfiRDvwc"
+                            title="CCIE Security v6.1 Training Demo Class | Nitiz Sharma Trainings" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                 </div>
-              </div>
-           </div>
+                </div>
+            </div>
         </div>
-     </section>
+    </section>
+
     <!-- CLIENTS FEEDBACK  -->
 
     <!-- WHY CHOOSE US -->
@@ -337,11 +412,11 @@
                 <div class="footer-col">
                     <h2>Other Links</h2>
 
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Refund Policy</a>
-                    <a href="#">Become An Instructor</a>
-                    <a href="#">Terms and Conditions</a>
-                    <a href="#">Customer Registration process and guidelines</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="refundPolicy.html">Refund Policy</a>
+                    <a href="instructor.html">Become An Instructor</a>
+                    <a href="termscondition.html">Terms and Conditions</a>
+                    <a href="customerregistrstion.html">Customer Registration process and guidelines</a>
                 </div>
                 <!-- <div class="footer-col">
                     <h1>Subscribe our newsletter</h1>
@@ -376,11 +451,10 @@
             </div>
         </div>
     </footer>
-    <a href="https://wa.me/917019021129?text=Hello!%20I%20need%20some%20assistance." 
-    class="whatsapp-float" 
-    target="_blank">
-     <i class="ri-whatsapp-fill"></i>
- </a>
+    <!-- <a href="https://wa.me/917019021129?text=Hello!%20I%20need%20some%20assistance." class="whatsapp-float"
+        target="_blank">
+        <i class="ri-whatsapp-fill"></i>
+    </a> -->
 
     <!-- Swiper Slider JS  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
@@ -389,6 +463,46 @@
     <!-- GSAP SCROLLING -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+
+
+    <script src="/js/language-switcher.js"></script>
+    <script>
+
+
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const courseMenuItem = document.querySelector(".menu li.has-dropdown");
+
+            // Only toggle dropdown if the actual <li> (not the <a>) is clicked
+            courseMenuItem.addEventListener("click", function (event) {
+                if (event.target.tagName !== 'A') {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    this.classList.toggle("active");
+                }
+            });
+
+            // Close dropdown on clicking anywhere outside
+            document.addEventListener("click", function (event) {
+                if (!courseMenuItem.contains(event.target)) {
+                    courseMenuItem.classList.remove("active");
+                }
+            });
+        });
+
+
+        var swiper = new Swiper(".cfbSwiper", {
+            direction: 'horizontal',   // already default, keep as is
+            loop: true,                // optional: keeps sliding continuously
+            slidesPerView: 1,          // show one at a time
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
 </body>
 

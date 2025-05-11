@@ -4,308 +4,1884 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nitiz Sharma</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="https://templates.envytheme.com/finix/default/assets/img/favicon.png"
-        type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <title>Enhanced Hero Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <!-- Font Awesome icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Swiper Slider CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
-   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
 </head>
+
+
 <style>
+    :root {
+        --prime-color: #d5a12b;
+        --secondary-color: #d5a12b;
+        --third-color: #d5a12b;
+        --bg-color: #241B38;
+        --text-color: #07000E;
+        --light-text: #716f73;
+        --black-color: #000;
+        --white-color: #fff;
+        --prim-icon-gradient: linear-gradient(50deg, #d5a12b 0%, #f3c049 49%, #e9c87b59 100%);
+        --prim-text-gradient: linear-gradient(90deg, ##d5a12b 0%, #d5a12b 48.53%, #ff6f05 100%);
+        --nav-menu-gradient: linear-gradient(180deg, #d5a12b 0%, rgba(254, 117, 36, 0) 80%);
+        --nav-gradient: linear-gradient(90deg, #d5a12d 0%, #d5a12b 2%, #d5a12b 100%);
+        --service-gradient: linear-gradient(-90deg, #d5a12b 0%, rgba(162, 52, 253, 0) 100%);
+        --service-gradient-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+
+        --Kaushan-font: "Kaushan Script", serif;
+        --DM-sans-font: "DM Sans", serif;
+
+        --transition-regular: .3s;
+        --transition-slow: .6s;
+    }
+
+    html,
     body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
+
+        font-family: 'Poppins', sans-serif;
+        background-color: #eef2f7;
+        max-width: 100%;
+        overflow-x: hidden;
+        /* position: relative; */
+    }
+
+
+
+    .bodycontform {
+        background-color: #000;
         margin: 0;
         padding: 0;
+        font-family: Arial, sans-serif;
     }
 
-    .HomepageAnonCards_root {
+    .smooth-scroll {
+        scroll-behavior: smooth;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    .hero-section {
         position: relative;
-        padding: 3rem 0;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .width-wrapper {
+        overflow: hidden;
+        color: white;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.756), rgba(0, 0, 0, 0.929)), url('wp3833677.jpg') no-repeat center center / cover;
         width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
+        padding: 50px 0;
     }
 
-    .HomepageAnonCards_item {
-        background: #ffffff;
-        padding: 1.5rem;
-        margin: 1rem;
+    .hero-content {
+        position: relative;
+        z-index: 10;
+        background: rgb(19 24 27 / 81%);
+        padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 300px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transform: translateY(50px);
     }
 
-    .HomepageAnonCards_icon {
-        background: #d5a12b;
-        border-radius: 50%;
-        width: 75px;
-        height: 75px;
-        margin: -40px auto 10px;
+    /* video setion */
+
+    .cs-main-body {
+        font-family: Arial, sans-serif;
+        background-color: #eef2f7;
         display: flex;
-        align-items: center;
         justify-content: center;
-    }
-
-    .HomepageAnonCards_icon img {
-        width: 50px;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-        margin: 10px 0;
-    }
-
-    p {
-        color: #666;
-        font-size: 1rem;
-    }
-
-    .button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #000000;
-        color: #ffffff;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-top: 10px;
-        font-weight: bold;
-    }
-
-    .training-schedule {
-        background-color: #1d1d1d;
-        padding: 3rem 0;
-        width: 100%;
-        /* max-width: 1028px; */
-        margin: 0 auto;
-    }
-
-    .schedule-container {
-        display: flex;
-        flex-direction: row;
         align-items: center;
-        gap: 1.5rem;
+        height: 100vh;
+        margin: 0;
+
     }
 
-    .schedule-item {
-        background: #00000000;
-        padding: 1.5rem;
-        border-radius: 10px;
+    .cs-carousel-container {
+        display: flex;
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
+        width: 85%;
+        max-width: 1000px;
+        height: 400px;
+        margin-top: 50px;
+    }
+
+    .ccie-success-title {
+        font-size: 2em;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+        /* Space for underline */
+    }
+
+    .funky-underline {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
         width: 100%;
-        max-width: 600px;
-        height: 200px;
-        /* Fixed height for all items */
+        height: 4px;
+        background: linear-gradient(90deg, #000000, #0000009a, #d5a12b);
+        border-radius: 5px;
+        animation: wave-underline 1.5s ease-in-out infinite;
+    }
+
+    @keyframes wave-underline {
+        0% {
+            transform: scaleX(0);
+            opacity: 0;
+        }
+
+        50% {
+            transform: scaleX(1.2);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scaleX(1);
+        }
+    }
+
+    .cs-carousel-image {
+        width: 50%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+    }
+
+    .cs-carousel-image::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(4 11 15 / 86%);
+        z-index: 1;
+        border-radius: 16px;
+    }
+
+    .cs-carousel-image {
+        position: relative;
+        background-image: url('ccnp-videoimg.webp');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cs-carousel-content {
+        width: 50%;
+        padding: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .cs-glue-spacer-3-top {
+        margin-top: 30px;
+        padding: 15px;
+    }
+
+    .cs-ion-arrow-button {
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+        color: #040a0e;
+        font-weight: bold;
+        position: relative;
     }
 
-    .schedule-item:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    .cs-ion-arrow-button__circle {
+        background-color: #040a0e;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color .2s;
+        position: absolute;
+        top: -70px;
+        animation: cs-pulse 1.5s infinite ease-in-out;
     }
 
-    .schedule-item h2 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-        color: #ffffff;
-        transition: color 0.3s ease;
+    .cs-ion-arrow-button__circle:hover {
+        background-color: #040a0ec8;
     }
 
-    .schedule-item:hover h2 {
-        color: #ffffff;
-        /* Change heading color on hover */
+    .cs-ion-arrow-button__circle-icon {
+        color: white;
+        font-size: 26px;
     }
 
-    .schedule-item p {
-        color: #666;
-        font-size: 1rem;
-        line-height: 1.5;
-        transition: color 0.3s ease;
-        white-space: nowrap;
+    .cs-ion-arrow-button span {
+        margin-top: 20px;
     }
 
-    .schedule-item:hover p {
-        color: #333;
-        /* Change paragraph color on hover */
+    .cs-quote {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: black;
     }
 
-    .container-video {
+    .cs-author {
+        font-size: 16px;
+        color: gray;
+        margin-bottom: 20px;
+    }
+
+    /* Modal styles */
+    .cs-modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cs-modal-content {
+        background-color: white;
+        position: relative;
+        padding: 20px;
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .cs-modal iframe {
+        width: 100%;
+        height: 400px;
+    }
+
+    .cs-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+        color: black;
+        cursor: pointer;
+    }
+
+    /* Animation */
+    @keyframes cs-pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 10px rgba(0, 149, 255, 0.6);
+        }
+
+        50% {
+            transform: scale(1.2);
+            box-shadow: 0 0 30px rgba(0, 149, 255, 0.6);
+        }
+
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 10px rgba(0, 149, 255, 0.6);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .cs-carousel-container {
+            flex-direction: column;
+            height: auto;
+        }
+
+        .cs-carousel-image,
+        .cs-carousel-content {
+            width: 100%;
+        }
+    }
+
+    /* countercss */
+
+
+
+    /* cciecontsiner */
+    .containerdes {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 50px;
-    }
-
-    .content {
-        width: 60%;
-    }
-
-    .video {
-        width: 35%;
-    }
-
-    iframe {
-        width: 100%;
-        height: 315px;
-    }
-
-    .padtop {
+        max-width: 1200px;
+        margin: 0px auto;
+        padding: 20px;
+        gap: 20px;
         padding-top: 50px;
         padding-bottom: 50px;
     }
 
-    .icon {
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 600px;
+    }
+
+    .card-1 {
+        background: linear-gradient(135deg, #1e1e1e, #333);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .card-1:hover {
+        transform: scale(1.05);
+    }
+
+    .card-1 i {
         font-size: 24px;
-        color: #d5a12b;
-        margin-bottom: 10px;
+        color: #d8a900;
+        margin-right: 15px;
     }
 
-    download-btn {
-        display: inline-block;
-        background-color: #d5a12b;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        font-size: 18px;
-        border-radius: 5px;
-        transition: 0.3s;
-    }
-
-    .download-btn:hover {
-        background-color: #d5a12b;
+    .card-1 span {
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
     }
 
     .form-container {
-        display: flex;
-        justify-content: space-between;
-        padding: 40px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .form-section {
-        width: 60%;
-        background-color: #000000;
+        width: 40%;
+        background-color: #111;
         padding: 30px;
-
-    }
-
-    .form-section h2 {
-        margin-bottom: 20px;
-        font-size: 26px;
+        border-radius: 12px;
         color: white;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
     }
 
-    .form-section input,
-    .form-section select,
-    .form-section textarea {
-        width: 100%;
-        padding: 8px 0px;
+    .form-container h2 {
+        font-size: 24px;
         margin-bottom: 15px;
+    }
+
+    .form-container input,
+    .form-container select,
+    .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
         border: none;
         border-bottom: 1px solid #edecec5b;
-
         font-size: 16px;
         background: transparent;
         color: #6f7173;
         outline: none;
-        margin-top: 20px;
     }
 
-    .separator {
-        height: 1px;
-        background: #777;
-        margin-bottom: 15px;
-    }
-
-    .form-section button {
-        background-color: #ffffff;
-        color: #000000;
+    .form-container button {
+        background-color: #d5a12b;
+        color: black;
         padding: 12px 20px;
         border: none;
         cursor: pointer;
         font-size: 18px;
-        width: 40%;
+        width: 100%;
         border-radius: 5px;
+        margin-top: 20px;
     }
 
-    .form-section button:hover {
-        background-color: #d5a12b;
+    .form-container button:hover {
+        background-color: #b5881a;
     }
 
-    .address-section {
-        width: 48%;
-        background-color: #1a1616;
-        padding: 40px;
-        border-radius: 12px;
-        color: white;
+    @media (max-width: 768px) {
+        .containerdes {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cards-container {
+            grid-template-columns: 1fr;
+            max-width: 100%;
+        }
+
+        .form-container {
+            width: 90%;
+            margin-top: 20px;
+        }
     }
 
-    .address-section h3 {
-        margin-bottom: 39px;
-        font-size: 24px;
+
+
+    /* course description */
+    .course-container {
+        max-width: 60rem;
+        margin-left: 5%;
+        padding: 3rem;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s ease-out forwards;
     }
 
-    .address-section p {
-        margin: 40px 0;
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .course-title {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #1d1f20;
+        margin-bottom: 20px;
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeIn 1s ease-out forwards 0.5s;
+    }
+
+    .course-subtitle {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #1d1f20;
+        margin-bottom: 20px;
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeIn 1s ease-out forwards 0.5s;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .course-description,
+    .course-text {
+        font-size: 1.1rem;
+        color: #1d1f20;
+        margin-bottom: 20px;
+        max-width: 600px;
+        opacity: 0;
+        transform: translateY(10px);
+        animation: fadeIn 1s ease-out forwards 0.7s;
+    }
+
+    .list-container {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .gradient-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px 40px;
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .gradient-list li {
+        background: rgb(255, 255, 255);
+        border-radius: 0 0.5rem 0.5rem 0.5rem;
+        box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+        counter-increment: gradient-counter;
+        padding: 1rem;
+        position: relative;
+        font-size: 1rem;
+        text-align: left;
+        margin-bottom: 10px;
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: fadeInLeft 0.5s ease-out forwards;
+        color: #000;
+    }
+
+    @keyframes fadeInLeft {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .gradient-list li:nth-child(even) {
+        animation: fadeInRight 0.5s ease-out forwards;
+    }
+
+    @keyframes fadeInRight {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .gradient-list li::before {
+        content: counter(gradient-counter);
+        background: linear-gradient(135deg, #d5a12b 0%, #d5a12b 100%);
+        color: black !important;
+        font-weight: 900;
+        font-size: 1.2rem;
+        width: 2.5rem;
+        height: 2.5rem;
         display: flex;
         align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        position: absolute;
+        left: -1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+
     }
 
-    .address-section i {
-        margin-right: 10px;
-        font-size: 20px;
+    /* Second list with different styling */
+    .gradient-list-2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px 40px;
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .gradient-list-2 li {
+        background: rgb(255, 255, 255);
+        border-radius: 0 0.5rem 0.5rem 0.5rem;
+        box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+        counter-increment: gradient-counter;
+        padding: 1rem;
+        position: relative;
+        font-size: 1rem;
+        text-align: left;
+        margin-bottom: 10px;
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: fadeInLeft 0.5s ease-out forwards;
+        color: #000;
+    }
+
+    .gradient-list-2 li::before {
+        content: counter(gradient-counter);
+        background: linear-gradient(135deg, #d5a12b 0%, #d5a12b 100%);
+        color: #1d1f20;
+        font-weight: 900;
+        font-size: 1.2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        position: absolute;
+        left: -1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+    }
+
+
+    /* counter  */
+
+    .page-wrapper {
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        padding: 20px;
+
+    }
+
+    .content-grid {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 1200px;
+        flex-wrap: wrap;
+    }
+
+    .content-card {
+        background: linear-gradient(135deg, #000000 0%, #050e13 100%);
+        color: white;
+        text-align: center;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        width: 220px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .content-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .content-card::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: skewX(-30deg);
+        transition: 0.5s;
+    }
+
+    .content-card:hover::after {
+        left: 100%;
+    }
+
+    .card-icon {
+        font-size: 40px;
+        margin-bottom: 15px;
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .card-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .card-description p {
+        font-size: 16px;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media(max-width: 1024px) {
+        .content-grid {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    @media(max-width: 768px) {
+        .content-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+
+    /* labsccienewdeign */
+
+    .labbody {
+        font-family: 'Poppins', sans-serif;
+        background-color: #0a0a0a;
+        margin: 0;
+        padding: 0;
+        color: white;
+        overflow-x: hidden;
+    }
+
+    .lab-container {
+        padding: 70px 60px;
+        text-align: center;
+    }
+
+    .lab-header {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .lab-info {
+        flex: 1;
+        text-align: left;
+        padding-left: 50px;
+        animation: slideLeft 1s ease-in-out;
+    }
+
+    .lab-info h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .lab-info p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    .lab-image {
+        flex: 1;
+        text-align: center;
+        animation: slideRight 1s ease-in-out;
+    }
+
+    .lab-image img {
+        width: 100%;
+        max-width: 550px;
+        border: 5px solid #f1c40f;
+        box-shadow: 0 12px 30px rgba(255, 255, 255, 0.4);
+        clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .lab-image img:hover {
+        transform: scale(1.05);
+    }
+
+    .lab-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+        padding: 40px;
+        max-width: 1200px;
+        margin: auto;
+        animation: fadeUp 1s ease-in-out;
+    }
+
+    .feature-box {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+        text-align: center;
+    }
+
+    .feature-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+    }
+
+    .feature-box i {
+        font-size: 50px;
+        color: #d5a12b;
+        margin-bottom: 20px;
+    }
+
+    .feature-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    @keyframes slideLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideRight {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+
+    /* end */
+    /* General Styling */
+    .ccie-success-body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #e5e7eb;
+        color: white;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    /* Section Styling */
+    .ccie-success-section {
+        padding: 50px 0;
+    }
+
+    .ccie-success-title {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        color: #d5a12b;
+        /* text-shadow: 0 0 10px #d5a12b; */
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+    }
+
+    /* Swiper Slider */
+    .ccie-swiper-container {
+        width: 90%;
+        max-width: 1200px;
+        padding: 20px;
+    }
+
+    /* Individual Profile Cards */
+    .ccie-profile-card {
+        background: linear-gradient(135deg, #111, #222);
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0px 5px 20px rgba(255, 196, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid #d5a12b;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ccie-profile-card:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 5px 30px rgba(255, 221, 0, 0.324);
+    }
+
+    .ccie-profile-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        border: 3px solid #d5a12b;
+        transition: transform 0.3s ease;
+    }
+
+    .ccie-profile-card:hover .ccie-profile-image {
+        transform: rotateY(360deg);
+    }
+
+    .ccie-profile-name {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+
+    .ccie-profile-id {
+        font-size: 0.9rem;
+        color: #d5a12b;
+        font-weight: bold;
+    }
+
+    .ccie-success-section {
+        padding: 50px 0;
+
+        text-align: center;
+    }
+
+    /* Swiper Navigation */
+    .ccie-swiper-button-next,
+    .ccie-swiper-button-prev {
         color: #d5a12b;
     }
 
-    .address-section a {
+    /* Pagination Styling */
+    .ccie-swiper-pagination-bullet {
+        background: #d5a12b;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .ccie-success-title {
+            font-size: 2rem;
+        }
+    }
+
+    .ccie-profile-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        min-height: 250px;
+        /* Adjust as needed */
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+
+    /* Responsive container */
+    @media (max-width: 1024px) {
+        .ccie-swiper-container {
+            width: 95%;
+            padding: 15px;
+        }
+    }
+
+    /* Tablet view */
+    @media (max-width: 768px) {
+        .ccie-success-title {
+            font-size: 2rem;
+            padding: 0 10px;
+        }
+
+        .ccie-profile-card {
+            min-height: 220px;
+            padding: 15px;
+        }
+
+        .ccie-profile-name {
+            font-size: 1rem;
+        }
+
+        .ccie-profile-id {
+            font-size: 0.85rem;
+        }
+
+        .ccie-profile-image {
+            width: 80px;
+            height: 80px;
+        }
+
+        .ccie-swiper-button-next,
+        .ccie-swiper-button-prev {
+            display: none;
+            /* hide arrows on small screens */
+        }
+    }
+
+    /* Mobile view */
+    @media (max-width: 480px) {
+        .ccie-success-title {
+            font-size: 1.5rem;
+        }
+
+        .ccie-profile-card {
+            min-height: 200px;
+            padding: 10px;
+        }
+
+        .ccie-profile-name {
+            font-size: 0.95rem;
+        }
+
+        .ccie-profile-id {
+            font-size: 0.8rem;
+        }
+
+        .ccie-profile-image {
+            width: 70px;
+            height: 70px;
+        }
+
+        .ccie-swiper-container {
+            width: 100%;
+            padding: 10px;
+        }
+        .nav-right{
+            display: none !important;
+        }
+    }
+
+    /* youtube video */
+    .video-container {
+        display: flex;
+        gap: 20px;
+    }
+
+    .video-card {
+        position: relative;
+        width: 300px;
+        height: 180px;
+        border-radius: 15px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #222, #444);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .video-card:hover {
+        transform: rotateY(10deg) scale(1.08);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+    }
+
+    .thumbnail {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(80%);
+        transition: filter 0.3s ease;
+    }
+
+    .video-card:hover .thumbnail {
+        filter: brightness(100%);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .video-card:hover .overlay {
+        opacity: 1;
+    }
+
+    .play-btn {
+        width: 60px;
+        animation: pop 1s infinite alternate;
+    }
+
+    @keyframes pop {
+        0% {
+            transform: scale(1);
+            opacity: 0.8;
+        }
+
+        100% {
+            transform: scale(1.15);
+            opacity: 1;
+        }
+    }
+
+    .videomain {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* students */
+    /* General Styles */
+    .student-reviews-body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #000;
         color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .student-reviews-title {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+
+        background: linear-gradient(to right, #d5a12b, #ffbc2db8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* Review Cards Container */
+    .student-reviews-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    /* Review Card */
+    .student-review-card {
+        background: rgb(26 26 26);
+        border-radius: 15px;
+        padding: 25px;
+        width: 320px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        animation: floatAnimation 3s ease-in-out infinite;
+    }
+
+    /* .student-review-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+    } */
+
+    /* Profile Icon */
+    .student-profile-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: white;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    .student-profile-icon.blue {
+        background: linear-gradient(135deg, #2196F3, #0D47A1);
+    }
+
+    .student-profile-icon.green {
+        background: linear-gradient(135deg, #4CAF50, #1B5E20);
+    }
+
+    .student-profile-icon.red {
+        background: linear-gradient(135deg, #E91E63, #880E4F);
+    }
+
+    .student-reviewer-name {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #fff;
+    }
+
+    .student-review-text {
+        font-size: 1rem;
+        margin: 15px 0;
+        color: #ddd;
+        line-height: 1.5;
+    }
+
+    /* Star Ratings */
+    .student-stars {
+        color: #d5a12b;
+        font-size: 1.2rem;
+    }
+
+    /* Floating Animation */
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .student-reviews-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    /* accordion */
+    .faq-section {
+        font-family: Arial, sans-serif;
+        background-color: #000000;
+        color: #111;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .faq-container {
+        max-width: 1000px;
+        width: 100%;
+        background: #000;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .faq-title {
+        text-align: center;
+        color: #ebba4e;
+        margin-bottom: 20px;
+        font-size: 40px;
+    }
+
+    .faq-grid {
+        display: flex;
+        gap: 20px;
+    }
+
+    .faq-column {
+        width: 50%;
+    }
+
+    .faq-item {
+        border: 1px solid #555;
+        margin: 10px 0;
+        padding: 15px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        background: #333;
+        transition: 0.3s;
+        position: relative;
+        border-radius: 8px;
+    }
+
+    .faq-item:hover {
+        background: #444;
+    }
+
+    .faq-item h3 {
+        margin: 0;
+        font-size: 18px;
+        flex: 1;
+        padding-left: 10px;
+        color: #fff;
+    }
+
+    .faq-icon {
+        font-size: 20px;
+        margin-right: 15px;
+        color: #fff;
+    }
+
+    .toggle-icon {
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.3s;
+        color: #fff;
+    }
+
+    .faq-answer {
+        display: none;
+        padding: 15px;
+        border-top: 1px solid #555;
+        background: #fff;
+        color: #111;
+        margin-top: 5px;
+        font-size: 16px;
+        animation: fadeIn 0.3s ease-in-out;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .faq-item.active .faq-answer {
+        display: block;
+    }
+
+    .faq-item.active {
+        background: #6a67678f;
+        color: #111;
+    }
+
+    .faq-item.active .faq-icon,
+    .faq-item.active .toggle-icon {
+        color: #111;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-5px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* youtube video */
+    .exclusive-body {
+        font-family: Arial, sans-serif;
+
+        color: rgb(255, 255, 255);
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .exclusive-container {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .exclusive-container h2 {
+        margin-bottom: 20px;
+    }
+
+    .interviews {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .interview-card {
+        background: #1a1a1a;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .thumbnail {
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        height: 150px;
+    }
+
+    .thumbnail img,
+    video {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 37%;
+        transform: translate(-50%, -50%);
+        background: rgba(13, 13, 13, 0.8);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .play-btn::after {
+        /* content: '\25B6'; */
+        color: black;
+        font-size: 24px;
+    }
+
+    .interview-card h3,
+    .interview-card p {
+        margin: 5px 0 0;
+    }
+
+    video {
+        display: none;
+    }
+
+    .ccie-profile-image {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .footer-social-icon i {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-image: var(--service-gradient); */
+        border-radius: 10px;
+        font-size: 1.5rem;
+        color: var(--white-color);
+        box-shadow: 0 0 10px rgba(131, 131, 131, 0.5);
+        transition: var(--transition-regular);
+    }
+
+    .footer-social-icon {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    nav .nav-right .btn button {
+        color: var(--text-color);
+    }
+
+    nav .nav-right .btn i {
+        background-color: var(--prime-color) !important;
+        background-image: none;
+    }
+
+    .btn i {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        color: var(--white-color);
+        background-color: var(--prime-color);
+        background-image: var(--prim-icon-gradient);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 4px solid var(--black-color);
+        transition: var(--transition-regular);
+    }
+
+    .logosize {
+        width: 234px;
+        margin-left: 23px;
+        align-items: center;
+        margin-top: 24px;
+    }
+
+    .mega-menu-column ul li a:hover {
+        color: #a69e9e !important;
+    }
+
+
+    .custom-body {
+        font-family: Arial, sans-serif;
+        /* background-color: #1a1a1a; */
+        color: #d8a900;
+        margin: 0;
+        padding: 0;
+    }
+
+    .containerprivacy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+        flex-wrap: wrap;
+    }
+
+    .left {
+        flex: 1;
+    }
+
+    .left h1 {
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 67px;
+    }
+
+    .left p {
+        font-size: 16px;
+        color: #000000;
+        line-height: 1.8rem;
+    }
+
+    .right {
+        flex: 2;
+    }
+
+    .right h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .servicesprivacy {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .service-box {
+        background-color: #222;
+        padding: 20px;
+        border-radius: 10px;
+        flex: 1;
+        border: 1px solid #ffd9004c;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        width: calc(50% - 10px);
+        /* Two service boxes in one row */
+        min-height: 150px;
+    }
+
+    .service-box:hover {
+        transform: scale(1.05);
+    }
+
+    .service-box h3 {
+        color: #d8a900;
+        font-size: 22px;
+    }
+
+    .service-box p {
+        color: #ccc;
+    }
+
+    .btn-privacy {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: 2px solid #d8a900;
+        color: #d8a900;
         text-decoration: none;
+        border-radius: 5px;
     }
 
-    .address-section a:hover {
-        text-decoration: underline;
+    /* Column for third box */
+    .third-column {
+        width: 49%;
+        display: flex;
+        justify-content: center;
+        padding-top: 18px;
     }
 
-    .cont {
-        background-color: #000 !important;
+    .third-column .service-box {
+        width: 50%;
+        /* Third service box in the next row */
+    }
+
+    /* Slide-in panel */
+    .slide-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 40%;
+        height: 75vh;
+        background-color: #2a2a2a;
+        color: white;
+        padding: 30px;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+        transition: right 0.5s ease-in-out;
+        overflow-y: auto;
+    }
+
+    .slide-container.active {
+        right: 0;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+
+    }
+
+    .subheading {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: yellow;
+    }
+
+    .animate-charcter {
+        text-transform: uppercase;
+        background-image: linear-gradient(-225deg,
+                #0c3526 0%,
+                #4c4a4a 29%,
+                #d8a900 67%,
+                #0c3526 100%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+        font-size: 79px;
+    }
+
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
+
+
+    /* certificte */
+    .main-body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 70px;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .content-wrapper {
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+        font-weight: 600;
+        color: #6c757d;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 15px;
+    }
+
+    .section-text {
+        font-size: 16px;
+        color: #444;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .highlight-link {
+        color: #d5a12b;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .certificate-section {
+        display: flex;
+        justify-content: start;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .certificate-wrapper {
+        width: 600px;
+        background: white;
+        padding: 30px;
+        text-align: center;
+        border: 12px solid #d2a029;
+        border-radius: 20px;
+        box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    .certificate-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 1024px) {
+        .form-container {
+            flex-direction: column;
+            padding: 30px 20px;
+        }
+
+        .form-section,
+        .address-section {
+            width: 100%;
+            padding: 25px;
+        }
+
+        .form-section button {
+            width: 100%;
+        }
+
+        .address-section h3 {
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .form-section h2 {
+            font-size: 22px;
+        }
+
+        .form-section input,
+        .form-section select,
+        .form-section textarea {
+            font-size: 15px;
+        }
+
+        .form-section button {
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .address-section {
+            padding: 25px;
+        }
+
+        .address-section h3 {
+            font-size: 20px;
+        }
+
+        .address-section p {
+            margin: 25px 0;
+            font-size: 14px;
+        }
+
+        .address-section i {
+            font-size: 18px;
+        }
+
+        .slide-container {
+            width: 90% !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .form-container {
+            padding: 20px 10px;
+        }
+
+        .form-section h2 {
+            font-size: 20px;
+        }
+
+        .form-section input,
+        .form-section select,
+        .form-section textarea {
+            font-size: 14px;
+        }
+
+        .form-section button {
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .address-section p {
+            font-size: 13px;
+        }
+
+        .address-section i {
+            font-size: 16px;
+        }
+
+
+        /* .slide-container {
+
+            width: 75%;
+            height: 75vh;
+
+        } */
+
+        .service-box {
+            margin-top: 30px;
+        }
+
+        .lab-info h1 {
+            font-size: 2rem;
+        }
+
+        .student-reviews-body {
+            height: auto;
+        }
+
+        .student-reviews-title {
+            font-size: 1.5rem;
+            padding-top: 30px;
+        }
+
+        .faq-title {
+            font-size: 20px !important;
+        }
+
+        .main-body {
+            padding: 30px;
+        }
+
+        .ccie-success-title {
+            font-size: 20px;
+        }
+
+        .lab-info {
+            padding: 7px;
+        }
+
+        .slide-container {
+            width: 90% !important;
+        }
+
+
     }
 </style>
 
-<body>
-    <!-- HERO HEADER  -->
-    <header>
+<body class="text-white smooth-scroll">
+    <headers>
         <!-- NAV  -->
-        <nav>
+        <nav style="background-color: black;">
             <div class="nav-left">
                 <div class="logo">
                     <a href="index.html"><img class="logosize" src="image/Nitiz-Sharma9.png"></a>
                 </div>
-                <ul class="menu">
+                <ul class="menu" style="margin-bottom: -22px;
+                  margin-left: 35px;">
                     <li class="has-dropdown">
                         <a href="#">Courses <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                         <div class="mega-menu">
@@ -315,7 +1891,7 @@
                                 <div class="mega-menu-column">
                                     <h4>EXPERT LEVEL TRAINING PROGRAMS</h4>
                                     <ul>
-                                        <li><a href="#">FCX/SE8</a></li>
+                                        <li><a href="#">FCX/NSE8</a></li>
                                         <li><a href="#">CCIE Security</a></li>
                                         <li><a href="#">CCIE Data Center</a></li>
                                         <li><a href="#">CCIE Enterprise Infrastructure</a></li>
@@ -361,19 +1937,22 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="corporatetraining.html">Corporate Training</a></li>
                     <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="contact.html">contact</a></li>
                 </ul>
             </div>
-            <div class="nav-right">
-                <!-- <div class="call-us">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <div class="call-det">
-                        <p>Call Us:</p>
-                        <h2>+91 7019021129</h2>
-                    </div>
-                </div> -->
+            <div class="nav-right flex items-center gap-4">
                 <div class="btn">
-                    <button onclick="location.href='contact.html'">Contact Us</button>
-                    <i class="ri-arrow-right-up-long-line"></i>
+                    <!-- Login Button -->
+                    <button onclick="location.href='login.html'"
+                        class="bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">
+                        Login/
+                    </button>
+
+                    <!-- Register Button -->
+                    <button onclick="location.href='register.html'"
+                        class="bg-red-600 text-white  py-2 rounded-lg hover:bg-red-700 transition">
+                        Register
+                    </button>
                 </div>
             </div>
             <div class="bars">
@@ -381,489 +1960,793 @@
             </div>
         </nav>
         <!-- HERO SECTION  -->
-        <div class="swiper heroSwiper">
-            <div class="swiper-wrapper">
-                <!-- slide 1 -->
-                <div class="swiper-slide">
-                    <div class="hero-header">
-                        <div class="hero-content">
-                            <h1 class="herheadingsize" class="" id="animatedText">Building Next-Generation</h1>
-                            <!-- <h1>Network Professionals</h1> -->
-                            <div class="">
-                                <div>
-                                    <h1>Network Professionals</h1>
-                                </div>
-                                <!-- <div>Empowering Tomorrow’s Networking Experts</div>
-                                <div>Developing Elite Network Professionals</div> -->
 
-                            </div>
-                            <p>Explore our platform for real-world learning.Engage with top instructors, comprehensive
-                                labs, and validate your Networking & Cybersecurity skills.</p>
-                            <!-- <div class="btn">
-                                <button>Explore Courses</button>
-                                <i class="ri-arrow-right-up-long-line"></i>
-                            </div> -->
+             <div class="main-container">
+            <!-- Hero Section -->
+            <section class="hero-section py-6 md:py-8 bg-black px-4 md:px-8">
+                <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-6">
+                  <!-- Left Content -->
+                  <div class="w-full md:w-1/2 text-center md:text-left">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-snug">
+                        We Make <i class="fa-solid fa-graduation-cap text-yellow-500"></i> Your Business Secure
+                      </h1>
+                    <p class="text-gray-300 mb-5 text-sm md:text-base max-w-md mx-auto md:mx-0 leading-relaxed">
+                      Secure your digital assets with cutting-edge security solutions and expert consulting.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                      <button class="bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded-full text-sm transition">
+                        Book a Consultation
+                      </button>
+                      <button class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-full text-sm transition">
+                        Learn More
+                      </button>
+                    </div>
+                  </div>
+              
+                  <!-- Right Image -->
+                  <div class="w-full md:w-1/2 flex justify-center">
+                    <img src="image/Nitiz-Sharma.png (2).webp" alt="Nitiz Sharma"
+                      class="max-w-[220px] md:max-w-[260px] lg:max-w-[280px] rounded-xl shadow-md object-cover">
+                  </div>
+                </div>
+              </section>
+              
+              
+              
+
+            <!-- Counter Section -->
+
+
+            <!-- Carousel Section -->
+
+
+            <!-- Modal -->
+
+
+            <!-- Feature Cards & Form Section -->
+
+        </div>
+        </header>
+
+
+      
+        <div class="bodycontform">
+            <div class="containerdes">
+                <div class="cards-container">
+                    <div class="card-1"><i class="fas fa-chalkboard-teacher"></i><span>Live Technology Lecture (60
+                            Min/Daily)</span></div>
+                    <div class="card-1"><i class="fas fa-book"></i><span>Materials to Prepare for SCOR</span></div>
+                    <div class="card-1"><i class="fas fa-video"></i><span>Live Recorded Lecture</span></div>
+                    <div class="card-1"><i class="fas fa-user-tie"></i><span>Instructor Guidance Till Exam</span></div>
+                    <div class="card-1"><i class="fas fa-drafting-compass"></i><span>Design Guide to Implement</span>
+                    </div>
+                    <div class="card-1"><i class="fas fa-check-circle"></i><span>Eve-ng all proper image</span></div>
+                    <div class="card-1"><i class="fas fa-file-alt"></i><span>Workbook with Solutions</span></div>
+                    <div class="card-1"><i class="fas fa-certificate"></i><span>Certificate of completion</span></div>
+                </div>
+
+                <div class="form-container">
+                    <h2>Have a Question? We’re here to Help You!</h2>
+                    <p>If you’re interested in learning more about our training materials or would like to schedule a
+                        free
+                        demo, please feel free to contact us at your convenience.</p>
+                    <form id="contactForm" action="send_email.php" method="POST">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input id="phone" type="tel" name="phone" placeholder="Phone Number" required>
+                        <select name="course_type" required>
+                            <option value="">Choose Course</option>
+                            <option value="short-courses">FCX/NSE8</option>
+                            <option value="featured-courses">CCIE Security</option>
+                            <option value="undergraduate">CCIE Data Center</option>
+                            <option value="diploma">CCIE Enterprise Infrastructure</option>
+                            <option value="certificate">CCIE Wireless</option>
+                            <option value="masters-degree">CCNA</option>
+                            <option value="postgraduate">SDN++/SD-WAN/ACI</option>
+                        </select>
+                        <textarea name="message" placeholder="Message" required></textarea>
+                        <button type="submit">Enquire Now</button>
+                    </form>
+                    <p id="success-message" style="display:none; color: green; font-weight: bold;">Form submitted
+                        successfully!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- coursesdescription -->
+        <section class="custom-body">
+            <div class="containerprivacy">
+                <div class="left">
+                    <h1>About <span class="animate-charcter">course</span></h1>
+                    <p>CCIE Security is a top certification in network security. Our training helps you learn how to
+                        design, manage, and protect strong network systems using global standards. The latest version
+                        (v6.1)
+                        covers important topics like firewall security, secure connectivity, and advanced threat
+                        protection.
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="servicesprivacy">
+                        <div class="service-box" onclick="openSlide('Development')">
+                            <h3>Security Lab Exam</h3>
+                            <p>Building high-performance websites and applications.</p>
+                            <a class="btn-privacy">More...</a>
                         </div>
-                        <!-- <div class="hero-img">
-                            <img src="image/NITIZ SHARMA.png" clas="nitizsharma-banner" alt="">
-                        </div> -->
-
+                        <div class="service-box" onclick="openSlide('SEO')">
+                            <h3>Pre-requisites</h3>
+                            <p>Optimizing content for better search rankings.</p>
+                            <a class="btn-privacy">More...</a>
+                        </div>
+                        <div class="service-box" onclick="openSlide('Marketing')">
+                            <h3>Course Objectives</h3>
+                            <p>Helping businesses grow with strategic marketing.</p>
+                            <a class="btn-privacy">More...</a>
+                        </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-        <!-- <div class="swiper-button-prev swiper-btn swiper-btn-prev"><i class="ri-arrow-left-s-line"></i></div>
-        <div class="swiper-button-next swiper-btn swiper-btn-next"><i class="ri-arrow-right-s-line"></i></div> -->
+
+            <div class="slide-container" id="slidePanel">
+                <span class="close-btn" onclick="closeSlide()">✖</span>
+                <div id="slideContent"></div>
+            </div>
+        </section>
 
 
+        <!-- CCielabs Section -->
 
-    </header>
 
-    <!-- Time ection -->
-    <!-- Video Section -->
-    <div class="container-video padtop">
-        <div class="content">
-            <h1>CCIE Security v6.1 Training and Certification</h1>
-            <p>CCIE Security Training Program From Foundation to Advanced Level.</p><br />
-            <p>CCIE Security Training is your path to learning advanced network security and earning one of the top
-                certifications in networking. At Nitiz Sharma Global Tech Pvt. Ltd., we offer a program that teaches you
-                the skills you need to handle modern network security challenges with confidence.</p><br />
-            <p>Our expert trainers guide you step-by-step through the CCIE Security Written and Lab exams. You’ll get
-                hands-on practice, real-world examples, and personal support to help you succeed. With access to the
-                latest tools and resources, you’ll learn how to design, set up, and fix advanced security systems.</p>
-            <br />
-            <p>Whether you’re just starting in networking or want to grow your career, our CCIE Security Training gives
-                you the knowledge and tools to achieve your goals. Come learn with us today and start your journey to
-                becoming an expert in network security!</p>
-        </div>
-        <div class="video">
-            <iframe
-                src="https://www.youtube.com/embed/-b_jJttKVqk?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Fnitizsharma.com&widgetid=1"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-    </div>
-    <!-- end -->
+        <section class="labbody py-0">
+            <div class="lab-container max-w-7xl mx-auto px-4">
 
-    <section class="training-schedule">
-        <div class="schedule-container">
-            <!-- Row 1 -->
-            <div class="schedule-item">
-                <div class="icon">
-                    <i class="fas fa-calendar-alt"></i> <!-- Icon for Date -->
+                <!-- Header Section -->
+                <div class="lab-header flex flex-col lg:flex-row items-center justify-between gap-6">
+
+                    <div class="lab-info lg:w-1/2 text-center lg:text-left">
+                        <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">CCIE Security Lab Setup</h1>
+                        <p class="text-gray-300 text-base sm:text-lg">
+                            Experience world-class hands-on training with our CCIE Security lab, offering real-world
+                            practice scenarios, expert guidance, and 24/7 accessibility.
+                        </p>
+                    </div>
+
+                    <div class="lab-image lg:w-1/2 flex justify-center">
+                        <img src="image/securitylab (1).png" alt="CCIE Security Lab"
+                            class="w-full max-w-md lg:max-w-full object-cover rounded-lg">
+                    </div>
+
                 </div>
-                <h2>Cohort Starts</h2>
-                <p>25th FEB, 2025 @ 10:30 AM IST</p>
-            </div>
 
-            <!-- Row 2 -->
-            <div class="schedule-item">
-                <div class="icon">
-                    <i class="fas fa-calendar-day"></i> <!-- Icon for Training Days -->
+                <!-- Features Section -->
+                <div class="lab-features grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+
+                    <div class="feature-box text-center">
+                        <i class="fas fa-clock text-2xl text-white mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-1">24x7 Lab Access</h3>
+                        <p class="text-gray-300">Access the lab anytime, anywhere for uninterrupted learning.</p>
+                    </div>
+
+                    <div class="feature-box text-center">
+                        <i class="fas fa-server text-2xl text-white mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-1">160 Hours of Rack Time</h3>
+                        <p class="text-gray-300">Practice with real-world lab racks for hands-on experience.</p>
+                    </div>
+
+                    <div class="feature-box text-center">
+                        <i class="fas fa-users text-2xl text-white mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-1">Live Bootcamp</h3>
+                        <p class="text-gray-300">Join expert-led sessions to enhance your skills.</p>
+                    </div>
+
+                    <div class="feature-box text-center">
+                        <i class="fas fa-globe text-2xl text-white mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-1">Virtual Access</h3>
+                        <p class="text-gray-300">Remotely connect to lab environments anytime.</p>
+                    </div>
+
+                    <div class="feature-box text-center">
+                        <i class="fas fa-chalkboard-teacher text-2xl text-white mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-1">Lab Help for Lectures</h3>
+                        <p class="text-gray-300">Get expert guidance to tackle complex topics.</p>
+                    </div>
+
+                    <div class="feature-box text-center">
+                        <i class="fas fa-laptop-code text-2xl text-white mb-3"></i>
+                        <h3 class="text-xl font-semibold mb-1">Hands-on Lab Practice</h3>
+                        <p class="text-gray-300">Apply your knowledge with hands-on configurations.</p>
+                    </div>
+
                 </div>
-                <h2>Training Days</h2>
-                <p>Weekdays (Mon-Thu)</p>
-            </div>
 
-            <!-- Row 3 -->
-            <div class="schedule-item">
-                <div class="icon">
-                    <i class="fas fa-clock"></i> <!-- Icon for Hours -->
+            </div>
+        </section>
+
+
+
+
+        <!-- student reviews -->
+
+        <section class="ccie-success-body">
+            <div class="ccie-success-section">
+                <!-- <h1 class="ccie-success-title"> Our Recent CCIE Success Stories </h1> -->
+                <h1 class="ccie-success-title">
+                    OUR RECENT CCIE SUCESS STORIES
+                    <!-- <span class="funky-underline"></span> -->
+                </h1>
+
+                <div class="ccie-swiper-container swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- CCIE Profiles -->
+                        <div class="swiper-slide">
+                            <div class="ccie-profile-card">
+                                <img class="ccie-profile-image" src="image/mohammed gritli.png" alt="Essa Elshafie">
+                                <h3 class="ccie-profile-name">Essa Elshafie</h3>
+                                <p class="ccie-profile-id">CCIE #53069</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="ccie-profile-card">
+                                <img class="ccie-profile-image" src="image/satish-karate.webp"
+                                    alt="Mohammad Kazim Abrar">
+                                <h3 class="ccie-profile-name">Mohammad Kazim Abrar</h3>
+                                <p class="ccie-profile-id">CCIE #67928</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="ccie-profile-card">
+                                <img class="ccie-profile-image" src="image/mohammed gritli.png" alt="Satish Karate">
+                                <h3 class="ccie-profile-name">Satish Karate</h3>
+                                <p class="ccie-profile-id">CCIE #55298</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="ccie-profile-card">
+                                <img class="ccie-profile-image" src="image/satish-karate.webp" alt="Shorouk Elkhateeb">
+                                <h3 class="ccie-profile-name">Shorouk Elkhateeb</h3>
+                                <p class="ccie-profile-id">CCIE #68139</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="ccie-profile-card">
+                                <img class="ccie-profile-image" src="image/mohammed gritli.png" alt="Selvam Nag">
+                                <h3 class="ccie-profile-name">Selvam Nag</h3>
+                                <p class="ccie-profile-id">CCIE #67210</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation Buttons -->
+                    <div class="ccie-swiper-button-next swiper-button-next"></div>
+                    <div class="ccie-swiper-button-prev swiper-button-prev"></div>
+                    <!-- <div class="ccie-swiper-pagination swiper-pagination"></div> -->
                 </div>
-                <h2>Hours</h2>
-                <p>90 Minutes / Day</p>
             </div>
+        </section>
 
-            <!-- Row 4 -->
-            <div class="schedule-item">
-                <div class="icon">
-                    <i class="fas fa-hourglass-half"></i> <!-- Icon for Duration -->
+
+        <!-- video section -->
+
+
+        <!-- end -->
+
+
+
+        <section class="student-reviews-body">
+
+            <h1 class="student-reviews-title">Student Reviews</h1>
+
+            <div class="student-reviews-container">
+                <div class="student-review-card">
+                    <div class="student-profile-icon blue">L</div>
+                    <div class="student-reviewer-name">Lijo Chacko</div>
+                    <p class="student-review-text">
+                        The CCIE Security course was comprehensive and well-structured. The instructor explained
+                        complex
+                        topics clearly.
+                    </p>
+                    <div class="student-stars">⭐⭐⭐⭐☆</div>
                 </div>
-                <h2>Duration</h2>
-                <p>2.5 Months Technology Training |<br /> 1.5 Months FCX Immersion / Lab</p>
-            </div>
-        </div>
-    </section>
-    <section class="HomepageAnonCards_root">
-        <h1 style="padding-bottom: 30px;">CCIE Security Course Syllabus</h1>
-        <div class="width-wrapper">
-            <div class="HomepageAnonCards_item">
-                <div class="HomepageAnonCards_icon">
-                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-build-0f21c66ed03bfb36c597636d27ca621e.svg"
-                        alt="Build & Test Icon">
+
+                <div class="student-review-card">
+                    <div class="student-profile-icon green">B</div>
+                    <div class="student-reviewer-name">Bhaskar Belwal</div>
+                    <p class="student-review-text">
+                        The trainer has extensive knowledge and makes high-level concepts easy to grasp. Highly
+                        interactive sessions!
+                    </p>
+                    <div class="student-stars">⭐⭐⭐⭐⭐</div>
                 </div>
-                <h2>ASA</h2>
-                <p>Secure your network with Cisco ASA – advanced firewall protection and threat defense.</p>
-            </div>
 
-            <div class="HomepageAnonCards_item">
-                <div class="HomepageAnonCards_icon">
-                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-learn-b1311620e99cea826f259aa2f7750940.svg"
-                        alt="Learn & Discover Icon">
+                <div class="student-review-card">
+                    <div class="student-profile-icon red">M</div>
+                    <div class="student-reviewer-name">Mohammed Farooq</div>
+                    <p class="student-review-text">
+                        I was new to security, but the teaching method was excellent. The course made all concepts
+                        easy
+                        and clear.
+                    </p>
+                    <div class="student-stars">⭐⭐⭐⭐⭐</div>
                 </div>
-                <h2>VPN</h2>
-                <p>Secure remote access and encrypted communication for seamless connectivity, ensuring privacy and data
-                    protection.</p>
             </div>
 
-            <div class="HomepageAnonCards_item">
-                <div class="HomepageAnonCards_icon">
-                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-share-910c683bbac21bf41fcf9aab64ebc957.svg"
-                        alt="Share Your Work Icon">
-                </div>
-                <h2>ISE</h2>
-                <p>Cisco ISE provides centralized network access control, policy enforcement, and identity management
-                    for enhanced security.</p>
-            </div>
+        </section>
 
-            <div class="HomepageAnonCards_item">
-                <div class="HomepageAnonCards_icon">
-                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-build-0f21c66ed03bfb36c597636d27ca621e.svg"
-                        alt="Build & Test Icon">
-                </div>
-                <h2>NGFW</h2>
-                <p>Advanced firewall protection with deep packet inspection, threat intelligence, and application
-                    control for modern cybersecurity.</p>
-            </div>
 
-            <div class="HomepageAnonCards_item">
-                <div class="HomepageAnonCards_icon">
-                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-build-0f21c66ed03bfb36c597636d27ca621e.svg"
-                        alt="Build & Test Icon">
-                </div>
-                <h2>WSA</h2>
-                <p>Cisco WSA ensures secure web browsing by filtering malicious content, preventing malware, and
-                    enforcing corporate policies.</p>
-            </div>
+        <!-- certification -->
 
-            <div class="HomepageAnonCards_item">
-                <div class="HomepageAnonCards_icon">
-                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-build-0f21c66ed03bfb36c597636d27ca621e.svg"
-                        alt="Build & Test Icon">
-                </div>
-                <h2>ESA</h2>
-                <p>Protects email communications from phishing, malware, and spam using advanced threat detection and
-                    encryption.</p>
-            </div>
 
-            <div class="HomepageAnonCards_item">
-                <div class="HomepageAnonCards_icon">
-                    <img src="https://cpwebassets.codepen.io/assets/packs/icon-build-0f21c66ed03bfb36c597636d27ca621e.svg"
-                        alt="Build & Test Icon">
-                </div>
-                <h2>Stealth Watch</h2>
-                <p>Network visibility and threat analytics solution leveraging AI and machine learning to detect and
-                    respond to cyber threats in real-time.</p>
-            </div>
-        </div>
-
-        <!-- Download Syllabus Button -->
-        <div style="text-align: center; margin-top: 20px;">
-            <a id="open-pdf" href="your-syllabus.pdf" download class="download-btn">Download Syllabus</a>
-        </div>
-
-        <style>
-            .download-btn {
-                display: inline-block;
-                background-color: #000000;
-                color: white;
-                padding: 10px 20px;
-                text-decoration: none;
-                font-size: 18px;
-                border-radius: 5px;
-                transition: 0.3s;
-            }
-
-            .download-btn:hover {
-                background-color: #000000;
-            }
-        </style>
-    </section>
-
-    <!-- ContactFrom -->
-    <div class="cont">
-        <div class="form-container">
-            <div class="form-section">
-                <h2>Have a Question? We’re here to Help You!
-                </h2>
-                <p style="color: white;line-height: 1.5rem;">If you’re interested in learning more about our training
-                    materials or would like to schedule a free demo, please feel free to contact us at your convenience.
+        <section class="main-body">
+            <div class="content-wrapper">
+                <p class="section-subtitle">GET THE CSM CERTIFICATION</p>
+                <h1 class="section-title">Earn the Coveted CSM Credential</h1>
+                <p class="section-text">
+                    Earning the Certified Scrum Master (CSM) certification goes beyond acquiring a new skill—it's
+                    the Scrum Alliance's validation of your Scrum mastery.
+                    This certification isn't just a certificate; it's a testament to your dedication and expertise
+                    in
+                    <a href="#" class="highlight-link">Scrum artifacts</a>, release planning, and product planning.
+                    It unlocks a realm of opportunities in your professional journey, signaling to employers and
+                    peers that you possess the knowledge and commitment
+                    to excel in guiding projects with agility and efficiency. You also get access to the Scrum
+                    Alliance community and free resources.
                 </p>
-
-                <form id="contactForm" action="send_email.php" method="POST">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-
-                    <!-- <select name="country" required>
-                        <option value="">Select a country</option>
-                        <option value="AF">Afghanistan</option>
-                        <option value="AL">Albania</option>
-                        <option value="DZ">Algeria</option>
-                        <option value="AS">American Samoa</option>
-                        <option value="AD">Andorra</option>
-                        <option value="AO">Angola</option>
-                        <option value="AI">Anguilla</option>
-                        <option value="AQ">Antarctica</option>
-                        <option value="AG">Antigua and Barbuda</option>
-                        <option value="AR">Argentina</option>
-                        <option value="AM">Armenia</option>
-                        <option value="AW">Aruba</option>
-                        <option value="AU">Australia</option>
-                        <option value="AT">Austria</option>
-                        <option value="AZ">Azerbaijan</option>
-                        <option value="BS">Bahamas</option>
-                        <option value="BH">Bahrain</option>
-                        <option value="BD">Bangladesh</option>
-                        <option value="BB">Barbados</option>
-                        <option value="BY">Belarus</option>
-                        <option value="BE">Belgium</option>
-                        <option value="BZ">Belize</option>
-                        <option value="BJ">Benin</option>
-                        <option value="BM">Bermuda</option>
-                        <option value="BT">Bhutan</option>
-                        <option value="BO">Bolivia</option>
-                        <option value="BA">Bosnia and Herzegovina</option>
-                        <option value="BW">Botswana</option>
-                        <option value="BR">Brazil</option>
-                        <option value="BN">Brunei</option>
-                        <option value="BG">Bulgaria</option>
-                        <option value="BF">Burkina Faso</option>
-                        <option value="BI">Burundi</option>
-                        <option value="KH">Cambodia</option>
-                        <option value="CM">Cameroon</option>
-                        <option value="CA">Canada</option>
-                        <option value="CV">Cape Verde</option>
-                        <option value="CF">Central African Republic</option>
-                        <option value="TD">Chad</option>
-                        <option value="CL">Chile</option>
-                        <option value="CN">China</option>
-                        <option value="CO">Colombia</option>
-                        <option value="KM">Comoros</option>
-                        <option value="CG">Congo</option>
-                        <option value="CR">Costa Rica</option>
-                        <option value="HR">Croatia</option>
-                        <option value="CU">Cuba</option>
-                        <option value="CY">Cyprus</option>
-                        <option value="CZ">Czech Republic</option>
-                        <option value="DK">Denmark</option>
-                        <option value="DJ">Djibouti</option>
-                        <option value="DM">Dominica</option>
-                        <option value="DO">Dominican Republic</option>
-                        <option value="EC">Ecuador</option>
-                        <option value="EG">Egypt</option>
-                        <option value="SV">El Salvador</option>
-                        <option value="GQ">Equatorial Guinea</option>
-                        <option value="ER">Eritrea</option>
-                        <option value="EE">Estonia</option>
-                        <option value="ET">Ethiopia</option>
-                        <option value="FI">Finland</option>
-                        <option value="FR">France</option>
-                        <option value="GA">Gabon</option>
-                        <option value="GM">Gambia</option>
-                        <option value="DE">Germany</option>
-                        <option value="GH">Ghana</option>
-                        <option value="GR">Greece</option>
-                        <option value="GT">Guatemala</option>
-                        <option value="GN">Guinea</option>
-                        <option value="HT">Haiti</option>
-                        <option value="HN">Honduras</option>
-                        <option value="HU">Hungary</option>
-                        <option value="IS">Iceland</option>
-                        <option value="IN">India</option>
-                        <option value="ID">Indonesia</option>
-                        <option value="IR">Iran</option>
-                        <option value="IQ">Iraq</option>
-                        <option value="IE">Ireland</option>
-                        <option value="IL">Israel</option>
-                        <option value="IT">Italy</option>
-                        <option value="JM">Jamaica</option>
-                        <option value="JP">Japan</option>
-                        <option value="JO">Jordan</option>
-                        <option value="KZ">Kazakhstan</option>
-                        <option value="KE">Kenya</option>
-                        <option value="KR">Korea</option>
-                        <option value="KW">Kuwait</option>
-                        <option value="LV">Latvia</option>
-                        <option value="LB">Lebanon</option>
-                        <option value="LY">Libya</option>
-                        <option value="LT">Lithuania</option>
-                        <option value="LU">Luxembourg</option>
-                        <option value="MG">Madagascar</option>
-                        <option value="MY">Malaysia</option>
-                        <option value="MX">Mexico</option>
-                        <option value="MA">Morocco</option>
-                        <option value="MZ">Mozambique</option>
-                        <option value="MM">Myanmar</option>
-                        <option value="NP">Nepal</option>
-                        <option value="NL">Netherlands</option>
-                        <option value="NZ">New Zealand</option>
-                        <option value="NG">Nigeria</option>
-                        <option value="NO">Norway</option>
-                        <option value="OM">Oman</option>
-                        <option value="PK">Pakistan</option>
-                        <option value="PA">Panama</option>
-                        <option value="PY">Paraguay</option>
-                        <option value="PE">Peru</option>
-                        <option value="PH">Philippines</option>
-                        <option value="PL">Poland</option>
-                        <option value="PT">Portugal</option>
-                        <option value="QA">Qatar</option>
-                        <option value="RO">Romania</option>
-                        <option value="RU">Russia</option>
-                        <option value="SA">Saudi Arabia</option>
-                        <option value="SN">Senegal</option>
-                        <option value="SG">Singapore</option>
-                        <option value="ZA">South Africa</option>
-                        <option value="ES">Spain</option>
-                        <option value="SE">Sweden</option>
-                        <option value="CH">Switzerland</option>
-                        <option value="TH">Thailand</option>
-                        <option value="TN">Tunisia</option>
-                        <option value="TR">Turkey</option>
-                        <option value="UA">Ukraine</option>
-                        <option value="AE">United Arab Emirates</option>
-                        <option value="GB">United Kingdom</option>
-                        <option value="US">United States</option>
-                        <option value="UY">Uruguay</option>
-                        <option value="VE">Venezuela</option>
-                        <option value="VN">Vietnam</option>
-                        <option value="YE">Yemen</option>
-                        <option value="ZM">Zambia</option>
-                        <option value="ZW">Zimbabwe</option>
-                    </select> -->
-
-
-                    <input id="phone" type="tel" name="phone" placeholder="Phone Number" required>
-
-
-                    <select name="course_type" required>
-                        <option value="">Choose Course</option>
-                        <option value="short-courses">FCX/NSE8</option>
-                        <option value="featured-courses">CCIE Security</option>
-                        <option value="undergraduate">CCIE Data Center</option>
-                        <option value="diploma">CCIE Enterprise Infrastructure</option>
-                        <option value="certificate">CCIE Wireless</option>
-                        <option value="masters-degree">CCNA</option>
-                        <option value="postgraduate">SDN++/SD-WAN/ACI</option>
-                    </select>
-
-                    <textarea name="message" placeholder="Message" required></textarea>
-
-                    <button type="submit">Enquire Now</button>
-                </form>
-
-                <p id="success-message" style="display:none; color: green; font-weight: bold;">Form submitted
-                    successfully!</p>
-
             </div>
 
-            <div class="address-section">
-                <h3>Contact Information</h3>
-                <p style="line-height: 1.5rem;"><i class="fas fa-map-marker-alt"></i>Nitiz Sharma Global Tech Pvt. Ltd,
-                    48-49, Gubbalala Main Rd, off Kanakapura Road, Gubbalala, Subramanyapura, Bengaluru, Karnataka
-                    560061</p>
-                <p><i class="fas fa-phone"></i> +91 7019021129</p>
-                <p><i class="fas fa-phone"></i> +91 776014441</p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:info@yoursite.com">info@nitizsharma.com</a></p>
-
+            <!-- Certificate Section -->
+            <div class="certificate-section">
+                <div class="certificate-wrapper">
+                    <img src="image/CCIE Security Standard Certificate.png" class="certificate-image">
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+        <!-- end -->
+        <!-- accordion -->
+
+        <section class="faq-section">
+            <div class="faq-container">
+                <h1 class="faq-title"
+                    style="align-items: center; justify-content: center; display: flex; font-size: 50px; font-weight: 500;">
+                    Frequently Asked Questions</h1>
+
+                <div class="faq-item">
+                    <i class="faq-icon fa-solid fa-question-circle"></i>
+                    <h3>What is the CCIE Security Certification?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">The CCIE Security Program covers core technology areas and is designed to
+                    validate end-to-end lifecycle capabilities in complex security technologies and solutions, from
+                    planning and design to operation and optimization. Aspects of automation and programmability are
+                    an
+                    integral part of the CCIE security concept.</div>
+
+                <div class="faq-item">
+                    <i class="faq-icon fa-solid fa-question-circle"></i>
+                    <h3>What is the duration of the CCIE course?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">You can select weekdays or weekend batches as per your convenience. You can
+                    opt
+                    for an onsite or online course. Regular weekday (Mon – Fri) classroom training takes 8 weeks or
+                    120
+                    hours while Weekend (Sat-Sun) classroom training takes 2 months or 120 hours. Please get in
+                    touch
+                    with us for the schedule, fees and other details.</div>
+
+                <div class="faq-item">
+                    <i class="faq-icon fa-solid fa-question-circle"></i>
+                    <h3>Do you have weekend training for professionals?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">Yes. For more information, please contact our team.</div>
+
+                <div class="faq-item">
+                    <i class="faq-icon fa-solid fa-question-circle"></i>
+                    <h3>What are the recommended study materials for CCIE Security training?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">The typical study material for CCIE security training is CCIE press books,
+                    latest workbooks prepared & revised regularly by experts.</div>
+
+                <div class="faq-item">
+                    <i class="faq-icon fa-solid fa-question-circle"></i>
+                    <h3>How to prepare for the CCIE Security exam?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">Preparation involves mastering both theory and practical labs. Study Cisco’s
+                    official guides, practice configurations and troubleshooting in labs, and take practice exams to
+                    assess your readiness and focus on areas needing improvement.</div>
+
+                <div class="faq-item">
+                    <i class="faq-icon fa-solid fa-question-circle"></i>
+                    <h3>What job roles are available after CCIE Security certification?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Here are some job roles offered to CCIE Security Experts:
+                    <ul>
+                        <li>Network Engineer</li>
+                        <li>Senior Network Engineer</li>
+                        <li>Network Administrator</li>
+                        <li>Network Security Engineer</li>
+                        <li>Network Security Administrator</li>
+                        <li>Network Security Specialist</li>
+                    </ul>
+                </div>
+
+                <div class="faq-item">
+                    <i class="faq-icon fa-solid fa-question-circle"></i>
+                    <h3>What is the cost of CCIE Security certification?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">The cost varies depending on the region and training provider. Contact our
+                    team for up-to-date pricing details.</div>
+
+                <div class="faq-item">
+                    <i class="faq-icon fa-solid fa-question-circle"></i>
+                    <h3>Can I take the CCIE Security exam online?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">The written exam can be taken at a certified Pearson VUE testing center, but
+                    the lab exam must be taken in person at a Cisco-certified lab location.</div>
+
+                <div class="faq-item">
+                    <i class="faq-icon fa-solid fa-question-circle"></i>
+                    <h3>How long is the CCIE Security certification valid?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">The CCIE Security certification is valid for three years, after which
+                    recertification is required to maintain active status.</div>
+            </div>
+        </section>
+        <!-- youtubevideo -->
+        </section>
+
+        <footer>
+            <div class="footer-container lines">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <a href="index.html"><span><img class="logosize" src="image/Nitiz-Sharma9.png"></span></a>
+                    </div>
+                </div>
+                <div class="footer-wrapper">
+                    <div class="footer-col">
+                        <h2>Links</h2>
+
+                        <a href="about.html">About Us</a>
+                        <a href="blogs.html">Blogs</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="corporatetraining.html">Corporate Training</a>
+
+                    </div>
+                    <div class="footer-col">
+                        <h2>Other Links</h2>
+
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Refund Policy</a>
+                        <a href="#">Become An Instructor</a>
+                        <a href="#">Terms and Conditions</a>
+                        <a href="#">Customer Registration process and guidelines</a>
+                    </div>
+                    <!-- <div class="footer-col">
+                    <h1>Subscribe our newsletter</h1>
+
+                    <div class="inputs">
+                        <input type="text" placeholder="Enter E-mail Here...">
+                        <i class="fa fa-paper-plane fa-md"></i>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025, Nitiz Sharma. All rights reserved.</p>
+                <div class="footer-social-icon">
+                    <a href="https://www.facebook.com/nitizsharmatrainings/" target="_blank">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nitizsharmatrainings/" target="_blank">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://twitter.com/NitizSharmaNZ" target="_blank">
+                        <i class="ri-twitter-x-line"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/nitiz-sharma-training/" target="_blank">
+                        <i class="ri-linkedin-box-fill"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@nitizsharm" target="_blank">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+
+                </div>
+            </div>
+            <a href="https://wa.me/917019021129?text=Hello!%20I%20need%20some%20assistance." class="whatsapp-float"
+                target="_blank">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <script>
+               document.addEventListener("DOMContentLoaded", function () {
+    const courseMenuItem = document.querySelector(".menu li.has-dropdown");
+
+    // Only toggle dropdown if the actual <li> (not the <a>) is clicked
+    courseMenuItem.addEventListener("click", function (event) {
+        if (event.target.tagName !== 'A') {
+            event.preventDefault();
+            event.stopPropagation();
+            this.classList.toggle("active");
+        }
+    });
+
+    // Close dropdown on clicking anywhere outside
+    document.addEventListener("click", function (event) {
+        if (!courseMenuItem.contains(event.target)) {
+            courseMenuItem.classList.remove("active");
+        }
+    });
+});
+
+            </script>
+
+        </footer>
+
+
+
+
+
+        <script>
+            gsap.to(".hero-content", {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: 0.3,
+                ease: "power3.out"
+            });
+            gsap.to(".hero-image img", {
+                opacity: 1,
+                scale: 1,
+                duration: 1,
+                delay: 0.5,
+                ease: "power3.out"
+            });
+
+            function openModal() {
+                const modal = document.getElementById('videoModal');
+                const iframe = document.getElementById('videoIframe');
+                iframe.src = 'https://www.youtube.com/embed/BzMwL9_d1dw';
+                modal.style.display = 'flex';
+            }
+
+            function closeModal() {
+                const modal = document.getElementById('videoModal');
+                const iframe = document.getElementById('videoIframe');
+                iframe.src = '';
+                modal.style.display = 'none';
+            }
+
+            window.onclick = function (event) {
+                const modal = document.getElementById('videoModal');
+                if (event.target === modal) {
+                    closeModal();
+                }
+            }
+
+            // counter
+            function toggleColor(element) {
+                element.classList.toggle('yellow');
+            }
+
+
+            // accordion
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    // Close all FAQ items first
+                    document.querySelectorAll('.faq-item').forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.nextElementSibling.style.display = "none";
+                            otherItem.querySelector('.toggle-icon').textContent = "+";
+                        }
+                    });
+
+                    // Toggle clicked FAQ item
+                    item.classList.toggle('active');
+                    let answer = item.nextElementSibling;
+                    let toggleIcon = item.querySelector('.toggle-icon');
+
+                    if (item.classList.contains('active')) {
+                        answer.style.display = "block";
+                        toggleIcon.textContent = "-";
+                    } else {
+                        answer.style.display = "none";
+                        toggleIcon.textContent = "+";
+                    }
+                });
+            });
+            // slider3
+
+
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: ".ccie-swiper-button-next",
+                    prevEl: ".ccie-swiper-button-prev",
+                },
+                pagination: {
+                    el: ".ccie-swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    1024: { slidesPerView: 3 },
+                    768: { slidesPerView: 2 },
+                    480: { slidesPerView: 1 }
+                }
+            });
+
+
+            // navbar drodown
+
+
+            // <!-- coursesbox -->
+
+            const serviceData = {
+                "Development": [
+                    {
+                        heading: "<span style='font-size: 1.5em; font-weight: bold;'>CCIE Security Lab Exam</span>",
+                        // description: "We build fast, scalable, and modern web applications.",
+                        points: [
+                            "Perimeter Security and Intrusion Prevention (20%)",
+                            "Secure Connectivity and Segmentation (20%)",
+                            "Infrastructure Security (15%)",
+                            "Identity Management, Information Exchange, and Access Control (25%)",
+                            "Advanced Threat Protection and Content Security (20%)",
+                        ]
+                    },
+
+
+                ],
+
+                "SEO": [
+                    {
+                        heading: "<span style='font-size: 1.5em; font-weight: bold;'>Pre-requisites</span>",
+                        // description: "Improve your website’s visibility on search engines.",
+                        points: [
+                            "Anyone with core CCIE Security Knowledge can go for this course.",
+                            "Usually, 3 to 5 years of experienced Network security Engineers can go for CCIE security.",
+                            "From Nitiz Sharma, fresh graduates with basic knowledge on networking have learned the course and prepared for CCIE Security Exam."
+                        ]
+                    }
+                ],
+                "Marketing": [
+                    {
+                        heading: "<span style='font-size: 1.5em; font-weight: bold;'>Course Objectives</span>",
+                        description: "Helping businesses grow with strategic marketing.",
+                        points: [
+                            "Implement core CCIE security solutions to provide advanced threat protection against cyber security attacks",
+                            "Security for networks, cloud and content, endpoint protection, secure network access, visibility, and enforcements",
+                            "Configure CCIE Firepower Threat Defense technology",
+                            "Implement advanced Next-Generation Firewall (NGFW) and Next-Generation Intrusion Prevention System (NGIPS) features",
+                            "Deploy and use CCIE Firepower Next-Generation Intrusion Prevention System (NGIPS)",
+                            "Detection of network-based malware and file type, NGIPS tuning",
+                            "Configuration including application control, security intelligence, firewall, and network-based malware and file controls",
+                            "Deploy and use CCIE Identity Services Engine (ISE) v2.4",
+                            "Highly secure access control across wired, wireless, and VPN connections",
+                            "Implement, use, and maintain CCIE Web Security Appliance (WSA)",
+                            "Provide advanced protection for business email and control against web security threats",
+                            "Deploy proxy services, use authentication, implement policies to control HTTPS traffic and access",
+                            "Deploy and troubleshoot traditional Internet Protocol Security (IPsec), Dynamic Multipoint Virtual Private Network (DMVPN), Flex VPN, and remote access VPN",
+                            "Design advanced automated security solutions for your network",
+                        ]
+                    },
+
+                ]
+            };
+
+
+
+
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3, // default for desktop
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    // when window width is <= 1024px
+                    1024: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    // when window width is <= 768px
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    }
+                }
+            });
+
+            function openSlide(serviceTitle) {
+                const serviceSections = serviceData[serviceTitle] || [];
+                const slideContent = document.getElementById("slideContent");
+
+                slideContent.innerHTML = serviceSections.map(section => `
+            <h2>${section.heading}</h2>
+            
+            <ul>${section.points.map(point => `<li>${point}</li>`).join("")}</ul>
+        `).join("");
+
+                document.getElementById("slidePanel").classList.add("active");
+            }
+
+            function closeSlide() {
+                document.getElementById("slidePanel").classList.remove("active");
+            }
+
+
+
+            // phone numberjs
+
+            // Initialize the phone input field with country flags and codes
+            const phoneInputField = document.querySelector("#phone");
+            const phoneInput = window.intlTelInput(phoneInputField, {
+                initialCountry: "auto",  // Automatically detects user's country
+                separateDialCode: true,  // Shows country code separately
+                autoPlaceholder: "polite",
+                preferredCountries: ["us", "gb", "in"], // Most commonly used countries at the top
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+            });
+
+            // Ensure that only a valid number is submitted
+            document.querySelector("#contactForm").addEventListener("submit", function (event) {
+                if (!phoneInput.isValidNumber()) {
+                    event.preventDefault();
+                    alert("Please enter a valid phone number.");
+                }
+            });
+
+
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const phoneInputField = document.querySelector("#phone");
+
+                if (phoneInputField) {
+                    const phoneInput = window.intlTelInput(phoneInputField, {
+                        initialCountry: "auto",
+                        separateDialCode: true,
+                        autoPlaceholder: "polite",
+                        preferredCountries: ["us", "gb", "in"],
+                        geoIpLookup: function (callback) {
+                            fetch("https://ipapi.co/json")
+                                .then(response => response.json())
+                                .then(data => callback(data.country_code))
+                                .catch(() => callback("us"));
+                        },
+                        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+                    });
+
+                    // Validate phone number before submitting the form
+                    document.querySelector("#contactForm").addEventListener("submit", function (event) {
+                        if (!phoneInput.isValidNumber()) {
+                            event.preventDefault();
+                            alert("Please enter a valid phone number.");
+                        }
+                    });
+                } else {
+                    console.error("Phone input field not found.");
+                }
+            });
+
+
+          
+        </script>
+
+
 </body>
 
-<footer>
-    <div class="footer-container lines">
-        <div class="footer-logo">
-            <div class="logo">
-                <a href="index.html"><span><img class="logosize" src="image/Nitiz-Sharma9.png"></span></a>
-            </div>
-        </div>
-        <div class="footer-wrapper">
-            <div class="footer-col">
-                <h2>Links</h2>
-                <a href="about.html">About Us</a>
-                <a href="blogs.html">Blogs</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="corporatetraining.html">Corporate Training</a>
-            </div>
-            <div class="footer-col">
-                <h2>Other Links</h2>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Refund Policy</a>
-                <a href="#">Become An Instructor</a>
-                <a href="#">Terms and Conditions</a>
-                <a href="#">Customer Registration process and guidelines</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2025, Nitiz Sharma. All rights reserved.</p>
-        <div class="footer-social-icon">
-            <a href="https://www.facebook.com/nitizsharmatrainings/" target="_blank">
-                <i class="ri-facebook-fill"></i>
-            </a>
-            <a href="https://www.instagram.com/nitizsharmatrainings/" target="_blank">
-                <i class="ri-instagram-line"></i>
-            </a>
-            <a href="https://twitter.com/NitizSharmaNZ" target="_blank">
-                <i class="ri-twitter-x-line"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/nitiz-sharma-training/" target="_blank">
-                <i class="ri-linkedin-box-fill"></i>
-            </a>
-            <a href="https://www.youtube.com/@nitizsharm" target="_blank">
-                <i class="ri-youtube-fill"></i>
-            </a>
-            <!-- WhatsApp Icon -->
-            <!-- <a href="https://wa.me/917019021129" target="_blank">
-                <i class="ri-whatsapp-fill"></i>
-            </a> -->
-        </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    
-    <script>
-        // URL of the PDF file
-
-        const pdfUrl = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
-
-        // Add click event to the button
-        document.getElementById('open-pdf').addEventListener('click', function () {
-            // Open the PDF in a new tab for viewing
-            window.open(pdfUrl, '_blank');
-
-            // Force download the PDF
-            const link = document.createElement('a');
-            link.href = pdfUrl;
-            link.download = 'file.pdf'; // Name of the downloaded file
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
-
-
-        // Initialize the phone input field with country flags and codes
-        const phoneInputField = document.querySelector("#phone");
-        const phoneInput = window.intlTelInput(phoneInputField, {
-            initialCountry: "auto",  // Automatically detects user's country
-            separateDialCode: true,  // Shows country code separately
-            autoPlaceholder: "polite",
-            preferredCountries: ["us", "gb", "in"], // Most commonly used countries at the top
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-        });
-
-        // Ensure that only a valid number is submitted
-        document.querySelector("#contactForm").addEventListener("submit", function (event) {
-            if (!phoneInput.isValidNumber()) {
-                event.preventDefault(); // Prevent form submission
-                alert("Please enter a valid phone number.");
-            }
-        });
-    </script>
-   
-</footer>
 
 </html>

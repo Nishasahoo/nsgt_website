@@ -1,0 +1,21 @@
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore environment variable files
+.env
+
+# Ignore log files
+*.log
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore compressed files
+*.zip
+*.tar.gz
+
+# Ignore VSCode settings (optional)
+.vscode/
+
+# Ignore backup/temp files
+*~

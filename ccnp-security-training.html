@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitiz Sharma</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Remix icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <!-- Font Awesome icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Swiper Slider CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <!-- Tailwind CSS -->
+
+    <!-- SwiperJS CSS & JS -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+</head>
+
+
+
+<style>
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+    }
+
+
+    /* cardreview, video, syylabus\ */
+    .card-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1.5rem;
+        object-fit: cover;
+        pointer-events: none;
+    }
+
+    .swap {
+        animation: swap 1.3s ease-out forwards;
+    }
+
+    @keyframes swap {
+        30% {
+            transform: translateX(-12rem) scale(0.85) rotate(-5deg) rotateY(65deg);
+        }
+
+        100% {
+            transform: translateX(-2rem) scale(0.5);
+            z-index: -1;
+        }
+    }
+
+    /* end */
+    .animate-fadeIn {
+        animation: fadeIn 0.6s ease-out both;
+    }
+
+    .slider-track {
+        animation: scroll 45s linear infinite;
+    }
+
+
+    .form-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .form-section {
+        width: 60%;
+        background-color: #000000;
+        padding: 30px;
+
+    }
+
+    .form-section h2 {
+        margin-bottom: 20px;
+        font-size: 26px;
+        color: white;
+    }
+
+    .form-section input,
+    .form-section select,
+    .form-section textarea {
+        width: 100%;
+        padding: 8px 0px;
+        margin-bottom: 15px;
+        border: none;
+        border-bottom: 1px solid #edecec5b;
+
+        font-size: 16px;
+        background: transparent;
+        color: #6f7173;
+        outline: none;
+        margin-top: 20px;
+    }
+
+    .separator {
+        height: 1px;
+        background: #777;
+        margin-bottom: 15px;
+    }
+
+    .form-section button {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        width: 40%;
+        border-radius: 5px;
+    }
+
+    .form-section button:hover {
+        background-color: #d5a12b;
+    }
+
+    .address-section {
+        width: 48%;
+        background-color: #1a1616;
+        padding: 40px;
+        border-radius: 12px;
+        color: white;
+    }
+
+    .address-section h3 {
+        margin-bottom: 39px;
+        font-size: 24px;
+    }
+
+    .address-section p {
+        margin: 40px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .address-section i {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #d5a12b;
+    }
+
+    .address-section a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .address-section a:hover {
+        text-decoration: underline;
+    }
+
+    .cont {
+        background-color: #000 !important;
+    }
+
+    .iti__selected-dial-code {
+        color: #747474;
+    }
+
+
+    .custom-body {
+        font-family: Arial, sans-serif;
+        /* background-color: #1a1a1a; */
+        color: #d8a900;
+        margin: 0;
+        padding: 0;
+    }
+
+    .containerprivacy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+        flex-wrap: wrap;
+    }
+
+    .left {
+        flex: 1;
+    }
+
+    .left h1 {
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 67px;
+    }
+
+    .left p {
+        font-size: 16px;
+        color: #000000;
+        line-height: 1.8rem;
+    }
+
+    .right {
+        flex: 2;
+    }
+
+    .right h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .servicesprivacy {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .service-box {
+        background-color: #222;
+        padding: 20px;
+        border-radius: 10px;
+        flex: 1;
+        border: 1px solid #ffd9004c;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        width: calc(50% - 10px);
+        /* Two service boxes in one row */
+        min-height: 150px;
+    }
+
+    .service-box:hover {
+        transform: scale(1.05);
+    }
+
+    .service-box h3 {
+        color: #d8a900;
+        font-size: 22px;
+    }
+
+    .service-box p {
+        color: #ccc;
+    }
+
+    .btn-privacy {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: 2px solid #d8a900;
+        color: #d8a900;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    /* Column for third box */
+    .third-column {
+        width: 49%;
+        display: flex;
+        justify-content: center;
+        padding-top: 18px;
+    }
+
+    .third-column .service-box {
+        width: 50%;
+        /* Third service box in the next row */
+    }
+
+    /* Slide-in panel */
+    .slide-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 40%;
+        height: 75vh;
+        background-color: #2a2a2a;
+        color: white;
+        padding: 30px;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+        transition: right 0.5s ease-in-out;
+        overflow-y: auto;
+    }
+
+    .slide-container.active {
+        right: 0;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+
+    }
+
+    .subheading {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: yellow;
+    }
+
+
+
+
+    .animate-charcter {
+        text-transform: uppercase;
+        background-image: linear-gradient(-225deg,
+                #0c3526 0%,
+                #4c4a4a 29%,
+                #d8a900 67%,
+                #0c3526 100%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+        font-size: 79px;
+    }
+
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
+
+
+    /* certificte */
+    .main-body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 70px;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .content-wrapper {
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+        font-weight: 600;
+        color: #6c757d;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 15px;
+    }
+
+    .section-text {
+        font-size: 16px;
+        color: #444;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .highlight-link {
+        color: #d5a12b;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .animate-charcter {
+        background: linear-gradient(90deg, #fbbf24, #000000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 1024px) {
+        .form-container {
+            flex-direction: column;
+            padding: 30px 20px;
+        }
+
+        .form-section,
+        .address-section {
+            width: 100%;
+            padding: 25px;
+        }
+
+        .form-section button {
+            width: 100%;
+        }
+
+        .address-section h3 {
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .form-section h2 {
+            font-size: 22px;
+        }
+
+        .form-section input,
+        .form-section select,
+        .form-section textarea {
+            font-size: 15px;
+        }
+
+        .form-section button {
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .address-section {
+            padding: 25px;
+        }
+
+        .address-section h3 {
+            font-size: 20px;
+        }
+
+        .address-section p {
+            margin: 25px 0;
+            font-size: 14px;
+        }
+
+        .address-section i {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .form-container {
+            padding: 20px 10px;
+        }
+
+        .form-section h2 {
+            font-size: 20px;
+        }
+
+        .form-section input,
+        .form-section select,
+        .form-section textarea {
+            font-size: 14px;
+        }
+
+        .form-section button {
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .address-section p {
+            font-size: 13px;
+        }
+
+        .address-section i {
+            font-size: 16px;
+        }
+
+        nav .nav-right .btn {
+            display: none;
+        }
+    }
+
+
+    .iti__selected-dial-code {
+        color: #747474;
+    }
+</style>
+</head>
+
+<body>
+    <headerss>
+        <!-- NAV  -->
+        <nav style="background-color: #000;">
+            <div class="nav-left">
+                <div class="logo">
+                    <a href="index.html"><img class="logosize" src="image/Nitiz-Sharma9.png"></a>
+                </div>
+                <ul class="menu">
+                    <li class="has-dropdown">
+                        <a href="#">Courses <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <div class="mega-menu">
+
+                            <!-- First Row (2 Columns) -->
+                            <div class="mega-menu-row">
+                                <div class="mega-menu-column">
+                                    <h4>EXPERT LEVEL TRAINING PROGRAMS</h4>
+                                    <ul>
+                                        <li><a href="fortinet-nse8-training.html">FCX/NSE8</a></li>
+                                        <li><a href="cciesecurity.html">CCIE Security</a></li>
+                                        <li><a href="ccie-data-center-training-and-certification.html">CCIE Data
+                                                Center</a></li>
+                                        <li><a href="ccie-enterprise-infrastructure-training.html">CCIE Enterprise
+                                                Infrastructure</a></li>
+                                        <li><a href="ccie-wireless-training.html">CCIE Wireless</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>PROFESSIONAL LEVEL TRAINING PROGRAMS</h4>
+                                    <ul>
+                                        <li><a href="ccnp-security-training.html">CCNP Security Training</a></li>
+                                        <li><a href="ccnp-data-center-training.html">CCNP Data Center Training</a></li>
+                                        <li><a href="ccnp-enterprise-infrastructure-training.html">CCNP Enterprise
+                                                Infrastructure Training</a></li>
+                                        <li><a href="ccnp-wireless-training.html">CCNP Wireless Training</a></li>
+                                        <li><a href="cisco-ise-training.html">Cisco ISE Training</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Second Row (2 Columns) -->
+                            <div class="mega-menu-row">
+                                <div class="mega-menu-column">
+                                    <h4>ASSOCIATE LEVEL TRAINING PROGRAMS</h4>
+                                    <ul>
+                                        <li><a href="ccna-course-and-certification.html">CCNA</a></li>
+                                        <!-- <li><a href="#">CWNA</a></li>
+                                        <li><a href="#">AWS</a></li> -->
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>SPECIAL COURSES</h4>
+                                    <ul>
+                                        <li><a href="/cisco-sdn-training-and-certification.html">SDN++</a></li>
+                                        <li style="margin-left: 20px;"><a
+                                                href="sdwan-training-and-certification.html">SDWAN training and
+                                                Certification</a>
+                                        </li>
+                                        <li style="margin-left: 20px;"><a
+                                                href="cisco-aci-training-and-certification.html">Cisco ACI training and
+                                                Certification</a></li>
+                                        <li><a href="fortinet-nse-4-certification.html">Fortinet NSE 4</a></li>
+                                        <li><a href="#">Digital Marketing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="corporatetraining.html">Corporate Training</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-right flex items-center gap-4">
+                <div class="btn">
+                    <!-- Login Button -->
+                    <button onclick="location.href='https://nitizsharma.com/dashboard/'"
+                        class="bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                        Login/
+                    </button>
+
+                    <!-- Register Button -->
+                    <button onclick="location.href='https://nitizsharma.com/dashboard/'"
+                        class="bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+                        Register
+                    </button>
+                </div>
+            </div>
+            <div class="bars">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+        <div class="main-container">
+            <!-- Hero Section -->
+            <section class="hero-section py-6 md:py-8 bg-black px-4 md:px-8">
+                <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-6">
+                    <!-- Left Content -->
+                    <div class="w-full md:w-1/2 text-center md:text-left">
+                        <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 leading-snug">
+                            CCNP Security Training and <i class="fa-solid fa-graduation-cap text-yellow-500"></i>
+                            Certification
+                        </h1>
+                        <p style="text-align: justify;"
+                            class="text-gray-300 mb-5 text-sm md:text-base max-w-md mx-auto md:mx-0 leading-relaxed">
+                            Boost your career with our CCNP Security Training covering network safety, threat
+                            management, and hands-on labs. Learn from experts and gain real-world skills to pass the
+                            exam with confidence.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                            <a href="contact.html" target="_blank">
+                                <button
+                                    class="bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded-full text-sm transition">
+                                    Enroll Now
+                                </button>
+                            </a>
+
+                            <a href="contact.html" target="_blank">
+                                <button
+                                    class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-full text-sm transition">
+                                    Free Demo Class
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Image -->
+                    <div class="w-full md:w-1/2 flex justify-center">
+                        <img src="image/Nitiz-Sharma.png (2).webp" alt="Nitiz Sharma"
+                            class="max-w-[220px] md:max-w-[260px] lg:max-w-[280px] rounded-xl shadow-md object-cover">
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <!-- Counter Section -->
+
+
+            <!-- Carousel Section -->
+
+
+            <!-- Modal -->
+
+
+            <!-- Feature Cards & Form Section -->
+
+        </div>
+
+
+        </header>
+
+
+        <section class="px-4 sm:px-6 md:px-12 lg:px-20 py-10 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-center text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-8">
+                    Upcoming CCNP Security Batches
+                </h2>
+
+                <!-- 👇 Horizontal scroll wrapper -->
+                <div class="w-full overflow-x-auto">
+                    <!-- 👇 Set a minimum width to force scroll on small screens -->
+                    <table
+                        class="min-w-[900px] w-full text-sm sm:text-base text-left text-gray-800 border border-gray-300 rounded-lg">
+                        <thead class="bg-gray-100 font-semibold text-gray-700">
+                            <tr>
+                                <th class="px-6 py-3 border-b border-gray-300 whitespace-nowrap">Batch</th>
+                                <th class="px-6 py-3 border-b border-gray-300 whitespace-nowrap">Start Date</th>
+                                <th class="px-6 py-3 border-b border-gray-300 whitespace-nowrap">Timing</th>
+                                <th class="px-6 py-3 border-b border-gray-300 whitespace-nowrap">Duration</th>
+                                <th class="px-6 py-3 border-b border-gray-300 whitespace-nowrap">Seats Left</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-yellow-50 transition">
+                                <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">Batch 1</td>
+                                <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">6th Jan 2025</td>
+                                <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">8:00 AM – 10:00 AM IST
+                                </td>
+                                <td class="px-6 py-4 border-b border-gray-200">3 months technology training + boot camp
+                                </td>
+                                <td class="px-6 py-4 border-b border-gray-200">5 Seats Left</td>
+                            </tr>
+                            <tr class="hover:bg-yellow-50 transition">
+                                <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">Batch 2</td>
+                                <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">13th Jan 2025</td>
+                                <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">11:00 AM – 1:00 PM</td>
+                                <td class="px-6 py-4 border-b border-gray-200">3 months technology training + boot camp
+                                </td>
+                                <td class="px-6 py-4 border-b border-gray-200">4 Seats Left</td>
+                            </tr>
+                            <tr class="hover:bg-yellow-50 transition">
+                                <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">Batch 3</td>
+                                <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">20th Jan 2025</td>
+                                <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">2:00 PM – 4:00 PM</td>
+                                <td class="px-6 py-4 border-b border-gray-200">3 months technology training + boot camp
+                                </td>
+                                <td class="px-6 py-4 border-b border-gray-200 text-red-600 font-semibold">Limited!</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <div class="py-16 px-6 md:px-12 lg:px-20 bg-gray-100">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-center text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-12">CCNP Security
+                    Course Technologies
+                </h2>
+
+                <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Card 1 -->
+                    <div onclick="toggleCard(this)"
+                        class="group cursor-pointer transition-all duration-500 bg-white p-6 rounded-3xl shadow-md hover:shadow-2xl ring-2 ring-transparent hover:ring-yellow-300 hover:rotate-1">
+                        <div class="flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-center text-xl font-bold mb-2 text-gray-800">Network Security</h3>
+                        <p class="text-center text-gray-600 text-sm">Implement and manage secure network infrastructures
+                            using Cisco Firepower, ASA, and Firepower Threat Defense (FTD).</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div onclick="toggleCard(this)"
+                        class="group cursor-pointer transition-all duration-500 bg-white p-6 rounded-3xl shadow-md hover:shadow-2xl ring-2 ring-transparent hover:ring-yellow-300 hover:rotate-1">
+                        <div class="flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mx-auto mb-4">
+                            <i class="fas fa-fire text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-center text-xl font-bold mb-2 text-gray-800">Secure Connectivity</h3>
+                        <p class="text-center text-gray-600 text-sm">Design and deploy secure VPN solutions, including
+                            site-to-site and remote access VPNs.​
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div onclick="toggleCard(this)"
+                        class="group cursor-pointer transition-all duration-500 bg-white p-6 rounded-3xl shadow-md hover:shadow-2xl ring-2 ring-transparent hover:ring-yellow-300 hover:rotate-1">
+                        <div class="flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mx-auto mb-4">
+                            <i class="fas fa-user-shield text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-center text-xl font-bold mb-2 text-gray-800">Secure Access</h3>
+                        <p class="text-center text-gray-600 text-sm">Configure and manage identity management solutions
+                            with Cisco Identity Services Engine (ISE).​
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div onclick="toggleCard(this)"
+                        class="group cursor-pointer transition-all duration-500 bg-white p-6 rounded-3xl shadow-md hover:shadow-2xl ring-2 ring-transparent hover:ring-yellow-300 hover:rotate-1">
+                        <div class="flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mx-auto mb-4">
+                            <i class="fas fa-chart-line text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-center text-xl font-bold mb-2 text-gray-800">Visibility and Enforcement</h3>
+                        <p class="text-center text-gray-600 text-sm">Utilize Cisco Stealthwatch and other tools for
+                            network visibility and threat detection.​</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div onclick="toggleCard(this)"
+                        class="group cursor-pointer transition-all duration-500 bg-white p-6 rounded-3xl shadow-md hover:shadow-2xl ring-2 ring-transparent hover:ring-yellow-300 hover:rotate-1">
+                        <div class="flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mx-auto mb-4">
+                            <i class="fas fa-cloud text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-center text-xl font-bold mb-2 text-gray-800">Automation and Assurance</h3>
+                        <p class="text-center text-gray-600 text-sm"> Implement automation and assurance solutions using
+                            Cisco DNA Center and other tools.
+                        </p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div onclick="toggleCard(this)"
+                        class="group cursor-pointer transition-all duration-500 bg-white p-6 rounded-3xl shadow-md hover:shadow-2xl ring-2 ring-transparent hover:ring-yellow-300 hover:rotate-1">
+                        <div class="flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mx-auto mb-4">
+                            <i class="fas fa-network-wired text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-center text-xl font-bold mb-2 text-gray-800">Cisco Routers (ISR/ASR)</h3>
+                        <p class="text-center text-gray-600 text-sm">Implement secure WAN connectivity and advanced
+                            routing protocols.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- syylabus -->
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-6 py-10 space-y-12">
+            <!-- Learning Path -->
+            <section class="px-4 sm:px-6 md:px-12 py-16 rounded-xl">
+                <div class="max-w-7xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-12">
+                        Learning <span class="text-[#fbbf24]">Path</span>
+                    </h2>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="text-[#fbbf24] text-2xl">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 font-medium">Course 1</p>
+                                    <h3 class="text-lg font-bold">CCNP Security – Core (SCOR 350-701)</h3>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Learn core security concepts, including threat defense, VPNs, secure network access, and
+                                automation across Cisco platforms.
+                            </p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="text-[#fbbf24] text-2xl">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 font-medium">Course 2</p>
+                                    <h3 class="text-lg font-bold">CCNP Security – Concentration (SISE 300-715)</h3>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Focus on Cisco ISE: identity management, posture assessment, and policy enforcement for
+                                advanced network access control.
+                            </p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-gradient-to-br from-[#fbbf24]/80 to-[#fbbf24]/100 text-white rounded-xl shadow-md p-6 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 relative">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="text-white text-2xl animate-pulse">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-white/80 font-medium">Course 3</p>
+                                    <h3 class="text-lg font-bold">CCNP Security – Real-World Deployment</h3>
+                                </div>
+                            </div>
+                            <p class="text-white/90 text-sm leading-relaxed">
+                                Apply your skills with hands-on labs covering firewalls, VPNs, ISE, FTD, and automation
+                                to align with enterprise security demands.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Course Syllabus -->
+            <div>
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
+                    <h2 class="text-lg md:text-xl font-bold text-black">
+                        Course <span class="text-[#fbbf24]">syllabus</span>
+                    </h2>
+                    <a href="file:///C:/Users/nisha/Downloads/CCNP-Security-Table-of-Contents.pdf"
+                        rel="noopener noreferrer">
+                        <button
+                            class="bg-[#fbbf24] text-white px-4 py-2 text-sm rounded border border-[#fbbf24] hover:bg-[#f59e0b] transition">
+                            View Syllabus
+                        </button>
+                    </a>
+                </div>
+
+                <div class="bg-gray-50 border border-gray-200 p-4 rounded-md max-h-[400px] overflow-y-auto text-sm">
+                    <h3 class="font-semibold mb-2">ASA</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Introduction to the Course</li>
+                        <li> Course Materia</li>
+                        <li>Planning for CCNP </li>
+                        <li>Discuss the Table of Conten</li>
+                    </ul>
+
+                    <h3 class="mt-4 font-semibold mb-2">VPN (Virtual Private Networks)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li> Basic Security</li>
+                        <li>Malware/Virus/Trojan/Worm</li>
+                        <li> CIA - Network Goal</li>
+                        <li> Cryptography </li>
+
+                    </ul>
+
+                    <h3 class="mt-4 font-semibold mb-2">ISE (Identity Services Engine)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>What is Identity and ISS</li>
+                        <li> Cisco ISE solutions Use Cases</li>
+                        <li>Secure Access Control</li>
+                        <li>ISE deployment components </li>
+                    </ul>
+
+
+
+                    <h3 class="mt-4 font-semibold mb-2">NGFW</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>What is NGFW</li>
+                        <li> NGFW/UTM - Features</li>
+                        <li>Components of NGFW</li>
+                        <li>ntroduction of the SourceFire and
+                            Snort Rules </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- end -->
+
+        <!-- Exam Info Section -->
+        <div class="bg-white text-sm text-gray-700">
+
+            <section class="relative py-16 px-6 md:px-12 lg:px-20 bg-white overflow-hidden">
+                <!-- Decorative SVG Background -->
+                <div class="absolute inset-0 -z-10">
+                    <svg class="w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                        <defs>
+                            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="gray" stroke-width="1" />
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#grid)" />
+                    </svg>
+                </div>
+
+                <div class="max-w-7xl mx-auto">
+                    <h2 class="text-center text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-12">CCNP Security
+                        Exam Info</h2>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                        <!-- Left Side -->
+                        <div>
+                            <!-- Table -->
+                            <div class="overflow-hidden rounded-xl border border-gray-200 shadow-md bg-white">
+                                <table class="min-w-full text-sm text-gray-700">
+                                    <tbody>
+                                        <tr class="hover:bg-yellow-50 transition duration-300">
+                                            <td
+                                                class="font-semibold px-6 py-4 w-1/3 bg-gray-50 border-b border-gray-200 border-r">
+                                                Exam Name</td>
+                                            <td class="px-6 py-4 border-b border-gray-200">CCNP Security: Implementing
+                                                and Operating Cisco Security Core Technologies</td>
+                                        </tr>
+                                        <tr class="hover:bg-yellow-50 transition duration-300">
+                                            <td
+                                                class="font-semibold px-6 py-4 bg-gray-50 border-b border-gray-200 border-r">
+                                                Exam Number</td>
+                                            <td class="px-6 py-4 border-b border-gray-200">350-701 SCOR</td>
+                                        </tr>
+                                        <tr class="hover:bg-yellow-50 transition duration-300">
+                                            <td
+                                                class="font-semibold px-6 py-4 bg-gray-50 border-b border-gray-200 border-r">
+                                                Exam Price</td>
+                                            <td class="px-6 py-4 border-b border-gray-200">$450</td>
+                                        </tr>
+                                        <tr class="hover:bg-yellow-50 transition duration-300">
+                                            <td
+                                                class="font-semibold px-6 py-4 bg-gray-50 border-b border-gray-200 border-r">
+                                                Duration</td>
+                                            <td class="px-6 py-4 border-b border-gray-200">120 minutes</td>
+                                        </tr>
+                                        <tr class="hover:bg-yellow-50 transition duration-300">
+                                            <td
+                                                class="font-semibold px-6 py-4 bg-gray-50 border-b border-gray-200 border-r">
+                                                Number of Questions</td>
+                                            <td class="px-6 py-4 border-b border-gray-200">90–110</td>
+                                        </tr>
+                                        <tr class="hover:bg-yellow-50 transition duration-300">
+                                            <td class="font-semibold px-6 py-4 bg-gray-50 border-r">Languages</td>
+                                            <td class="px-6 py-4">English and Japanese.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Group Discount Collapsible -->
+                            <div class="mt-6 max-w-md w-full">
+                                <input type="checkbox" id="toggle-discount" class="peer hidden">
+                                <label for="toggle-discount"
+                                    class="flex items-center justify-between cursor-pointer bg-yellow-400 px-6 py-4 font-bold text-white text-base rounded-t-md">
+                                    <span>Group Discount</span>
+                                    <span class="flex items-center gap-1">
+                                        Up to 30% OFF
+                                        <svg class="w-4 h-4 transition-transform duration-300 peer-checked:rotate-180"
+                                            fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                                            <path d="M6 15l6-6 6 6" />
+                                        </svg>
+                                    </span>
+                                </label>
+                                <form id="groupDiscountForm"
+                                    class="bg-white shadow-md border border-t-0 border-yellow-300 max-h-0 peer-checked:max-h-[1000px] transition-all duration-500 overflow-hidden px-6 py-6 text-sm space-y-4 rounded-b-md">
+
+                                    <!-- Hidden Setup -->
+                                    <input type="hidden" name="_cc" value="nishasahoo99@gmail.com">
+                                    <input type="hidden" name="_subject" value="Group Discount Submission">
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="hidden" name="_autoresponse"
+                                        value="Thank you for your submission! We’ll be in touch shortly.">
+
+                                    <div>
+                                        <p class="font-semibold">Offer ends in: <span class="text-red-600 font-bold">3d
+                                                8h 44m 51s</span></p>
+                                        <p class="text-gray-600 text-sm mt-1">More members, more discount! Ideal for
+                                            study groups or teams.</p>
+                                    </div>
+
+                                    <!-- Discount Tier -->
+                                    <div class="bg-gray-100 p-4 rounded-md">
+                                        <h4 class="font-semibold mb-2">Discount Tiers:</h4>
+                                        <label class="flex items-center gap-2">
+                                            <input type="radio" name="Discount Tier" value="3 People - 15%"
+                                                class="accent-green-600" required />
+                                            <span>3 people: 15% off</span>
+                                        </label>
+                                        <label class="flex items-center gap-2">
+                                            <input type="radio" name="Discount Tier" value="4 People - 20%"
+                                                class="accent-green-600" />
+                                            <span>4 people: 20% off</span>
+                                        </label>
+                                        <label class="flex items-center gap-2">
+                                            <input type="radio" name="Discount Tier" value="5 People - 25%"
+                                                class="accent-green-600" />
+                                            <span>5 people: 25% off</span>
+                                        </label>
+                                        <label class="flex items-center gap-2">
+                                            <input type="radio" name="Discount Tier" value="6+ People - 30%"
+                                                class="accent-green-600" />
+                                            <span>6+ people: 30% off</span>
+                                        </label>
+                                    </div>
+
+                                    <!-- Phone with Country Code -->
+                                    <div>
+                                        <label class="block font-semibold mb-1">Phone Number <span
+                                                class="text-red-500">*</span></label>
+                                        <div class="flex gap-2">
+                                            <select name="Country Code" required
+                                                class="w-[40%] px-4 py-2 border border-gray-300 rounded-md text-sm bg-white">
+                                                <option value="">Code</option>
+                                                <option value="+1">🇺🇸 +1 (USA)</option>
+                                                <option value="+91">🇮🇳 +91 (India)</option>
+                                                <option value="+44">🇬🇧 +44 (UK)</option>
+                                                <option value="+61">🇦🇺 +61 (Australia)</option>
+                                                <option value="+81">🇯🇵 +81 (Japan)</option>
+                                                <option value="+49">🇩🇪 +49 (Germany)</option>
+                                                <option value="+971">🇦🇪 +971 (UAE)</option>
+                                                <option value="+880">🇧🇩 +880 (Bangladesh)</option>
+                                            </select>
+                                            <input type="tel" name="Phone Number" placeholder="9876543210" required
+                                                class="w-full px-4 py-2 border border-gray-300 rounded-md text-sm placeholder-gray-500" />
+                                        </div>
+                                    </div>
+
+                                    <!-- Course Select -->
+                                    <div>
+                                        <label class="block font-semibold mb-1">Choose Course <span
+                                                class="text-red-500">*</span></label>
+                                        <select name="Course" required
+                                            class="w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-sm">
+                                            <option value="">Choose Course</option>
+                                            <option value="fcx">FCX/ NSE8</option>
+                                            <option value="cciesecurity">CCIE Security</option>
+                                            <option value="cciedc">CCIE Data Center</option>
+                                            <option value="ccieenterprise">CCIE Enterprise Infrastructure</option>
+                                            <option value="cciewireless">CCIE Wireless</option>
+                                            <option value="ccnpsecurity">CCNP Security</option>
+                                            <option value="ccnpdc">CCNP Data Center</option>
+                                            <option value="ccnpenterprise">CCNP Enterprise Infrastructure</option>
+                                            <option value="ccnpwireless">CCNP Wireless</option>
+                                            <option value="ccna">CCNA</option>
+                                            <option value="sdnplus">Cisco SDN++</option>
+                                            <option value="sdwan">Cisco SD-WAN</option>
+                                            <option value="aci">Cisco ACI</option>
+                                            <option value="nse4">Fortinet NSE 4</option>
+
+                                        </select>
+                                    </div>
+
+                                    <!-- Submit -->
+                                    <div class="text-center">
+                                        <button type="submit"
+                                            class="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 rounded-md transition text-sm">
+                                            Get My Group Discount
+                                        </button>
+                                    </div>
+
+                                    <div id="discount-message" class="text-center text-sm font-semibold mt-3"></div>
+                                </form>
+                            </div>
+
+
+
+
+                        </div>
+
+                        <!-- Right Side: Contact Form -->
+                        <div class="bg-[#f3f3f3] text-black rounded-xl p-8 shadow-lg animate-fadeIn">
+                            <h3 class="text-xl font-semibold mb-4">Have a Question? We’re here to Help You!</h3>
+                            <p class="text-sm text-gray-700 mb-6">
+                                If you're interested in learning more about our training materials or would like to
+                                schedule a free demo, please feel free to contact us at your convenience.
+                            </p>
+                            <form id="contactForm" class="w-full max-w-md bg-white p-6 rounded shadow space-y-2">
+                                <!-- Hidden Inputs -->
+                                <input type="hidden" name="_cc" value="info@nitizsharma.com">
+                                <input type="hidden" name="_subject" value="New Contact Form Submission from Website">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_autoresponse"
+                                    value="Thank you for contacting us! We’ll be in touch shortly.">
+                                <input type="hidden" name="_next" value="thankyou.html">
+
+                                <!-- Full Name -->
+                                <input type="text" name="Full Name" placeholder="Full Name" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded placeholder-gray-500" />
+
+                                <!-- Email -->
+                                <input type="email" name="Email" placeholder="Your Email" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded placeholder-gray-500" />
+
+                                <!-- Phone -->
+                                <div class="border border-gray-300 rounded">
+                                    <input type="tel" name="Phone Number" id="phone" placeholder="Phone Number" required
+                                        class="w-full px-4 py-2 rounded placeholder-gray-500" />
+                                </div>
+
+                                <!-- Course -->
+                                <select name="Course" id="course" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded text-gray-700">
+                                    <option value="">Choose Course</option>
+                                    <option value="fcx">FCX/ NSE8</option>
+                                    <option value="cciesecurity">CCIE Security</option>
+                                    <option value="cciedc">CCIE Data Center</option>
+                                    <option value="ccieenterprise">CCIE Enterprise Infrastructure</option>
+                                    <option value="cciewireless">CCIE Wireless</option>
+                                    <option value="ccnpsecurity">CCNP Security</option>
+                                    <option value="ccnpdc">CCNP Data Center</option>
+                                    <option value="ccnpenterprise">CCNP Enterprise Infrastructure</option>
+                                    <option value="ccnpwireless">CCNP Wireless</option>
+                                    <option value="ccna">CCNA</option>
+                                    <option value="sdnplus">Cisco SDN++</option>
+                                    <option value="sdwan">Cisco SD-WAN</option>
+                                    <option value="aci">Cisco ACI</option>
+                                    <option value="nse4">Fortinet NSE 4</option>
+
+                                </select>
+
+                                <!-- Message -->
+                                <textarea name="Message" placeholder="Message" rows="4" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded placeholder-gray-500"></textarea>
+
+                                <!-- Submit Button -->
+                                <button type="submit"
+                                    class="w-full bg-yellow-400 text-black font-semibold py-2 rounded hover:bg-yellow-500 transition">
+                                    Enquire Now
+                                </button>
+
+                                <!-- Success Message -->
+                                <p id="success-message" class="font-semibold text-center"
+                                    style="display: none; color: black !important;">
+                                    Form submitted successfully!
+                                </p>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- OPTIONAL: Add fade-in animation -->
+
+
+
+        <section class="bg-[#f3f3f3] py-20 px-4 md:px-12">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-center text-xl sm:text-2xl md:text-3xl font-bold text-center mb-12 uppercase">
+
+                    Our Training Highlights </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Feature Card -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition flex items-start gap-4">
+                        <i class="fas fa-chalkboard-teacher text-yellow-500 text-2xl mt-1"></i>
+                        <span class="text-gray-800 font-medium text-sm">Live Technology Lecture (60 Min/Daily)</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition flex items-start gap-4">
+                        <i class="fas fa-book text-yellow-500 text-2xl mt-1"></i>
+                        <span class="text-gray-800 font-medium text-sm">Materials to Prepare for SCOR</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition flex items-start gap-4">
+                        <i class="fas fa-video text-yellow-500 text-2xl mt-1"></i>
+                        <span class="text-gray-800 font-medium text-sm">Live Recorded Lecture</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition flex items-start gap-4">
+                        <i class="fas fa-user-tie text-yellow-500 text-2xl mt-1"></i>
+                        <span class="text-gray-800 font-medium text-sm">Instructor Guidance Till Exam</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition flex items-start gap-4">
+                        <i class="fas fa-drafting-compass text-yellow-500 text-2xl mt-1"></i>
+                        <span class="text-gray-800 font-medium text-sm">Design Guide to Implement</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition flex items-start gap-4">
+                        <i class="fas fa-check-circle text-yellow-500 text-2xl mt-1"></i>
+                        <span class="text-gray-800 font-medium text-sm">Eve-ng all proper image</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition flex items-start gap-4">
+                        <i class="fas fa-file-alt text-yellow-500 text-2xl mt-1"></i>
+                        <span class="text-gray-800 font-medium text-sm">Workbook with Solutions</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition flex items-start gap-4">
+                        <i class="fas fa-certificate text-yellow-500 text-2xl mt-1"></i>
+                        <span class="text-gray-800 font-medium text-sm">Certificate of Completion</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- about  -->
+
+        <section class="bg-white px-6 py-16 md:px-12 lg:px-20" x-data="{ activeSlide: '', showSlide: false }">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column -->
+                <div>
+                    <h1 class="text-4xl font-extrabold text-gray-800 mb-6">
+                        About <span class="text-[#fbbf24]">the Course</span>
+                    </h1>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                        Our Cisco Security program is tailored to equip you with the advanced skills and in-depth
+                        knowledge necessary for a successful career in Network Security. The curriculum covers a broad
+                        spectrum of topics, from Network Security design to implementation and troubleshooting.
+                    </p>
+
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-6">
+                    <div class="bg-yellow-50 p-6 rounded-xl shadow-sm flex items-start gap-4 cursor-pointer hover:bg-yellow-100 transition"
+                        @click="activeSlide = 'lab'; showSlide = true">
+                        <div class="text-yellow-600 text-2xl">🧪</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">CCNP Security Lab Exam:</h3>
+                            <p class="text-gray-600">Get in-depth knowledge of each section in the lab exam with
+                                hands-on learning. <span style="color: red;">readmore...</span></p>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 p-6 rounded-xl shadow-sm flex items-start gap-4 cursor-pointer hover:bg-yellow-100 transition"
+                        @click="activeSlide = 'pre'; showSlide = true">
+                        <div class="text-yellow-600 text-2xl">📚</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Pre-requisites</h3>
+                            <p class="text-gray-600">Check if you're ready for CCIE Security and what foundational
+                                skills you need. <span style="color: red;">readmore...</span></p>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 p-6 rounded-xl shadow-sm flex items-start gap-4 cursor-pointer hover:bg-yellow-100 transition"
+                        @click="activeSlide = 'obj'; showSlide = true">
+                        <div class="text-yellow-600 text-2xl">🎯</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Course Objectives</h3>
+                            <p class="text-gray-600">Learn about what this course will help you achieve step-by-step.
+                                <span style="color: red;">readmore...</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Slide Panel -->
+            <div class="fixed top-0 right-0 h-screen sm:w-[400px] bg-gray-900 text-white pt-10 px-6 pb-6 shadow-xl z-50 transform transition-transform duration-500 ease-in-out overflow-y-auto"
+                :class="showSlide ? 'translate-x-0' : 'translate-x-full'">
+                <button @click="showSlide = false"
+                    class="text-white text-2xl absolute top-4 right-6 font-bold hover:text-yellow-500">&times;</button>
+
+                <!-- Lab Content -->
+                <div x-show="activeSlide === 'lab'">
+                    <h2 class="text-xl font-bold mb-4">CCNP Security Lab Exam:</h2>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li>Security Concepts (25%)</li>
+                        <li>Network Security (20%)</li>
+                        <li>Securing the Cloud (15%)</li>
+                        <li>Content Security (15%)</li>
+                        <li>Endpoint Protection and Detection (10%)</li>
+                        <li>Secure Network Access, Visibility, and Enforcement (15%)</li>
+                    </ul>
+                </div>
+
+                <!-- Prerequisites Content -->
+                <div x-show="activeSlide === 'pre'">
+                    <h2 class="text-xl font-bold mb-4">Pre-requisites</h2>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li>The program is open to anyone who wants to become a certified professional in network
+                            security.</li>
+                        <li>The training is designed for IT professionals, Network Engineers, Security Analysts, and
+                            Cybersecurity Specialists.</li>
+                        <li>This program helps individuals gain a strong understanding of core and advanced security
+                            technologies used in modern networks.</li>
+                        <li> The training prepares participants for the CCNP Security certification exam, focusing on
+                            hands-on labs and real-world security scenarios.</li>
+                        <li>Overall, anyone aiming to build or advance a career in network security can benefit from
+                            this training.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Objectives Content -->
+                <div x-show="activeSlide === 'obj'">
+                    <h2 class="text-xl font-bold mb-4">Course Objectives</h2>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li>Implement core CCIE security solutions to provide advanced threat protection against cyber
+                            security attacks</li>
+                        <li>Security for networks, cloud and content, endpoint protection, secure network access,
+                            visibility, and enforcements</li>
+                        <li>Configure CCIE Firepower Threat Defense technology</li>
+                        <li>Implement advanced Next-Generation Firewall (NGFW) and Next-Generation Intrusion Prevention
+                            System (NGIPS) features</li>
+                        <li>Deploy and use CCIE Firepower Next-Generation Intrusion Prevention System (NGIPS)</li>
+                        <li>Detection of network-based malware and file type, NGIPS tuning</li>
+                        <li>Configuration including application control, security intelligence, firewall, and
+                            network-based malware and file controls</li>
+                        <li>Deploy and use CCIE Identity Services Engine (ISE) v2.4</li>
+                        <li>Highly secure access control across wired, wireless, and VPN connections</li>
+                        <li>Implement, use, and maintain CCIE Web Security Appliance (WSA)</li>
+                        <li>Provide advanced threat protection for email and content aligned with security threats</li>
+                        <li>Deploy proxy services, user authentication, implemented controls to control HTTPS traffic;
+                            and decryption</li>
+                        <li>Design and troubleshoot traditional Internet Protocol Security (IPsec), Dynamic Multipoint
+                            Virtual Private Network (DMVPN), Flex VPN, and remote access VPN</li>
+                        <li>Design advanced automated security solutions for your network</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- end -->
+
+
+        <!-- Syllabus Section -->
+
+
+        <!-- end -->
+
+
+
+
+
+
+
+        <!-- youtubevideo -->
+
+        <div class="bg-white">
+            <section class="bg-[#f3f3f3] py-14 px-4 md:px-20" x-data="{ open: false }">
+                <div
+                    class="max-w-6xl mx-auto flex flex-col md:flex-row rounded-3xl overflow-hidden shadow-lg min-h-[400px]">
+
+                    <!-- Left Image -->
+                    <div class="w-full md:w-1/2 bg-cover bg-center min-h-[250px] md:min-h-full"
+                        style="background-image: url('image/Gritli\ 1.png');">
+                    </div>
+
+                    <!-- Right Content -->
+                    <div
+                        class="w-full md:w-1/2 bg-white p-6 md:p-10 flex flex-col justify-center items-start text-left space-y-6 animate-fadeIn">
+
+                        <!-- Centered YouTube Button with pulse animation -->
+                        <div class="w-full flex justify-center">
+                            <button @click="open = true"
+                                class="bg-black text-white p-4 rounded-full shadow-lg animate-pulse hover:scale-110 transition duration-300">
+                                <i class="fa-brands fa-youtube text-2xl"></i>
+                            </button>
+                        </div>
+
+                        <!-- Bullet Points -->
+                        <ul class="text-sm md:text-base text-gray-700 list-disc pl-5 space-y-2">
+                            <li><strong>Holds CCIE #66102 Security</strong> and CCDP certifications, demonstrating
+                                expertise in networking technologies.</li>
+                            <li>Certified in Cisco CCNP Enterprise and CCNA CyberOps — showcasing a commitment to
+                                excellence.</li>
+                            <li><strong>Fortinet NSE4 certified</strong>, reflecting deep security knowledge and
+                                practices.</li>
+                            <li>Also holds <strong>NSA CNSS 4011 and CCAI</strong> — reinforcing field credibility and
+                                proficiency.</li>
+                        </ul>
+
+                        <!-- Author -->
+                        <p class="text-sm md:text-base font-semibold text-gray-500 pl-5">
+                            Mr. Mohammed Gritli
+                        </p>
+                    </div>
+                </div>
+
+                <!-- YouTube Modal -->
+
+                <!-- YouTube Modal -->
+                <!-- YouTube Modal -->
+                <div x-show="open" x-cloak
+                    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50"
+                    x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-90"
+                    x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                    @click.away="open = false">
+
+                    <div class="relative bg-white rounded-lg overflow-hidden shadow-lg w-full max-w-3xl aspect-video">
+
+                        <!-- Close Button -->
+                        <button @click="open = false"
+                            class="absolute top-2 right-2 text-black bg-gray-200 hover:bg-gray-300 rounded-full p-1.5 z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        <!-- Lazy-loaded YouTube iframe -->
+                        <template x-if="open">
+                            <iframe class="w-full h-full"
+                                :src="open ? 'https://www.youtube.com/embed/nJsMd-o4Ep8?autoplay=1' : ''"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </template>
+
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+
+
+
+        <section class="w-full bg-white pt-10 pb-6 px-4">
+            <div
+                class="max-w-[100rem] mx-auto flex flex-col md:flex-row items-center justify-between bg-[#fffbeb] shadow-md rounded-xl p-6 md:p-10">
+
+                <!-- Left Content -->
+                <div class="flex-1">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-3">Flexible EMI Plans </h2>
+                    <p class="text-gray-600 mb-5 max-w-xl">
+                        Don’t let fees stop your dreams.
+                        Get started now and break your course fee into small, easy EMIs. No stress, no hassle – just
+                        smooth learning ahead.
+                        👉 Choose Your Plan & Start Learning Today!
+                    </p>
+                    <a href="#contactForm"
+                        class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-2 rounded-lg transition duration-200">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Right Illustration -->
+                <div class="w-48 mt-8 md:mt-0 md:ml-10">
+                    <img src="image/emi3.png" alt="Shopping Cart Illustration" class="w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- cisecos career -->
+        <section class="bg-white py-10 px-4 md:px-12">
+            <div class="max-w-7xl mx-auto">
+                <!-- Heading -->
+                <div class="text-center mb-14">
+                    <h2 class="text-center text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Your Cisco Career
+                        Ladder is Ready for You</h2>
+                    <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
+                        Step into the world of high-paying Networking careers with Cisco's globally recognized
+                        certifications.
+                    </p>
+                </div>
+
+                <!-- Animated Gradient Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Card 1 -->
+                    <div
+                        class="relative bg-gradient-to-br from-blue-50 to-white border border-gray-200 rounded-xl p-6 pt-14 shadow-md hover:shadow-xl transition-all hover:-translate-y-2 hover:scale-[1.02] duration-300 group">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                            <div
+                                class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white w-14 h-14 rounded-full flex items-center justify-center font-bold text-sm shadow-lg group-hover:scale-110 transition">
+                                CCNA
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-gray-800 group-hover:text-blue-600 transition">
+                            Network Support Engineer</h3>
+                        <p class="text-sm text-center text-gray-500 mb-3">₹3–7 LPA | $50k–70k</p>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">
+                            Entry-level job to build your skills in routers, switching, and LAN troubleshooting.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="relative bg-gradient-to-br from-purple-50 to-white border border-gray-200 rounded-xl p-6 pt-14 shadow-md hover:shadow-xl transition-all hover:-translate-y-2 hover:scale-[1.02] duration-300 group">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                            <div
+                                class="bg-gradient-to-r from-purple-500 to-pink-500 text-white w-14 h-14 rounded-full flex items-center justify-center font-bold text-sm shadow-lg group-hover:scale-110 transition">
+                                CCNP
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-gray-800 group-hover:text-purple-600 transition">
+                            Network Engineer</h3>
+                        <p class="text-sm text-center text-gray-500 mb-3">₹7–12 LPA | $70k–110k</p>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">
+                            Mid-level role managing secure routing, switching, and wireless infrastructure.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="relative bg-gradient-to-br from-green-50 to-white border border-gray-200 rounded-xl p-6 pt-14 shadow-md hover:shadow-xl transition-all hover:-translate-y-2 hover:scale-[1.02] duration-300 group">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                            <div
+                                class="bg-gradient-to-r from-green-500 to-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center font-bold text-sm shadow-lg group-hover:scale-110 transition">
+                                CCIE
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-gray-800 group-hover:text-green-600 transition">
+                            Network Architect</h3>
+                        <p class="text-sm text-center text-gray-500 mb-3">₹20–40 LPA | $120k–200k</p>
+                        <p class="text-sm text-gray-600 text-center leading-relaxed">
+                            Advanced career in enterprise cloud, security design, and large-scale network planning.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- 
+end -->
+
+        <!-- cta -->
+
+        <!-- Technologies Section -->
+
+        <!-- Container -->
+        <div class="bg-gray-100 px-4 pt-10 pb-16">
+
+            <!-- Section with reduced padding -->
+            <div class="bg-white-100 pt-10 pb-12">
+
+                <!-- Heading with less bottom margin -->
+                <h2 class="text-center text-4xl sm:text-3xl font-extrabold uppercase text-black tracking-wide mb-10">
+                    OUR RECENT CCNP Security SUCCESS STORIES
+                </h2>
+
+                <!-- Slider -->
+                <div class="overflow-hidden max-w-full">
+                    <div class="flex slider-track w-max gap-8 items-stretch">
+
+                        <!-- Group 1 -->
+                        <div class="flex gap-8 items-stretch">
+
+                            <!-- Card 1 -->
+                            <div
+                                class="bg-white p-4 rounded-3xl w-72 flex flex-col text-center flex-shrink-0 transition">
+                                <img src="image/aabarnam.png" alt="User" class="w-16 h-16 rounded-full mx-auto mb-3">
+                                <div class="mt-auto">
+                                    <h3 class="font-semibold text-blue-600 text-base">Abarnam samiappan</h3>
+                                    <p class="text-sm text-gray-500">CCIE #67742</p>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div
+                                class="bg-pink-100 p-4 rounded-3xl w-72 flex flex-col text-center flex-shrink-0 transition">
+                                <img src="image/Marah.png" alt="User" class="w-16 h-16 rounded-full mx-auto mb-3">
+                                <div class="mt-auto">
+                                    <h3 class="font-semibold text-pink-600 text-base">Marah</h3>
+                                    <p class="text-sm text-gray-500">CCIE #67286</p>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div
+                                class="bg-green-100 p-4 rounded-3xl w-72 flex flex-col text-center flex-shrink-0 transition">
+                                <img src="image/satish-karate.webp" alt="User"
+                                    class="w-16 h-16 rounded-full mx-auto mb-3">
+                                <div class="mt-auto">
+                                    <h3 class="font-semibold text-green-600 text-base">Satish Karate</h3>
+                                    <p class="text-sm text-gray-500">CCIE #55298</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Group 4 (Duplicate) -->
+
+
+                        <div class="bg-white p-4 rounded-3xl w-72 flex flex-col text-center flex-shrink-0 transition">
+                            <img src="image/Essa.png" alt="User" class="w-16 h-16 rounded-full mx-auto mb-3">
+                            <div class="mt-auto">
+                                <h3 class="font-semibold text-blue-600 text-base"> Essa Elshafie </h3>
+                                <p class="text-sm text-gray-500">CCIE #53069</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-pink-100 p-4 rounded-3xl w-72 flex flex-col text-center flex-shrink-0 transition">
+                            <img src="image/Mrunal.png" alt="User" class="w-16 h-16 rounded-full mx-auto mb-3">
+                            <div class="mt-auto">
+                                <h3 class="font-semibold text-pink-600 text-base">Mrunal Meshram </h3>
+                                <p class="text-sm text-gray-500">CCIE #61827</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-green-100 p-4 rounded-3xl w-72 flex flex-col text-center flex-shrink-0 transition">
+                            <img src="image/Selvam.png" alt="User" class="w-16 h-16 rounded-full mx-auto mb-3">
+                            <div class="mt-auto">
+                                <h3 class="font-semibold text-green-600 text-base">Selvam Nagappan</h3>
+                                <p class="text-sm text-gray-500">CCIE #67723</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-3xl w-72 flex flex-col text-center flex-shrink-0 transition">
+                            <img src="image/Amit.png" alt="User" class="w-16 h-16 rounded-full mx-auto mb-3">
+                            <div class="mt-auto">
+                                <h3 class="font-semibold text-green-600 text-base">Amit Kumar</h3>
+                                <p class="text-sm text-gray-500">CCIE #67744</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-pink-100 p-4 rounded-3xl w-72 flex flex-col text-center flex-shrink-0 transition">
+                            <img src="image/Reham.png" alt="User" class="w-16 h-16 rounded-full mx-auto mb-3">
+                            <div class="mt-auto">
+                                <h3 class="font-semibold text-green-600 text-base">Reham Alamaaitah</h3>
+                                <p class="text-sm text-gray-500">CCIE #67296</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-green-100 p-4 rounded-3xl w-72 flex flex-col text-center flex-shrink-0 transition">
+                            <img src="image/Shorouk.png" alt="User" class="w-16 h-16 rounded-full mx-auto mb-3">
+                            <div class="mt-auto">
+                                <h3 class="font-semibold text-green-600 text-base">Shorouk Elkhateeb</h3>
+                                <p class="text-sm text-gray-500">CCIE #68139</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- YouTube Section (Black) -->
+
+
+
+
+
+
+        <!-- Student Reviews Section (Gray) -->
+
+        <!-- cotact form -->
+
+        <!-- ccie students stories -->
+
+        <!-- Slide 2 -->
+
+
+
+        <!-- end -->
+
+        <!-- contact form end -->
+
+        <div class="relative bg-black text-white px-6 md:px-12 py-14 overflow-hidden">
+            <!-- Top-left Glow -->
+            <div
+                class="absolute -left-40 -top-40 w-[500px] h-[500px] bg-gradient-to-br from-purple-700 via-yellow-500 to-green-500 opacity-25 blur-3xl rounded-full pointer-events-none z-0">
+            </div>
+
+            <!-- Bottom-right Glow -->
+            <div
+                class="absolute -right-40 -bottom-40 w-[500px] h-[500px] bg-gradient-to-br from-purple-700 via-yellow-500 to-green-500 opacity-25 blur-3xl rounded-full pointer-events-none z-0">
+            </div>
+
+            <!-- Heading -->
+            <h2 class="text-4xl font-bold text-white text-center relative z-10">
+                <span class="text-center text-xl sm:text-2xl md:text-3xl font-bold py-3 inline-block">Frequently Asked
+                    Questions</span>
+            </h2>
+
+            <div class="max-w-5xl mx-auto mt-10 space-y-4 relative z-10" x-data="{ openFaq: 0 }">
+                <!-- FAQ 1 -->
+                <div class="rounded-md overflow-hidden border border-gray-700">
+                    <button @click="openFaq = openFaq === 1 ? 0 : 1"
+                        class="w-full flex items-center justify-between bg-[#191a1b] px-4 py-4 font-semibold hover:bg-gray-800 transition text-left">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-question-circle text-white text-lg"></i>
+                            <span>What is the CCNP Security Certification?</span>
+                        </div>
+                        <span x-text="openFaq === 1 ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="openFaq === 1" x-collapse class="bg-white text-black p-4 text-sm leading-relaxed">
+                        The CCNP Security certification by Cisco validates advanced network security skills, focusing on
+                        threat protection, secure access, and managing Cisco security solutions. It demonstrates
+                        expertise in designing, implementing, and troubleshooting network security technologies, ideal
+                        for professionals seeking specialized roles in IT security.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="rounded-md overflow-hidden border border-gray-700">
+                    <button @click="openFaq = openFaq === 2 ? 0 : 2"
+                        class="w-full flex items-center justify-between bg-[#191a1b] px-4 py-4 font-semibold hover:bg-gray-800 transition text-left">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-question-circle text-white text-lg"></i>
+                            <span>What is the duration of the CCNP course?</span>
+                        </div>
+                        <span x-text="openFaq === 2 ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="openFaq === 2" x-collapse class="bg-white text-black p-4 text-sm leading-relaxed">
+                        You can select weekdays batches. You can opt for an onsite or online course. Regular weekday
+                        (Mon – Fri) classroom training takes 8 weeks or 120 hours. Please get in touch with us for the
+                        schedule, fees and other details.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="rounded-md overflow-hidden border border-gray-700">
+                    <button @click="openFaq = openFaq === 3 ? 0 : 3"
+                        class="w-full flex items-center justify-between bg-[#191a1b] px-4 py-4 font-semibold hover:bg-gray-800 transition text-left">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-question-circle text-white text-lg"></i>
+                            <span>Do you have weekend training for professionals?</span>
+                        </div>
+                        <span x-text="openFaq === 3 ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="openFaq === 3" x-collapse class="bg-white text-black p-4 text-sm leading-relaxed">
+                        No, we doesn’t provide weekend training.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="rounded-md overflow-hidden border border-gray-700">
+                    <button @click="openFaq = openFaq === 4 ? 0 : 4"
+                        class="w-full flex items-center justify-between bg-[#191a1b] px-4 py-4 font-semibold hover:bg-gray-800 transition text-left">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-question-circle text-white text-lg"></i>
+                            <span>What are the recommended study materials for Cisco security training?</span>
+                        </div>
+                        <span x-text="openFaq === 4 ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="openFaq === 4" x-collapse class="bg-white text-black p-4 text-sm leading-relaxed">
+                        The typical study material for CCNP Security training is Cisco press books, latest workbooks
+                        prepared & revised regularly by experts.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+
+                <!-- FAQ 6 -->
+                <div class="rounded-md overflow-hidden border border-gray-700">
+                    <button @click="openFaq = openFaq === 6 ? 0 : 6"
+                        class="w-full flex items-center justify-between bg-[#191a1b] px-4 py-4 font-semibold hover:bg-gray-800 transition text-left">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-question-circle text-white text-lg"></i>
+                            <span>What would be various job roles offered to Cisco Security candidates?</span>
+                        </div>
+                        <span x-text="openFaq === 6 ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="openFaq === 6" x-collapse class="bg-white text-black p-4 text-sm leading-relaxed">
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Network Engineer</li>
+                            <li>Senior Network Engineer</li>
+                            <li>Network Administrator</li>
+                            <li>Network Security Engineer</li>
+                            <li>Network Security Administrator</li>
+                            <li>Network Security Specialist</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="rounded-md overflow-hidden border border-gray-700">
+                    <button @click="openFaq = openFaq === 7 ? 0 : 7"
+                        class="w-full flex items-center justify-between bg-[#191a1b] px-4 py-4 font-semibold hover:bg-gray-800 transition text-left">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-question-circle text-white text-lg"></i>
+                            <span>What prerequisites are required for the CCNP Security certification?</span>
+                        </div>
+                        <span x-text="openFaq === 7 ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="openFaq === 7" x-collapse class="bg-white text-black p-4 text-sm leading-relaxed">
+                        The CCNP Security certification does not have formal prerequisites. However, Cisco recommends
+                        having a good understanding of the exam topics, as well as three to five years of experience
+                        implementing security solutions.
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="rounded-md overflow-hidden border border-gray-700">
+                    <button @click="openFaq = openFaq === 8 ? 0 : 8"
+                        class="w-full flex items-center justify-between bg-[#191a1b] px-4 py-4 font-semibold hover:bg-gray-800 transition text-left">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-question-circle text-white text-lg"></i>
+                            <span>How long is the CCNP Security certification valid, and how can it be renewed?</span>
+                        </div>
+                        <span x-text="openFaq === 8 ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="openFaq === 8" x-collapse class="bg-white text-black p-4 text-sm leading-relaxed">
+                        The CCNP Security certification is valid for three years. To renew it, you can pass one of the
+                        higher-level exams, such as a CCIE lab exam, complete continuing education activities, or retake
+                        the CCNP Security exams.
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+
+            </div>
+        </div>
+
+
+
+        <!-- <Faq Section -->
+
+
+        <footer>
+            <div class="footer-container lines">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <a href="index.html"><span><img style="margin-top: 12px;"
+                                    src="image/Nitiz-Sharma9.png"></span></a>
+                    </div>
+                </div>
+                <div class="footer-wrapper">
+                    <div class="footer-col">
+                        <h2>Links</h2>
+
+                        <a href="about.html">About Us</a>
+                        <a href="blogs.html">Blogs</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="corporatetraining.html">Corporate Training</a>
+
+                    </div>
+                    <div class="footer-col">
+                        <h2>Other Links</h2>
+
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="refundPolicy.html">Refund Policy</a>
+                        <a href="instructor.html">Become An Instructor</a>
+                        <a href="termscondition.html">Terms and Conditions</a>
+                        <a href="customerregistrstion.html">Customer Registration process and guidelines</a>
+                    </div>
+                    <!-- <div class="footer-col">
+                    <h1>Subscribe our newsletter</h1>
+
+                    <div class="inputs">
+                        <input type="text" placeholder="Enter E-mail Here...">
+                        <i class="fa fa-paper-plane fa-md"></i>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025, Nitiz Sharma. All rights reserved.</p>
+                <div class="footer-social-icon">
+                    <a href="https://www.facebook.com/nitizsharmatrainings/" target="_blank">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nitizsharmatrainings/" target="_blank">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://twitter.com/NitizSharmaNZ" target="_blank">
+                        <i class="ri-twitter-x-line"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/nitiz-sharma-training/" target="_blank">
+                        <i class="ri-linkedin-box-fill"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@nitizsharm" target="_blank">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+
+                </div>
+            </div>
+            <a href="https://wa.me/917019021129?text=Hello!%20I%20need%20some%20assistance." class="whatsapp-float"
+                target="_blank">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+
+            <a href="https://wa.me/917019021129?text=Hello!%20I%20want%20a%20FREE%20Demo%20Class." target="_blank"
+                class="fixed bottom-24 right-10 z-50 animate-bounce">
+                <img src="image/freedemo.gif" alt="Free Demo" class="w-20 h-auto">
+            </a>
+
+
+
+            <script src="https://cdn.tailwindcss.com"></script>
+            <script src="script.js"></script>
+
+            <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+            <!-- GSAP  -->
+            <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+            <!-- GSAP SCROLLING -->
+            <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+            <script src="script.js"></script>
+            <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
+            <script src="https://md-aqil.github.io/images/swiper.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+            <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+            <!-- Replace with your real kit -->
+
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const phoneInputField = document.querySelector("#phone");
+                    let phoneInput = null;
+
+                    if (phoneInputField && window.intlTelInput) {
+                        phoneInput = window.intlTelInput(phoneInputField, {
+                            initialCountry: "auto",
+                            separateDialCode: true,
+                            autoPlaceholder: "polite",
+                            preferredCountries: ["us", "gb", "in"],
+                            geoIpLookup: function (callback) {
+                                fetch("https://ipapi.co/json")
+                                    .then(response => response.json())
+                                    .then(data => callback(data.country_code))
+                                    .catch(() => callback("us"));
+                            },
+                            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+                        });
+                    }
+
+                    // 📩 Contact Form Submission
+                    const contactForm = document.querySelector("#contactForm");
+                    if (contactForm) {
+                        contactForm.addEventListener("submit", async function (e) {
+                            e.preventDefault();
+
+                            const phone = phoneInput ? phoneInput.getNumber() : "";
+                            if (phoneInput && phone && !phoneInput.isValidNumber()) {
+                                alert("Please enter a valid phone number.");
+                                return;
+                            }
+
+                            const formData = {
+                                fullName: document.querySelector('[name="Full Name"]').value,
+                                email: document.querySelector('[name="Email"]').value,
+                                phone: phone,
+                                course: document.querySelector('#course').value,
+                                message: document.querySelector('[name="Message"]').value
+                            };
+
+                            try {
+                                // ⏱️ Send quickly — server responds instantly (email sent in background)
+                                await fetch("http://localhost:3000/contact", {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json" },
+                                    body: JSON.stringify(formData)
+                                });
+
+                                // ✅ Redirect without waiting
+                                window.location.href = "thankyou.html";
+                            } catch (err) {
+                                console.error("Fetch error (contact):", err);
+                                alert("Server error. Please try again later.");
+                            }
+                        });
+                    }
+
+                    // 🎯 Group Discount Form Submission
+                    const discountForm = document.querySelector("#groupDiscountForm");
+                    const messageDiv = document.getElementById("discount-message");
+                    const submitBtn = discountForm?.querySelector('button[type="submit"]');
+
+                    if (discountForm) {
+                        discountForm.addEventListener("submit", async function (e) {
+                            e.preventDefault();
+
+                            const countryCode = discountForm.querySelector('[name="Country Code"]').value;
+                            const phone = discountForm.querySelector('[name="Phone Number"]').value;
+                            const course = discountForm.querySelector('[name="Course"]').value;
+                            const discount = discountForm.querySelector('[name="Discount Tier"]:checked')?.value;
+
+                            if (!countryCode || !phone || !course || !discount) {
+                                messageDiv.textContent = "❌ Please fill in all required fields.";
+                                messageDiv.className = "text-center text-sm font-semibold mt-3 text-red-600";
+                                return;
+                            }
+
+                            const data = { phone, countryCode, course, discount };
+
+                            // Show submitting state
+                            submitBtn.disabled = true;
+                            submitBtn.textContent = "Submitting...";
+                            messageDiv.textContent = "⏳ Submitting...";
+                            messageDiv.className = "text-center text-sm font-semibold mt-3 text-blue-600";
+
+                            try {
+                                // ⏱️ Fast fetch — server responds before email is sent
+                                await fetch("http://localhost:3000/group-discount", {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json" },
+                                    body: JSON.stringify(data)
+                                });
+
+                                messageDiv.textContent = "✅ Group discount form submitted successfully!";
+                                messageDiv.className = "text-center text-sm font-semibold mt-3 text-green-600";
+                                discountForm.reset();
+                            } catch (err) {
+                                messageDiv.textContent = "❌ Server error. Please try again.";
+                                messageDiv.className = "text-center text-sm font-semibold mt-3 text-red-600";
+                                console.error("Fetch error (group discount):", err);
+                            }
+
+                            // Restore button state
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = "Get My Group Discount";
+
+                            // Clear message after 5s
+                            setTimeout(() => {
+                                messageDiv.textContent = "";
+                            }, 5000);
+                        });
+                    }
+                });
+
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    const courseMenuItem = document.querySelector(".menu li.has-dropdown");
+
+                    // Only toggle dropdown if the actual <li> (not the <a>) is clicked
+                    courseMenuItem.addEventListener("click", function (event) {
+                        if (event.target.tagName !== 'A') {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            this.classList.toggle("active");
+                        }
+                    });
+
+                    // Close dropdown on clicking anywhere outside
+                    document.addEventListener("click", function (event) {
+                        if (!courseMenuItem.contains(event.target)) {
+                            courseMenuItem.classList.remove("active");
+                        }
+                    });
+                });
+            </script>
+        </footer>
+</body>
+
+</html>

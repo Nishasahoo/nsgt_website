@@ -15,6 +15,198 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
 </head>
+<style>
+    .form-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .form-section {
+        width: 60%;
+        background-color: #000000;
+        padding: 30px;
+
+    }
+
+    .form-section h2 {
+        margin-bottom: 20px;
+        font-size: 26px;
+        color: white;
+    }
+
+    .form-section input,
+    .form-section select,
+    .form-section textarea {
+        width: 100%;
+        padding: 8px 0px;
+        margin-bottom: 15px;
+        border: none;
+        border-bottom: 1px solid #edecec5b;
+
+        font-size: 16px;
+        background: transparent;
+        color: #6f7173;
+        outline: none;
+        margin-top: 20px;
+    }
+
+    .separator {
+        height: 1px;
+        background: #777;
+        margin-bottom: 15px;
+    }
+
+    .form-section button {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        width: 40%;
+        border-radius: 5px;
+    }
+
+    .form-section button:hover {
+        background-color: #d5a12b;
+    }
+
+    .address-section {
+        width: 48%;
+        background-color: #1a1616;
+        padding: 40px;
+        border-radius: 12px;
+        color: white;
+    }
+
+    .address-section h3 {
+        margin-bottom: 39px;
+        font-size: 24px;
+    }
+
+    .address-section p {
+        margin: 40px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .address-section i {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #d5a12b;
+    }
+
+    .address-section a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .address-section a:hover {
+        text-decoration: underline;
+    }
+
+    .cont {
+        background-color: #000 !important;
+    }
+
+    .iti__selected-dial-code {
+        color: #747474;
+    }
+
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 1024px) {
+        .form-container {
+            flex-direction: column;
+            padding: 30px 20px;
+        }
+
+        .form-section,
+        .address-section {
+            width: 100%;
+            padding: 25px;
+        }
+
+        .form-section button {
+            width: 100%;
+        }
+
+        .address-section h3 {
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .form-section h2 {
+            font-size: 22px;
+        }
+
+        .form-section input,
+        .form-section select,
+        .form-section textarea {
+            font-size: 15px;
+        }
+
+        .form-section button {
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .address-section {
+            padding: 25px;
+        }
+
+        .address-section h3 {
+            font-size: 20px;
+        }
+
+        .address-section p {
+            margin: 25px 0;
+            font-size: 14px;
+        }
+
+        .address-section i {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .form-container {
+            padding: 20px 10px;
+        }
+
+        .form-section h2 {
+            font-size: 20px;
+        }
+
+        .form-section input,
+        .form-section select,
+        .form-section textarea {
+            font-size: 14px;
+        }
+
+        .form-section button {
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .address-section p {
+            font-size: 13px;
+        }
+
+        .address-section i {
+            font-size: 16px;
+        }
+    }
+
+
+    .iti__selected-dial-code {
+        color: #747474;
+    }
+</style>
 
 <body>
 
@@ -30,47 +222,52 @@
                     <li class="has-dropdown">
                         <a href="#">Courses <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                         <div class="mega-menu">
-                            
-                            <!-- First Row (2 Columns) -->
                             <div class="mega-menu-row">
                                 <div class="mega-menu-column">
                                     <h4>EXPERT LEVEL TRAINING PROGRAMS</h4>
                                     <ul>
-                                        <li><a href="#">FCX/SE8</a></li>
-                                        <li><a href="#">CCIE Security</a></li>
-                                        <li><a href="#">CCIE Data Center</a></li>
-                                        <li><a href="#">CCIE Enterprise Infrastructure</a></li>
-                                        <li><a href="#">CCIE Wireless</a></li>
+                                        <li><a href="fortinet-nse8-training.html">FCX/NSE8</a></li>
+                                        <li><a href="cciesecurity.html">CCIE Security</a></li>
+                                        <li><a href="ccie-data-center-training-and-certification.html">CCIE Data
+                                                Center</a></li>
+                                        <li><a href="ccie-enterprise-infrastructure-training.html">CCIE Enterprise
+                                                Infrastructure</a></li>
+                                        <li><a href="ccie-wireless-training.html">CCIE Wireless</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega-menu-column">
                                     <h4>PROFESSIONAL LEVEL TRAINING PROGRAMS</h4>
                                     <ul>
-                                        <li><a href="#">CCNP Security Training</a></li>
-                                        <li><a href="#">CCNP Data Center Training</a></li>
-                                        <li><a href="#">CCNP Enterprise Infrastructure Training</a></li>
-                                        <li><a href="#">CCNP Wireless Training</a></li>
+                                        <li><a href="ccnp-security-training.html">CCNP Security Training</a></li>
+                                        <li><a href="ccnp-data-center-training.html">CCNP Data Center Training</a></li>
+                                        <li><a href="ccnp-enterprise-infrastructure-training.html">CCNP Enterprise
+                                                Infrastructure Training</a></li>
+                                        <li><a href="ccnp-wireless-training.html">CCNP Wireless Training</a></li>
+                                        <li><a href="cisco-ise-training.html">Cisco ISE Training</a></li>
                                     </ul>
                                 </div>
                             </div>
-        
-                            <!-- Second Row (2 Columns) -->
                             <div class="mega-menu-row">
                                 <div class="mega-menu-column">
                                     <h4>ASSOCIATE LEVEL TRAINING PROGRAMS</h4>
                                     <ul>
-                                        <li><a href="#">CCNA</a></li>
-                                        <li><a href="#">CWNA</a></li>
-                                        <li><a href="#">AWS</a></li>
+                                        <li><a href="ccna-course-and-certification.html">CCNA</a></li>
+                                        <!-- <li><a href="#">CWNA</a></li>
+                                        <li><a href="#">AWS</a></li> -->
                                     </ul>
                                 </div>
                                 <div class="mega-menu-column">
                                     <h4>SPECIAL COURSES</h4>
                                     <ul>
-                                        <li><a href="#">SDN++</a></li>
-                                        <li style="margin-left: 20px;"><a href="#">SDWAN training and Certification</a></li>
-                                        <li style="margin-left: 20px;"><a href="#">Cisco ACI training and Certification</a></li>
-                                        <li><a href="#">Fortinet NSE 4</a></li>
+                                        <li><a href="/cisco-sdn-training-and-certification.html">SDN++</a></li>
+                                        <li style="margin-left: 20px;"><a
+                                                href="sdwan-training-and-certification.html">SDWAN training and
+                                                Certification</a>
+                                        </li>
+                                        <li style="margin-left: 20px;"><a
+                                                href="cisco-aci-training-and-certification.html">Cisco ACI training and
+                                                Certification</a></li>
+                                        <li><a href="fortinet-nse-4-certification.html">Fortinet NSE 4</a></li>
                                         <li><a href="#">Digital Marketing</a></li>
                                     </ul>
                                 </div>
@@ -80,25 +277,29 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="corporatetraining.html">Corporate Training</a></li>
                     <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <div class="nav-right">
-                <!-- <div class="call-us">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <div class="call-det">
-                        <p>Call Us:</p>
-                        <h2>+91 7019021129</h2>
-                    </div>
-                </div> -->
+            <div class="nav-right flex items-center gap-4">
                 <div class="btn">
-                    <button onclick="location.href='contact.html'">Contact Us</button>
-                    <i class="ri-arrow-right-up-long-line"></i>
+                    <!-- Login Button -->
+                    <button onclick="location.href='https://nitizsharma.com/dashboard/'"
+                        class="bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                        Login/
+                    </button>
+
+                    <!-- Register Button -->
+                    <button onclick="location.href='https://nitizsharma.com/dashboard/'"
+                        class="bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+                        Register
+                    </button>
                 </div>
             </div>
             <div class="bars">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
+
         <!-- HERO SECTION  -->
         <div class="swiper heroSwiper">
             <div class="swiper-wrapper">
@@ -106,15 +307,18 @@
                 <div class="swiper-slide">
                     <div class="hero-header">
                         <div class="hero-content">
-                            <h1 class="herheadingsize" class="" id="animatedText">Enhance Your Team with Expert Corporate Training  
+                            <h1 class="herheadingsize" class="" id="animatedText">Enhance Your Team with Expert
+                                Corporate Training
                             </h1>
-                            <p>Corporate Training is an essential investment for businesses looking to thrive. At Nitiz Sharma Global Tech Pvt. Ltd., we provide comprehensive solutions to help your workforce excel</p>
-                            
+                            <p style="text-align: justify;">Corporate Training is an essential investment for businesses
+                                looking to thrive. At Nitiz Sharma Global Tech Pvt. Ltd., we provide comprehensive
+                                solutions to help your workforce excel</p>
+
                         </div>
                         <!-- <div class="hero-img">
                             <img src="image/NITIZ SHARMA.png" clas="nitizsharma-banner" alt="">
                         </div> -->
-                        
+
                     </div>
                 </div>
                 <!-- slide 2 -->
@@ -131,11 +335,12 @@
     <!-- SERVICES PAGE SECTION  -->
     <section class="service-page">
         <div class="sps-top">
-            <h2>Core Features of Our Corporate Training  
+            <h2>Core Features of Our Corporate Training
             </h2>
-          
+
         </div>
-        <p>Our consultants will design a customized training program to address your business's unique needs and skill gaps. Benefit from targeted solutions that enhance team performance.</p>
+        <p>Our consultants will design a customized training program to address your business's unique needs and skill
+            gaps. Benefit from targeted solutions that enhance team performance.</p>
         <div class="sps-cards">
             <!-- card 1 -->
             <div class="sps-card">
@@ -145,7 +350,7 @@
                 </div>
                 <p>Detailed assessments to identify skill gaps and training needs for optimal performance.</p>
             </div>
-            
+
             <!-- card 2 -->
             <div class="sps-card">
                 <div class="sps-title">
@@ -154,7 +359,7 @@
                 </div>
                 <p>Tailored training plans to meet your business's specific needs and objectives.</p>
             </div>
-            
+
             <!-- card 3 -->
             <div class="sps-card">
                 <div class="sps-title">
@@ -163,7 +368,7 @@
                 </div>
                 <p>Training on the latest tools and technologies to keep your team ahead in the digital age.</p>
             </div>
-            
+
             <!-- card 4 -->
 
 
@@ -174,8 +379,8 @@
                 </div>
                 <p>Leverage data analytics to measure training effectiveness and drive continuous improvement.</p>
             </div>
-           
-            
+
+
             <!-- card 5 -->
             <div class="sps-card">
                 <div class="sps-title">
@@ -184,7 +389,7 @@
                 </div>
                 <p>Training programs that adhere to international standards and best practices.</p>
             </div>
-            
+
             <!-- card 6 -->
             <div class="sps-card">
                 <div class="sps-title">
@@ -194,10 +399,10 @@
                 <p>elementor-heading-title elementor-size-default</p>
             </div>
         </div>
-        
-        
+
+
     </section>
-    
+
     <!-- SERVICE COM  -->
     <section class="service-com">
         <div class="sc-com">
@@ -206,31 +411,43 @@
                     <!-- slide 1 -->
                     <div class="swiper-slide">
                         <div class="sc-com-img">
-                            <img src="image/service-page-com-1.webp" alt="">
+                            <img src="image/ciscobrand.png" alt="">
                         </div>
                     </div>
                     <!-- slide 2 -->
                     <div class="swiper-slide">
                         <div class="sc-com-img">
-                            <img src="image/service-page-com-2.webp" alt="">
+                            <img src="image/hclbrand.png" alt="">
                         </div>
                     </div>
                     <!-- slide 3 -->
                     <div class="swiper-slide">
                         <div class="sc-com-img">
-                            <img src="image/service-page-com-3.webp" alt="">
+                            <img src="image/fortinetbrand.png" alt="">
                         </div>
                     </div>
                     <!-- slide 4 -->
                     <div class="swiper-slide">
                         <div class="sc-com-img">
-                            <img src="image/service-page-com-4.webp" alt="">
+                            <img src="image/vi branding logo new.png" alt="">
                         </div>
                     </div>
                     <!-- slide 5 -->
                     <div class="swiper-slide">
                         <div class="sc-com-img">
-                            <img src="image/service-page-com-4.webp" alt="">
+                            <img src="image/intel brandingss logo.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="sc-com-img">
+                            <img src="image/hp 250165 logo branding.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="sc-com-img">
+                            <img src="image/dellbrand.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -238,6 +455,95 @@
         </div>
     </section>
 
+
+
+
+    <div class="cont">
+        <div class="form-container">
+            <div class="form-section">
+                <h2>Have a Question? We’re here to Help You!
+                </h2>
+                <p style="color: white;line-height: 1.5rem;">If you’re interested in learning more about our training
+                    materials or would like to schedule a free demo, please feel free to contact us at your convenience.
+                </p>
+
+                <form id="contactForm">
+
+                    <!-- Hidden Setup -->
+                    <input type="hidden" name="_cc" value="info@nitizsharma.com">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission from Website">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_autoresponse"
+                        value="Thank you for contacting us! We’ll be in touch shortly.">
+                    <input type="hidden" name="_next" value="https://nitizsharma.com/thank-you.html">
+
+                    <!-- Full Name -->
+                    <input type="text" name="Full Name" placeholder="Full Name" required
+                        class="w-full px-4 py-2 bg-white border border-gray-300 rounded-md placeholder-gray-500" />
+
+                    <!-- Email -->
+                    <input type="email" name="Email" placeholder="Your Email" required
+                        class="w-full px-4 py-2 bg-white border border-gray-300 rounded-md placeholder-gray-500" />
+
+                    <!-- Phone -->
+                    <input type="tel" name="Phone Number" id="phone" placeholder="Phone Number" required
+                        class="w-full px-4 py-2 bg-white border border-gray-300 rounded-md placeholder-gray-500" />
+
+                    <!-- Course -->
+                    <select name="Course" required class="w-full px-4 py-2 bg-white border border-gray-300 rounded-md">
+                        <option value="">Choose Course</option>
+                        <option value="fcx">FCX/ NSE8</option>
+                        <option value="cciesecurity">CCIE Security</option>
+                        <option value="cciedc">CCIE Data Center</option>
+                        <option value="ccieenterprise">CCIE Enterprise Infrastructure</option>
+                        <option value="cciewireless">CCIE Wireless</option>
+                        <option value="ccnpsecurity">CCNP Security</option>
+                        <option value="ccnpdc">CCNP Data Center</option>
+                        <option value="ccnpenterprise">CCNP Enterprise Infrastructure</option>
+                        <option value="ccnpwireless">CCNP Wireless</option>
+                        <option value="ccna">CCNA</option>
+                        <option value="sdnplus">Cisco SDN++</option>
+                        <option value="sdwan">Cisco SD-WAN</option>
+                        <option value="aci">Cisco ACI</option>
+                        <option value="nse4">Fortinet NSE 4</option>
+                        
+                    </select>
+
+                    <!-- Message -->
+                    <textarea name="Message" placeholder="Message" rows="4" required
+                        class="w-full px-4 py-2 bg-white border border-gray-300 rounded-md placeholder-gray-500"></textarea>
+
+                    <!-- Submit Button -->
+                    <button type="submit"
+                        class="w-[50%] bg-yellow-400 text-black font-semibold py-2 rounded-md hover:bg-yellow-500 transition">
+                        Enquire Now
+                    </button>
+
+                    <!-- Optional success message (for JS handling) -->
+                    <p id="success-message" style="display:none; color: green; font-weight: bold;">
+                        Form submitted successfully!
+                    </p>
+                </form>
+
+                <p id="success-message" style="display:none; color: green; font-weight: bold;">Form submitted
+                    successfully!</p>
+
+            </div>
+
+            <div class="address-section">
+                <h3>Contact Information</h3>
+                <p style="line-height: 1.5rem;"><i class="fas fa-map-marker-alt"></i>Nitiz Sharma Global Tech Pvt. Ltd,
+                    48-49, Gubbalala Main Rd, off Kanakapura Road, Gubbalala, Subramanyapura, Bengaluru, Karnataka
+                    560061</p>
+                <p><i class="fas fa-phone"></i> +91 7019021129</p>
+                <p><i class="fas fa-phone"></i> +91 7760144441</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@yoursite.com">info@nitizsharma.com</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@yoursite.com">nitiz@nitizsharma.com</a></p>
+
+            </div>
+        </div>
+    </div>
     <!-- OUR BEST SERVICE  -->
     <!-- <section class="best-section">
         <div class="bs-wrapper">
@@ -265,7 +571,7 @@
             </div>
         </div>
     </section> -->
-   
+
 
 
     <!-- FOOTER  -->
@@ -289,11 +595,11 @@
                 <div class="footer-col">
                     <h2>Other Links</h2>
 
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Refund Policy</a>
-                    <a href="#">Become An Instructor</a>
-                    <a href="#">Terms and Conditions</a>
-                    <a href="#">Customer Registration process and guidelines</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="refundPolicy.html">Refund Policy</a>
+                    <a href="instructor.html">Become An Instructor</a>
+                    <a href="termscondition.html">Terms and Conditions</a>
+                    <a href="customerregistrstion.html">Customer Registration process and guidelines</a>
                 </div>
                 <!-- <div class="footer-col">
                     <h1>Subscribe our newsletter</h1>
@@ -328,11 +634,10 @@
             </div>
         </div>
     </footer>
-    <a href="https://wa.me/917019021129?text=Hello!%20I%20need%20some%20assistance." 
-    class="whatsapp-float" 
-    target="_blank">
-     <i class="ri-whatsapp-fill"></i>
- </a>
+    <a href="https://wa.me/917019021129?text=Hello!%20I%20need%20some%20assistance." class="whatsapp-float"
+        target="_blank">
+        <i class="ri-whatsapp-fill"></i>
+    </a>
 
     <!-- Swiper Slider JS  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
@@ -342,6 +647,70 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const courseMenuItem = document.querySelector(".menu li.has-dropdown");
+
+            // Only toggle dropdown if the actual <li> (not the <a>) is clicked
+            courseMenuItem.addEventListener("click", function (event) {
+                if (event.target.tagName !== 'A') {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    this.classList.toggle("active");
+                }
+            });
+
+            // Close dropdown on clicking anywhere outside
+            document.addEventListener("click", function (event) {
+                if (!courseMenuItem.contains(event.target)) {
+                    courseMenuItem.classList.remove("active");
+                }
+            });
+        });
+
+
+
+
+
+
+
+        // nodejs formsubmit
+
+
+        document.querySelector("#contactForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const formData = {
+                fullName: document.querySelector('[name="Full Name"]').value,
+                email: document.querySelector('[name="Email"]').value,
+                phone: document.querySelector('[name="Phone Number"]').value,
+                course: document.querySelector('[name="Course"]').value,
+                message: document.querySelector('[name="Message"]').value
+            };
+
+            const response = await fetch("http://localhost:3000/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                document.getElementById("success-message").style.display = "block";
+            } else {
+                alert("There was a problem submitting the form. Please try again.");
+            }
+        });
+
+
+
+
+    </script>
 </body>
 
 </html>

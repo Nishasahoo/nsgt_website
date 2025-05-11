@@ -15,6 +15,14 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
     <style>
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+            /* position: relative; */
+        }
+
+
         .page-section {
             margin-bottom: 20px;
         }
@@ -97,6 +105,8 @@
             margin-right: 10px;
             border-radius: 5px;
         }
+
+        
     </style>
 </head>
 
@@ -114,47 +124,56 @@
                     <li class="has-dropdown">
                         <a href="#">Courses <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
                         <div class="mega-menu">
-                            
+
                             <!-- First Row (2 Columns) -->
                             <div class="mega-menu-row">
                                 <div class="mega-menu-column">
                                     <h4>EXPERT LEVEL TRAINING PROGRAMS</h4>
                                     <ul>
-                                        <li><a href="#">FCX/SE8</a></li>
-                                        <li><a href="#">CCIE Security</a></li>
-                                        <li><a href="#">CCIE Data Center</a></li>
-                                        <li><a href="#">CCIE Enterprise Infrastructure</a></li>
-                                        <li><a href="#">CCIE Wireless</a></li>
+                                        <li><a href="fortinet-nse8-training.html">FCX/NSE8</a></li>
+                                        <li><a href="cciesecurity.html">CCIE Security</a></li>
+                                        <li><a href="ccie-data-center-training-and-certification.html">CCIE Data
+                                                Center</a></li>
+                                        <li><a href="ccie-enterprise-infrastructure-training.html">CCIE Enterprise
+                                                Infrastructure</a></li>
+                                        <li><a href="ccie-wireless-training.html">CCIE Wireless</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega-menu-column">
                                     <h4>PROFESSIONAL LEVEL TRAINING PROGRAMS</h4>
                                     <ul>
-                                        <li><a href="#">CCNP Security Training</a></li>
-                                        <li><a href="#">CCNP Data Center Training</a></li>
-                                        <li><a href="#">CCNP Enterprise Infrastructure Training</a></li>
-                                        <li><a href="#">CCNP Wireless Training</a></li>
+                                        <li><a href="ccnp-security-training.html">CCNP Security Training</a></li>
+                                        <li><a href="ccnp-data-center-training.html">CCNP Data Center Training</a></li>
+                                        <li><a href="ccnp-enterprise-infrastructure-training.html">CCNP Enterprise
+                                                Infrastructure Training</a></li>
+                                        <li><a href="ccnp-wireless-training.html">CCNP Wireless Training</a></li>
+                                        <li><a href="cisco-ise-training.html">Cisco ISE Training</a></li>
                                     </ul>
                                 </div>
                             </div>
-        
+
                             <!-- Second Row (2 Columns) -->
                             <div class="mega-menu-row">
                                 <div class="mega-menu-column">
                                     <h4>ASSOCIATE LEVEL TRAINING PROGRAMS</h4>
                                     <ul>
-                                        <li><a href="#">CCNA</a></li>
-                                        <li><a href="#">CWNA</a></li>
-                                        <li><a href="#">AWS</a></li>
+                                        <li><a href="ccna-course-and-certification.html">CCNA</a></li>
+                                        <!-- <li><a href="#">CWNA</a></li>
+                                        <li><a href="#">AWS</a></li> -->
                                     </ul>
                                 </div>
                                 <div class="mega-menu-column">
                                     <h4>SPECIAL COURSES</h4>
                                     <ul>
-                                        <li><a href="#">SDN++</a></li>
-                                        <li style="margin-left: 20px;"><a href="#">SDWAN training and Certification</a></li>
-                                        <li style="margin-left: 20px;"><a href="#">Cisco ACI training and Certification</a></li>
-                                        <li><a href="#">Fortinet NSE 4</a></li>
+                                        <li><a href="/cisco-sdn-training-and-certification.html">SDN++</a></li>
+                                        <li style="margin-left: 20px;"><a
+                                                href="sdwan-training-and-certification.html">SDWAN training and
+                                                Certification</a>
+                                        </li>
+                                        <li style="margin-left: 20px;"><a
+                                                href="cisco-aci-training-and-certification.html">Cisco ACI training and
+                                                Certification</a></li>
+                                        <li><a href="fortinet-nse-4-certification.html">Fortinet NSE 4</a></li>
                                         <li><a href="#">Digital Marketing</a></li>
                                     </ul>
                                 </div>
@@ -164,19 +183,22 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="corporatetraining.html">Corporate Training</a></li>
                     <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <div class="nav-right">
-                <!-- <div class="call-us">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <div class="call-det">
-                        <p>Call Us:</p>
-                        <h2>+91 7019021129</h2>
-                    </div>
-                </div> -->
+            <div class="nav-right flex items-center gap-4">
                 <div class="btn">
-                    <button onclick="location.href='contact.html'">Contact Us</button>
-                    <i class="ri-arrow-right-up-long-line"></i>
+                    <!-- Login Button -->
+                    <button onclick="location.href='https://nitizsharma.com/dashboard/'"
+                        class="bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                        Login/
+                    </button>
+
+                    <!-- Register Button -->
+                    <button onclick="location.href='https://nitizsharma.com/dashboard/'"
+                        class="bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+                        Register
+                    </button>
                 </div>
             </div>
             <div class="bars">
@@ -191,7 +213,7 @@
                     <div class="hero-header">
                         <div class="hero-content">
                             <h1 class="herheadingsize" class="" id="animatedText">Learn What Is Network Automation</h1>
-                            <p>Network automation simplifies network management by giving insights into automating
+                            <p style="text-align: justify;">Network automation simplifies network management by giving insights into automating
                                 processes for security, scalability, featuring tools, benefits and more</p>
                         </div>
                         <!-- <div class="hero-img">
@@ -231,18 +253,132 @@
     <div id="all" class="tab-content active">
         <section class="blogs">
             <div class="blog-wrapper">
+
+
                 <!-- blog col 1 -->
-                
-                    <div class="blog-col">
-                        <div class="blog-img">
-                            <img src="image/Understanding-and-Implementing-Virtual-Private-Networks-1-1-1024x576.png" alt="VPN in CCNA">
-                        </div>
-                        <div class="blog-content">
-                            <a href="vpns.html"><h2 style="color: #d7a61b;">Virtual Private Networks (VPNs) in CCNA and more...</h2></a>
-                         
-                        </div>
+
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/interviewbnr.png" alt="VPN in CCNA">
                     </div>
-             
+                    <div class="blog-content">
+                        <a href="ccie-interview-questions-answer.html">
+                            <h2 style="color: #d7a61b;">Most Asked CCIE Interview Questions and more...</h2>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- blog col 2 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Blue-Tosca-Futuristic-Technology-Artificial-Intelligence-Video-768x432.png"
+                            alt="">
+                    </div>
+                    <div class="blog-content">
+                        <a href="ccna-full-form-exam-detail.html">
+                        <h2 style="color: #d7a61b;">Introduction to CCNA and more...</h2>
+                    </a>
+                    </div>
+                </div>
+                <!-- blog col 3 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Blue-Modern-Technology-YouTube-Intro-2-768x432.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <a href="wan-technologies.html">
+                        <h2 style="color: #d7a61b;">Understanding WAN Technologies  read and more...</h2>
+                    </a>
+                    </div>
+                </div>
+                <!-- blog col 4 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Understanding-Spanning-Tree-Protocol-Its-Types-768x432.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Understanding About Spanning Tree Protocol and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 5 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Pink-Blue-Modern-Artificial-Intelligence-Video-1-1-768x432.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Configuring Syslog and SNMP on Cisco Devices
+                            and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 6 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Understanding-Cisco-Identity-Services-Engine-ISE-in-CCIE-Security-2-1024x576.png"
+                            alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Cisco Identity Services Engine (ISE) in CCIE Security and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 7 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Blue-and-White-Animated-Get-Ready-Video-768x432.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Understanding Wireshark Troubleshooting for Cisco Networks and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 8 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Purple-White-Modern-Artificial-Intelligence-Video-768x432.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2> Role of MPLS in Modern CCIE Enterprise Infrastructure Networks and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 9 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Understanding-and-Implementing-Virtual-Private-Networks-2-1-768x432.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Understanding-and-Implementing-Virtual-Private-Networks-2-1-768x432 and more...</h2>
+
+                    </div>
+                </div>
+
+
+                <!-- <div style="text-align: center; margin-top: 30px;">
+                    <button id="readMoreBtn" style="background-color: #d5a12b; color: white; padding: 10px 25px; border: none; cursor: pointer; font-weight: bold;">
+                      Read More
+                    </button>
+                  </div> -->
+
+                <!-- blog col 2 -->
+
+
+                <div id="more-blogs" style="display: none; margin-top: 30px;">
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Understanding-and-Implementing-Virtual-Private-Networks-1-1-1024x576.png"
+                            alt="VPN in CCNA">
+                    </div>
+                    <div class="blog-content">
+                        <a href="wan-technologies.html">
+                            <h2 style="color: #d7a61b;">Virtual Private Networks (VPNs) in CCNA and more...</h2>
+                        </a>
+
+                    </div>
+                </div>
+
                 <!-- blog col 2 -->
                 <div class="blog-col">
                     <div class="blog-img">
@@ -333,8 +469,11 @@
                 <!-- blog col 12 -->
 
             </div>
+            </div>
         </section>
     </div>
+
+
     <!-- end -->
     <div id="ccie" class="tab-content ">
         <section class="blogs">
@@ -524,283 +663,286 @@
         </section>
     </div>
     <!-- end -->
-<!-- cciesecurity -->
-<div id="security" class="tab-content ">
-    <section class="blogs">
-        <div class="blog-wrapper">
-            <!-- blog col 1 -->
-            <div class="blog-col">
-                <div class="blog-img">
-                    <img src="image/Cisco-ASA-Firewalls-1024x576.png" alt="">
-                </div>
-                <div class="blog-content">
-                    <h2>Cisco ASA Firewalls Set Up and more...</h2>
+    <!-- cciesecurity -->
+    <div id="security" class="tab-content ">
+        <section class="blogs">
+            <div class="blog-wrapper">
+                <!-- blog col 1 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Cisco-ASA-Firewalls-1024x576.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Cisco ASA Firewalls Set Up and more...</h2>
 
+                    </div>
                 </div>
+                <!-- blog col 2 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/How-to-Use-GNS3-and-EVE-NG-for-CCIE-Security-Labs-1-1024x576.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>How to Use GNS3 and EVE-NG for CCIE Security Labs
+                            and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 3 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/The-Role-of-Zero-Trust-Network-Architecture-in-CCIE-Security-Certification-1-1024x576.png"
+                            alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Zero Trust Network Architecture more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 4 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Blue-Minimalist-Collage-Blog-Banner-1024x576.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Security Misconfigurations
+                            and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 5 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/EI-guest-posting-blog-banner-3.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Why Build a Home Lab for CCIE Security? and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 6 -->
+
+                <!-- blog col 7 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/8-ways-to-take-care-of-your-skin-1-1024x576.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>What Makes CCIE Security Special? and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 8 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Website-blog-banner-image-2.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2> Why Firewalls Are Critical and more...</h2>
+
+                    </div>
+                </div>
+
+                <!-- blog col 9 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/What-is-IPsec-FEATURED-IMAGE-1-1024x576.webp" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>What is IPsec? and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 10 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/ASA-Featured-image.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>What Is The Cisco ASA? and more...</h2>
+
+                    </div>
+                </div>
+                <!-- blog col 11 -->
+
+                <!-- blog col 12 -->
+
             </div>
-            <!-- blog col 2 -->
-            <div class="blog-col">
-                <div class="blog-img">
-                    <img src="image/How-to-Use-GNS3-and-EVE-NG-for-CCIE-Security-Labs-1-1024x576.png" alt="">
-                </div>
-                <div class="blog-content">
-                    <h2>How to Use GNS3 and EVE-NG for CCIE Security Labs
-                        and more...</h2>
+        </section>
+    </div>
+    <!-- end -->
+    <!-- cciewireless -->
+    <div id="networking" class="tab-content ">
+        <section class="blogs">
+            <div class="blog-wrapper">
+                <!-- blog col 1 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/CCIE-WIRELESS-blog-website-banner.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>What is CCIE Wireless Certification? and more...</h2>
 
+                    </div>
                 </div>
+                <!-- blog col 2 -->
+
             </div>
-            <!-- blog col 3 -->
-            <div class="blog-col">
-                <div class="blog-img">
-                    <img src="image/The-Role-of-Zero-Trust-Network-Architecture-in-CCIE-Security-Certification-1-1024x576.png" alt="">
-                </div>
-                <div class="blog-content">
-                    <h2>Zero Trust Network Architecture more...</h2>
+            <!-- blog col 11 -->
 
-                </div>
-            </div>
-            <!-- blog col 4 -->
-            <div class="blog-col">
-                <div class="blog-img">
-                    <img src="image/Blue-Minimalist-Collage-Blog-Banner-1024x576.png" alt="">
-                </div>
-                <div class="blog-content">
-                    <h2>Security Misconfigurations
-                        and more...</h2>
+            <!-- blog col 12 -->
 
-                </div>
-            </div>
-            <!-- blog col 5 -->
-            <div class="blog-col">
-                <div class="blog-img">
-                    <img src="image/EI-guest-posting-blog-banner-3.png" alt="">
-                </div>
-                <div class="blog-content">
-                    <h2>Why Build a Home Lab for CCIE Security? and more...</h2>
+    </div>
 
-                </div>
-            </div>
-            <!-- blog col 6 -->
 
-            <!-- blog col 7 -->
-            <div class="blog-col">
-                <div class="blog-img">
-                    <img src="image/8-ways-to-take-care-of-your-skin-1-1024x576.png" alt="">
-                </div>
-                <div class="blog-content">
-                    <h2>What Makes CCIE Security Special? and more...</h2>
 
-                </div>
-            </div>
-            <!-- blog col 8 -->
-            <div class="blog-col">
-                <div class="blog-img">
-                    <img src="image/Website-blog-banner-image-2.png" alt="">
-                </div>
-                <div class="blog-content">
-                    <h2> Why Firewalls Are Critical and more...</h2>
+    <!-- nsefcx/ -->
+    <div id="nse" class="tab-content ">
+        <section class="blogs">
+            <div class="blog-wrapper">
+                <!-- blog col 1 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Fortinet-NSE-8-Certification-The-Ultimate-Guide-for-Network-Security-Experts-1.png"
+                            alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Understanding of Fortinet NSE 8 Certification and more...</h2>
 
+                    </div>
                 </div>
-            </div>
-           
-            <!-- blog col 9 -->
-            <div class="blog-col">
-                <div class="blog-img">
-                    <img src="image/What-is-IPsec-FEATURED-IMAGE-1-1024x576.webp" alt="">
-                </div>
-                <div class="blog-content">
-                    <h2>What is IPsec? and more...</h2>
+                <!-- blog col 2 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Understanding-Layer-2-security-in-Network-Architecture-for-FCX-Certification.png"
+                            alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>What is Layer 2 security in Network Architecture ? and more...</h2>
 
+                    </div>
                 </div>
-            </div>
-            <!-- blog col 10 -->
-            <div class="blog-col">
-                <div class="blog-img">
-                    <img src="image/ASA-Featured-image.png" alt="">
-                </div>
-                <div class="blog-content">
-                    <h2>What Is The Cisco ASA? and more...</h2>
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/fortinet-blog-feature-image.webp" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>What is CCIE Wireless Certification? and more...</h2>
 
+                    </div>
                 </div>
             </div>
             <!-- blog col 11 -->
-          
+
             <!-- blog col 12 -->
 
-        </div>
-    </section>
-</div>
-<!-- end -->
-  <!-- cciewireless -->
-  <div id="networking" class="tab-content ">
-    <section class="blogs">
-        <div class="blog-wrapper">
-            <!-- blog col 1 -->
-            <div class="blog-col">
-                <div class="blog-img">
-                    <img src="image/CCIE-WIRELESS-blog-website-banner.png" alt="">
-                </div>
-                <div class="blog-content">
-                    <h2>What is CCIE Wireless Certification? and more...</h2>
-
-                </div>
-            </div>
-            <!-- blog col 2 -->
-          
-            </div>
-            <!-- blog col 11 -->
-          
-            <!-- blog col 12 -->
-
-        </div>
-
-
-
-        <!-- nsefcx/ -->
-        <div id="nse" class="tab-content ">
-            <section class="blogs">
-                <div class="blog-wrapper">
-                    <!-- blog col 1 -->
-                    <div class="blog-col">
-                        <div class="blog-img">
-                            <img src="image/Fortinet-NSE-8-Certification-The-Ultimate-Guide-for-Network-Security-Experts-1.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h2>Understanding of Fortinet NSE 8 Certification and more...</h2>
-        
-                        </div>
-                    </div>
-                    <!-- blog col 2 -->
-                    <div class="blog-col">
-                        <div class="blog-img">
-                            <img src="image/Understanding-Layer-2-security-in-Network-Architecture-for-FCX-Certification.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h2>What is Layer 2 security in Network Architecture ? and more...</h2>
-        
-                        </div>
-                    </div>
-                    <div class="blog-col">
-                        <div class="blog-img">
-                            <img src="image/fortinet-blog-feature-image.webp" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h2>What is CCIE Wireless Certification? and more...</h2>
-        
-                        </div>
-                    </div>
-                    </div>
-                    <!-- blog col 11 -->
-                  
-                    <!-- blog col 12 -->
-        
-                </div>
-        <!-- end -->
+    </div>
+    <!-- end -->
 
     <!-- ccna  -->
 
-    
+
     <!-- end -->
 
-        <!-- ccna -->
-        <div id="data" class="tab-content ">
-            <section class="blogs">
-                <div class="blog-wrapper">
-                    <!-- blog col 1 -->
-                    <div class="blog-col">
-                        <div class="blog-img">
-                            <img src="image/Understanding-and-Implementing-Virtual-Private-Networks-2-1.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h2>Top 50 Questions and Answers for Subnetting and more...</h2>
-        
-                        </div>
+    <!-- ccna -->
+    <div id="data" class="tab-content ">
+        <section class="blogs">
+            <div class="blog-wrapper">
+                <!-- blog col 1 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Understanding-and-Implementing-Virtual-Private-Networks-2-1.png" alt="">
                     </div>
-                    <!-- blog col 2 -->
-                    <div class="blog-col">
-                        <div class="blog-img">
-                            <img src="image/Understanding-and-Implementing-Virtual-Private-Networks-1-1-1024x576.png"
-                                alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h2>Virtual Private Networks (VPNs) in CCNA and more...</h2>
-    
-                        </div>
-                    </div>
-                    <div class="blog-col">
-                        <div class="blog-img">
-                            <img src="image/Understanding-NAT-for-CCNA-2-1024x576.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h2>Why NAT Matters in Networking and more...</h2>
-    
-                        </div>
-                    </div>
+                    <div class="blog-content">
+                        <h2>Top 50 Questions and Answers for Subnetting and more...</h2>
 
-                    <div class="blog-col">
-                        <div class="blog-img">
-                            <img src="image/Understanding-OSI-1.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h2>OSI and TCP Models for CCNA and more...</h2>
-        
-                        </div>
                     </div>
-                    <div class="blog-col">
-                        <div class="blog-img">
-                            <img src="image/Blue-Modern-Futuristic-Cyber-Security-Presentation-1.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h2>Importance of VLANs and Inter-VLAN and more...</h2>
-        
-                        </div>
-                    </div>
-                    <div class="blog-col">
-                        <div class="blog-img">
-                            <img src="image/Top-30-CCNA-Interview-Questions-and-How-to-Answer-Them-1.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h2>Subnetting Guide for CCNA Candidates and more...</h2>
-        
-                        </div>
-                    </div>
-                    <div class="blog-col">
-                        <div class="blog-img">
-                            <img src="image/Cyber-Monday-1-1024x576.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h2>Routing and OSI Model and more...</h2>
-        
-                        </div>
-                    </div>
-                    <div class="blog-col">
-                        <div class="blog-img">
-                            <img src="image/ccna-blog-banner.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h2>What is the CCNA 200-301 Exam, and Why is it Important? and more...</h2>
-        
-                        </div>
-                    </div>
-                    <div class="blog-col">
-                        <div class="blog-img">
-                            <img src="image/overview-of-routing-tables.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h2>Interpreting the Components of a Routing Table and more...</h2>
-        
-                        </div>
-                    </div>
-                    </div>
-                    <!-- blog col 11 -->
-                  
-                    <!-- blog col 12 -->
-        
                 </div>
-        <!-- end -->
+                <!-- blog col 2 -->
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Understanding-and-Implementing-Virtual-Private-Networks-1-1-1024x576.png"
+                            alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Virtual Private Networks (VPNs) in CCNA and more...</h2>
+
+                    </div>
+                </div>
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Understanding-NAT-for-CCNA-2-1024x576.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Why NAT Matters in Networking and more...</h2>
+
+                    </div>
+                </div>
+
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Understanding-OSI-1.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>OSI and TCP Models for CCNA and more...</h2>
+
+                    </div>
+                </div>
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Blue-Modern-Futuristic-Cyber-Security-Presentation-1.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Importance of VLANs and Inter-VLAN and more...</h2>
+
+                    </div>
+                </div>
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Top-30-CCNA-Interview-Questions-and-How-to-Answer-Them-1.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Subnetting Guide for CCNA Candidates and more...</h2>
+
+                    </div>
+                </div>
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/Cyber-Monday-1-1024x576.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Routing and OSI Model and more...</h2>
+
+                    </div>
+                </div>
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/ccna-blog-banner.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>What is the CCNA 200-301 Exam, and Why is it Important? and more...</h2>
+
+                    </div>
+                </div>
+                <div class="blog-col">
+                    <div class="blog-img">
+                        <img src="image/overview-of-routing-tables.png" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Interpreting the Components of a Routing Table and more...</h2>
+
+                    </div>
+                </div>
+            </div>
+            <!-- blog col 11 -->
+
+            <!-- blog col 12 -->
+
+    </div>
+    <!-- end -->
     </section>
-</div>
-  <!-- end -->
+    </div>
+    <!-- end -->
     <div id="cloud" class="tab-content">
         <h3>Cloud Computing Blogs</h3>
         <p>Cloud trends in 2025...</p>
@@ -825,9 +967,9 @@
         <h3>DevOps Blogs</h3>
         <p>DevOps automation and CI/CD...</p>
     </div>
-    <div class="more-tab-btn">
+    <!-- <div class="more-tab-btn">
         <button class="active-btn">Read More</button>
-    </div>
+    </div> -->
     <!-- <div class="project-marquee blog-marquee">
         <marquee behavior="alternate" direction="">
             <div class="project-marquee-text">
@@ -880,11 +1022,11 @@
                 <div class="footer-col">
                     <h2>Other Links</h2>
 
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Refund Policy</a>
-                    <a href="#">Become An Instructor</a>
-                    <a href="#">Terms and Conditions</a>
-                    <a href="#">Customer Registration process and guidelines</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="refundPolicy.html">Refund Policy</a>
+                    <a href="instructor.html">Become An Instructor</a>
+                    <a href="termscondition.html">Terms and Conditions</a>
+                    <a href="customerregistrstion.html">Customer Registration process and guidelines</a>
                 </div>
                 <!-- <div class="footer-col">
                     <h1>Subscribe our newsletter</h1>
@@ -920,11 +1062,10 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/917019021129?text=Hello!%20I%20need%20some%20assistance." 
-    class="whatsapp-float" 
-    target="_blank">
-     <i class="ri-whatsapp-fill"></i>
- </a>
+    <a href="https://wa.me/917019021129?text=Hello!%20I%20need%20some%20assistance." class="whatsapp-float"
+        target="_blank">
+        <i class="ri-whatsapp-fill"></i>
+    </a>
     <!-- Swiper Slider JS  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <!-- GSAP  -->
@@ -932,6 +1073,55 @@
     <!-- GSAP SCROLLING -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script>
+
+
+        // old code
+        //     document.addEventListener("DOMContentLoaded", function () {
+        //     const courseMenuItem = document.querySelector(".menu li.has-dropdown");
+        //     courseMenuItem.addEventListener("click", function (event) {
+        //         event.preventDefault(); 
+        //         event.stopPropagation();
+        //         this.classList.toggle("active");
+        //     });
+
+        //     document.addEventListener("click", function (event) {
+        //         if (!courseMenuItem.contains(event.target)) {
+        //             courseMenuItem.classList.remove("active");
+        //         }
+        //     });
+        // });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const courseMenuItem = document.querySelector(".menu li.has-dropdown");
+
+            // Only toggle dropdown if the actual <li> (not the <a>) is clicked
+            courseMenuItem.addEventListener("click", function (event) {
+                if (event.target.tagName !== 'A') {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    this.classList.toggle("active");
+                }
+            });
+
+            // Close dropdown on clicking anywhere outside
+            document.addEventListener("click", function (event) {
+                if (!courseMenuItem.contains(event.target)) {
+                    courseMenuItem.classList.remove("active");
+                }
+            });
+        });
+
+
+        // readmorebutton js
+        document.getElementById("readMoreBtn").addEventListener("click", function () {
+    const moreBlogs = document.getElementById("more-blogs");
+    moreBlogs.style.display = "grid"; // You can change to "block" if layout breaks
+    this.style.display = "none";
+  });
+
+    </script>
 
 </body>
 
