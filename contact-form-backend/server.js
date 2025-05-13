@@ -7,33 +7,33 @@ const app = express();
 
 // Configure CORS more explicitly
 app.use(cors({
-    origin: '*', // Allow all origins
+    origin: '*', 
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }));
 
-// Parse JSON request bodies
+
 app.use(bodyParser.json());
 
-// Test route
+
 app.get("/", (req, res) => {
     res.send("Server is running!");
 });
 
-// Configure nodemailer transporter
+
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
         user: "nitiz.sharma.learning@gmail.com",
-        pass: "gifa hqvf rouw aqup"  // Your Gmail App Password
+        pass: "gifa hqvf rouw aqup"  //  Gmail App Password
     },
     tls: {
         rejectUnauthorized: false
     }
 });
 
-// 🔹 Contact form submission handler
+
 app.post("/contact", (req, res) => {
     console.log("Received contact form:", req.body);
     
@@ -71,7 +71,6 @@ app.post("/contact", (req, res) => {
     });
 });
 
-// 🔹 Group Discount form submission handler
 app.post("/group-discount", (req, res) => {
     console.log("Received group discount form:", req.body);
 
@@ -108,7 +107,6 @@ app.post("/group-discount", (req, res) => {
     });
 });
 
-// Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);

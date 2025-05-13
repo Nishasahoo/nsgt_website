@@ -5153,3 +5153,20 @@ body::before {
 .iti--separate-dial-code .iti__selected-flag {
     background-color: unset !important;
 }
+
+
+
+
+img.lazy {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  img.lazy:not([src]) {
+    visibility: hidden;
+  }
+
+  img.lazy[src] {
+    opacity: 1;
+    visibility: visible;
+  }

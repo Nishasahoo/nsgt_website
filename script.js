@@ -793,21 +793,21 @@ const testimonials = [
       name: "Mr. Kuldeep Sheokand",
       designation: "CCIE EI Expert Instructor",
       src: "image/kuldeep 1.png",
-      link: "#"
+     
     },
     {
       quote: "Specialist in SD-WAN, CCNP, Python automation, and real-world enterprise training.",
       name: "Mr. Joel Augustine",
       designation: "Expert SD-WAN Network Instructor",
       src: "image/Joel 1.png",
-      link: "#"
+    
     },
     {
       quote: "Specialist in CCNA & CCNP Certified Expert Instructor.",
       name: "Mr. DHANANJAY PATANKAR",
       designation: "CCNA & CCNP Certified Expert Instructor",
       src: "image/Dj 1.png",
-      link: "#"
+   
     }
   ];
   
@@ -934,3 +934,32 @@ document.querySelector("#contactForm").addEventListener("submit", async function
       alert("There was a problem submitting the form. Please try again.");
     }
   });
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll("img.lazy");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove("lazy");
+            observer.unobserve(img);
+          }
+        });
+      });
+
+      lazyImages.forEach(img => observer.observe(img));
+    } else {
+      // Fallback for old browsers: Load all images immediately
+      lazyImages.forEach(img => {
+        img.src = img.dataset.src;
+        img.classList.remove("lazy");
+      });
+    }
+  });
+

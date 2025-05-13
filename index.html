@@ -511,6 +511,15 @@
             padding-top: 0;
         }
     }
+
+    img.lazy {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    img.lazy[src] {
+        opacity: 1;
+    }
 </style>
 
 </head>
@@ -522,7 +531,7 @@
         <nav>
             <div class="nav-left">
                 <div class="logo">
-                    <a href="index.html"><img class="logosize" src="image/Nitiz-Sharma9.png"></a>
+                    <a href="index.html"><img class="logosize" src="image/Nitiz-Sharma9.png" alt="logo"></a>
                 </div>
                 <ul class="menu">
                     <li class="has-dropdown">
@@ -751,41 +760,42 @@
                     <!-- slide 1 -->
                     <div class="swiper-slide">
                         <div class="">
-                            <img src="image/Cisco branding.png" alt=""
+                            <img data-src="image/Cisco branding.png" alt="Cisco branding" class="lazy"
                                 style="width: 120px; height: auto; margin: 0 2px;">
                         </div>
                     </div>
                     <!-- slide 2 -->
                     <div class="swiper-slide">
                         <div class="">
-                            <img src="image/hclbrand.png" alt="" style="width: 120px; height: auto; margin: 0 2px;">
+                            <img data-src="image/hclbrand.png" alt="hclbrand" class="lazy"
+                                style="width: 120px; height: auto; margin: 0 2px;">
                         </div>
                     </div>
                     <!-- slide 3 -->
                     <div class="swiper-slide">
                         <div class="">
-                            <img src="image/fortinetbrand.png" alt=""
+                            <img data-src="image/fortinetbrand.png" class="lazy"
                                 style="width: 120px; height: auto; margin: 0 2px;">
                         </div>
                     </div>
                     <!-- slide 4 -->
                     <div class="swiper-slide">
                         <div class="">
-                            <img src="image/vi 16070 branding logo website.png" alt=""
+                            <img data-src="image/vi 16070 branding logo website.png"  alt="vibrand" class="lazy"
                                 style="width: 120px; height: auto; margin: 0 8px;">
                         </div>
                     </div>
                     <!-- slide 5 -->
                     <div class="swiper-slide">
                         <div class="">
-                            <img src="image/intel 16070 Branding logo website.png" alt=""
+                            <img data-src="image/intel 16070 Branding logo website.png" alt="intelbrand" class="lazy"
                                 style="width: 120px; height: auto; margin: 0 8px;">
                         </div>
                     </div>
                     <!-- slide 6 -->
                     <div class="swiper-slide">
                         <div class="">
-                            <img src="image/HP Branding logo website.png" alt=""
+                            <img data-src="image/HP Branding logo website.png" alt="hpbrand" class="lazy"
                                 style="width: 120px; height: auto; margin: 0 8px;">
                         </div>
                     </div>
@@ -794,7 +804,8 @@
                     <!-- slide 8 -->
                     <div class="swiper-slide">
                         <div class="">
-                            <img src="image/dellbrand.png" alt="" style="width: 120px; height: auto; margin: 0 8px;">
+                            <img data-src="image/dellbrand.png" alt="dellbrand" class="lazy"
+                                style="width: 120px; height: auto; margin: 0 8px;">
                         </div>
                     </div>
 
@@ -809,7 +820,7 @@
     <!-- ABOUT SECTION  -->
     <div class="about-container">
         <div class="about-img">
-            <img style="border-radius: 20px;" src="image/CCIE-requirements.jpg" alt="">
+            <img style="border-radius: 20px;" data-src="image/CCIE-requirements.jpg" alt="ccierequiremt" class="lazy">
         </div>
         <div class="about-content">
             <h1>About <span style="color: #d5a12b;">Nitiz Sharma Global Tech Private Limited </span></h1>
@@ -855,13 +866,13 @@
                     <!-- slide 1 -->
                     <div class="swiper-slide">
                         <div class="about-slide-img">
-                            <img src="image/1 5.png" alt="">
+                            <img data-src="image/1 5.png" alt="girl" class="lazy">
                         </div>
                     </div>
                     <!-- slide 2 -->
                     <div class="swiper-slide">
                         <div class="about-slide-img">
-                            <img src="image/2 8.png" alt="">
+                            <img data-src="image/2 8.png" alt="girl2" class="lazy">
                         </div>
                     </div>
                 </div>
@@ -881,8 +892,7 @@
                     data-hover-text-color="#242424">
                     <div class="learning-inner-container">
                         <div class="learning-image-container">
-                            <img src="image/Classroom training.png" alt="Classroom Training"
-                                class="learning-file-image">
+                            <img data-src="image/Classroom training.png"valt="classroom" class="lazy" class="learning-file-image">
                         </div>
                         <div class="learning-content">
                             <h1 class="learning-text">
@@ -901,7 +911,8 @@
                     data-hover-text-color="#242424">
                     <div class="learning-inner-container">
                         <div class="learning-image-container">
-                            <img src="image/Flexible.png" alt="Fly-Me-A-Trainer" class="learning-file-image">
+                            <img data-src="image/Flexible.png" alt="Fly-Me-A-Trainer" class="lazy"
+                                class="learning-file-image">
                         </div>
                         <div class="learning-content">
                             <h1 class="learning-text">
@@ -921,7 +932,7 @@
                     data-hover-text-color="#242424">
                     <div class="learning-inner-container">
                         <div class="learning-image-container">
-                            <img src="image/Online class.png" alt="Live Online Classes" class="learning-file-image">
+                            <img data-src="image/Online class.png" alt="onlineclass" class="lazy" class="learning-file-image">
                         </div>
                         <div class="learning-content">
                             <h1 class="learning-text">
@@ -940,7 +951,7 @@
                     data-hover-text-color="#242424">
                     <div class="learning-inner-container">
                         <div class="learning-image-container">
-                            <img src="image/Instructor.png" alt="Flexi" class="learning-file-image">
+                            <img data-src="image/Instructor.png"  alt="instructor" class="lazy" class="learning-file-image">
                         </div>
                         <div class="learning-content">
                             <h1 class="learning-text">
@@ -968,7 +979,7 @@
             </a> -->
 
             <div class="service-bottom-content">
-                <img src="image/atom-png-9.png" alt="">
+                <img data-src="image/atom-png-9.png" alt="atom" class="lazy">
                 <h2>Level Up Your Networking</h2>
             </div>
         </section>
@@ -982,7 +993,7 @@
             <!-- card 1 -->
             <div class="service-card">
                 <div class="service-img">
-                    <img src="image/live-sessions-1.png" alt="">
+                    <img data-src="image/live-sessions-1.png" alt="livesession" class="lazy">
                 </div>
                 <div class="service-content">
                     <h2>Live Sessions</h2>
@@ -993,7 +1004,7 @@
             <!-- card 2 -->
             <div class="service-card">
                 <div class="service-img">
-                    <img src="image/Bootcamp-1.png" alt="">
+                    <img data-src="image/Bootcamp-1.png" alt="bootcamp" class="lazy">
                 </div>
                 <div class="service-content">
                     <h2>Bootcamp</h2>
@@ -1004,7 +1015,7 @@
             <!-- card 3 -->
             <div class="service-card">
                 <div class="service-img">
-                    <img src="image/Lab-Practice-1.png" alt="">
+                    <img data-src="image/Lab-Practice-1.png" alt="labpractice" class="lazy">
                 </div>
                 <div class="service-content">
                     <h2>Lab Practice</h2>
@@ -1015,7 +1026,7 @@
             <!-- card 4 -->
             <div class="service-card">
                 <div class="service-img">
-                    <img src="image/discussions-1.png" alt="">
+                    <img data-src="image/discussions-1.png" alt="discussion" class="lazy">
                 </div>
                 <div class="service-content">
                     <h2>Discussions</h2>
@@ -1091,7 +1102,7 @@
         <div class="client-wrapper">
             <div class="client-det">
                 <div class="client-img">
-                    <img src="image/Mobile-Marketing-bro.png" alt="">
+                    <img data-src="image/Mobile-Marketing-bro.png" alt="mobile" class="lazy">
                 </div>
 
             </div>
@@ -1191,8 +1202,9 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide nitizreviewsslide">
                     <div class="nitizreviewscard text-center">
-                        <img src="image/Anwar.png" class="mx-auto w-24 h-24 rounded-full object-cover mb-4"
-                            alt="Anwar Ali">
+                        <img data-src="image/Anwar.png" class="lazy mx-auto w-24 h-24 rounded-full object-cover mb-4"
+                            alt="Anwar">
+
                         <p class="text-white mb-2">"The way of delivering the training is awesome with well planned
                             structure and excellent CCIE Security material."</p>
                         <p class="text-yellow-500 text-lg">★★★★★</p>
@@ -1200,16 +1212,16 @@
                     </div>
 
                     <div class="nitizreviewscard">
-                        <img src="image/Britto.png" class="mx-auto w-24 h-24 rounded-full object-cover mb-4"
-                            alt="Jane Smith">
+                        <img data-src="image/Britto.png" class="lazy mx-auto w-24 h-24 rounded-full object-cover mb-4"
+                            alt="Britto">
                         <p class="nitizreviewscontent">"Nitiz teaches with unmatched depth and passion—making complex
                             topics feel effortless."</p>
                         <p class="nitizreviewsstars">★★★★★</p>
                         <p class="nitizreviewsauthor">- Britto Arthur</p>
                     </div>
                     <div class="nitizreviewscard">
-                        <img src="image/Nabeel.png" class="mx-auto w-24 h-24 rounded-full object-cover mb-4"
-                            alt="Alex Brown">
+                        <img data-src="image/Nabeel.png" class="lazy mx-auto w-24 h-24 rounded-full object-cover mb-4"
+                            alt="Nabeel">
                         <p class="nitizreviewscontent">""Learning from Madhuri Suresh in CCIE DC has been
                             exceptional—clear, engaging, and expertly guided!."</p>
                         <p class="nitizreviewsstars">★★★★★</p>
@@ -1218,16 +1230,16 @@
                 </div>
                 <div class="swiper-slide nitizreviewsslide">
                     <div class="nitizreviewscard">
-                        <img src="image/Manoj.png" class="mx-auto w-24 h-24 rounded-full object-cover mb-4"
-                            alt="Michael Lee">
+                        <img data-src="image/Manoj.png" class="lazy mx-auto w-24 h-24 rounded-full object-cover mb-4"
+                            alt="Manoj">
                         <p class="nitizreviewscontent">"Malav made learning seamless with clear explanations and a
                             well-structured syllabus."</p>
                         <p class="nitizreviewsstars">★★★★★</p>
                         <p class="nitizreviewsauthor">- Manoj Sonsurkar</p>
                     </div>
                     <div class="nitizreviewscard">
-                        <img src="image/Mansoor.png" class="mx-auto w-24 h-24 rounded-full object-cover mb-4"
-                            alt="Emily Clark">
+                        <img data-src="image/Mansoor.png" class="lazy mx-auto w-24 h-24 rounded-full object-cover mb-4"
+                            alt="Mansoor">
                         <p class="nitizreviewscontent">"With 15 years of experience and a CCIE, I can confidently say
                             Nitiz Sharma’s expertise is unmatched."
                             Let me know if you'd like a slightly different tone!"</p>
@@ -1235,8 +1247,8 @@
                         <p class="nitizreviewsauthor">- Mansoor Abbasi</p>
                     </div>
                     <div class="nitizreviewscard">
-                        <img src="image/Vinay.png" class="mx-auto w-24 h-24 rounded-full object-cover mb-4"
-                            alt="David Martin">
+                        <img data-src="image/Vinay.png" class="lazy mx-auto w-24 h-24 rounded-full object-cover mb-4"
+                            alt="Vinay">
                         <p class="nitizreviewscontent">"Malav is an excellent faculty member, known for his patience in
                             addressing every query until students fully grasp the topic."</p>
                         <p class="nitizreviewsstars">★★★★★</p>
@@ -1549,6 +1561,32 @@
                         console.error("Fetch error:", err);
                         alert("Server error. Is your backend running?");
                     }
+                });
+            }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const lazyImages = document.querySelectorAll("img.lazy");
+
+            if ("IntersectionObserver" in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.classList.remove("lazy");
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(img => observer.observe(img));
+            } else {
+                // Fallback: load all
+                lazyImages.forEach(img => {
+                    img.src = img.dataset.src;
+                    img.classList.remove("lazy");
                 });
             }
         });
