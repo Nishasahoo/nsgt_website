@@ -5107,13 +5107,33 @@ body::before {
         background-position: 5% -100%;
         margin-top: 105px;
     }
+
+    .menu:after {
+        top: 52% !important;
+        left: 100%; 
+        transform: translate(-50%, -50%);
+         width: 213.3%; 
+        height: 99.3%; 
+         border-radius: unset !important; 
+        background-color: #000000;
+    }
     @media (min-width: 640px) {
         .hero-content {
             padding-top: 4rem;  /* Keep padding same on desktop */
             padding-bottom: 4rem; /* Keep padding same on desktop */
         }
+
+
+        .mega-menu-row {
+          
+            width: 78% !important;
+            gap: 20px;
+        }
+        
     }
-    
+    .btnlogin{
+        display: none;
+    }
     /* Center text horizontally for both mobile and desktop */
     .hero-content h1,
     .hero-content p {
